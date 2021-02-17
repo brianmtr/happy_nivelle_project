@@ -22,7 +22,7 @@
           <li><a class ="" href="/events">Boite à idées</a></li>
           <li><a class ="" href="/agenda/index">Agenda</a></li>       
           <li><a class ="" href="/contacts/new">Contact</a></li>
-          <% if user_signed_in? && current_user.role === 'admin' %>
+          <% if user_signed_in? && current_user.admin === true %>
           <li>
           <a class ="" href="/admins/index">Admin</a>
           </li>
