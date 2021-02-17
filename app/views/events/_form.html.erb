@@ -11,8 +11,36 @@
     </div>
   <% end %>
 
+ 
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :adresse %>
+    <%= form.text_field :adress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+  <%= form.label :Choisir_une_image %>
+  <%= form.hidden_field :image, value: event.cached_image_data %>
+  <%= form.file_field :image %>
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "créer l'évènement" %>
+    
   </div>
 <% end %>

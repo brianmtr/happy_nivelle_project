@@ -1,15 +1,5 @@
-
-<p id="notice"><%= notice %></p>
-<p>Bonjour  
-<% if user_signed_in? %>
-  <%= current_user.firstname %>
-<% end %>
-</p>
-<h2>Les évènements proposés</h2>
 <% @events.each do |event| %>
-
-<% if event.status === 'proposed' %>
-
+<% if event.status === 'accepted' %>
 
   <table class="table table-striped">
 
@@ -20,8 +10,8 @@
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= event.title %> <br>
-        <%= link_to 'Voir évenement', events_path(event.id) %>
+       
+        <%= link_to 'Voir évenement', events_path(@event) %>
 
         </button>
       </h5>
@@ -35,6 +25,8 @@
       <scope="col">Adresse: <%= event.adress %><br><br>
       <scope="col">Description:<br> <%= event.description %><br>
       <scope="col">Image: <%= image_tag event.image_url, height: 200 if event.image %><br>
+   
+   
       </div>
     </div>
   </div>
@@ -43,20 +35,5 @@
     
   </tbody>
 </table>
-<% end %>
-
-<% end %>
-
-<h2>Les évènements acceptés</h2>
-<% @events.each do |event| %>
-<% if event.status === 'accepted' %>
-    <%= render 'accepted', home: @home %>
-<% end %>
-<% end %>
-
-<h2>Les évènements passé</h2>
-<% @events.each do |event| %>
-<% if event.status === 'past' %>
-    <%= render 'past', home: @home %>
 <% end %>
 <% end %>

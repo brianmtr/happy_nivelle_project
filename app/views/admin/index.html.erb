@@ -1,10 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Events</h1>
 <% @events.each do |event| %>
-<% if event.status === 'proposed' %>
-<h2>Les évènements proposés</h2>
 
+
+<% if event.status == nil %>
   <table class="table table-striped">
 
   <tbody>
@@ -14,19 +11,9 @@
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= event.title %> <br>
-        <%= link_to 'Voir évenement', event_path(event.id) %>
-        
-        <% if user_signed_in? && current_user.admin? %>
+        <%= event.title %> <br><%= link_to 'Voir évenement', event_path(event.id) %>
         <%= link_to 'Refuser', event, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
         <%=  link_to 'Accepter', event, method: :validate %>
-      <% end %>
-      <% if user_signed_in? %>
-        <%=  link_to 'Je participe', event, method: :participate, :class => "btn btn-success" %>
-        <%=  link_to 'Peut-être', event, method: :validate, :class => "btn btn-warning" %>
-        <%=  link_to 'Je ne participe pas', event, method: :validate, :class => "btn btn-danger" %>
-      <% end %>
-        </button>
       </h5>
     </div>
 
@@ -48,9 +35,6 @@
   </tbody>
 </table>
 
-<% end %>
-<% if event.status === 'accepted' %>
-    <%= render 'accepted', home: @home %>
 <% end %>
 <% end %>
 <br>

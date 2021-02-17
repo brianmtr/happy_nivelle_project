@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-    before_action :set_event, only: %i[ show create ]
+    before_action :set_event, only: %i[ show edit ]
 
     def index
         @events = Event.all
@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
      # GET /events/1 or /events/1.json
   def show
+    # @event = Event.new
   end
 
   # GET /events/new
@@ -18,7 +19,7 @@ class EventsController < ApplicationController
   # POST /events or /events.json
   def create
     @event = Event.new(event_params)
-
+    
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: "Event was successfully created." }
@@ -30,6 +31,25 @@ class EventsController < ApplicationController
     end
   end
 
+  def validate
+    @event = Event.find(params[:id])
+    status = @event.status 
+    case status
+when nil
+    @event.status = 'proposed'
+    @event.save
+    redirect_to '/events/', notice: "l'évenement a bien été accepté."
+  
+  when 'proposed' 
+    @event.status = 'accepted'
+    @event.save
+    if @event.status === 'accepted' && Date.today > @event.date 
+    @event.status = 'past'
+    @event.save
+    redirect_to '/events/', notice: "l'évenement a bien été accepté."
+    end
+  end
+end
 
 
   private
