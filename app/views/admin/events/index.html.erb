@@ -1,80 +1,43 @@
-<h1>Admin events </h1>
 
+<h2>Demande d'évènement</h2>
+<br>
 <% @events.each do |event| %>
 
-
-<% if event.status == nil %>
-  <table class="table table-striped">
-
-  <tbody>
-
-    <div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-               <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= event.title %> <br><%= link_to 'Voir évenement', event_path(event.id) %>
-        <%= link_to 'Refuser', event, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-        <%=  link_to 'Accepter', event, method: :validate %>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-     
-      <scope="col">Titre: <%= event.title %><br>
-      <scope="col">Date: <%= event.date %><br>
-      <scope="col">Adresse: <%= event.adress %><br><br>
-      <scope="col">Description:<br> <%= event.description %><br>
-      <scope="col">Image: <%= image_tag event.image_url, height: 200 if event.image %><br>
-   
-      </div>
-    </div>
-  </div>
+<% if event.status === nil %>
+<div class="card" style="width: 60%; margin-left: 20%">
+<div class="card-header" id="headingOne" >
+ <tbody>
+      <tr>
+        <td><%= image_tag event.image_url, height: 50 if event.image %></td>
+        <td><strong><%= event.title %></td></strong><br>
+        <td><%= event.date %></td><br>
+        <td><%= event.adress %></td><br>
+        <br>
+        <td><%= event.description %></td><br>
+        <td><%= link_to 'Voir événement', event_path(event.id) %></td>
+        <%= link_to 'Edit', event %>
+        <%= link_to 'Refuser', @admin_event_path, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+        <%= link_to 'Accepter', event, method: :accepted %>
+      </tr>
+  </tbody>  
 </div>
-
-    
-  </tbody>
-</table>
-
+</div>
 <% end %>
 
 <% end %>
 <br>
-<h2>Les events proposé</h2>
-<% @events_proposed.each do |event| %>
-    <%= render 'status', event: @event %>
-<% end %>
+<h2>Les évènements proposés</h2>
 
+<% @events_proposed.each do |event| %>
+    <%= render 'status', event: event %>
+<% end %>
+<br>
+<h2>Les évènements acceptés</h2>
+
+<% @events_accepted.each do |event| %>
+    <%= render 'status', event: event %>
+<% end %>
 
 <% if user_signed_in? %>
-<%= link_to 'Créer un évènement', @admin_event_path %>
-<% end %>
-
-<h2>Commentaire à valider</h2>
-
-<% @comments.each do |comment| %>
-<% if comment.accepted === false %>
-    <%= comment.created_at %>
-    <%= comment.description %>
-  
-
-   
-      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= link_to 'Show', comment %>
-        <%= link_to 'Edit', edit_comment_path(comment) %>
-        <%= link_to 'Refuser', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-        <%= link_to 'Accepter', comment, method: :accepted %>
-      </button>
-     
-      <br>
-
-
-</div>
-
-
-</table>
-
-
-<% end %>
+<%= link_to 'Créer un évènement', new_admin_event_path %>
 <% end %>

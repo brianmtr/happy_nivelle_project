@@ -12,7 +12,7 @@
 
         <% if user_signed_in? && current_user.admin? %>
             <%= link_to 'Refuser', events_url, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-            <%=  link_to 'Accepter',events_url, method: :validate %>
+            <%=  link_to 'Accepter', event, method: :validate %>
         <% end %>
         <% if user_signed_in? %>
             <%=  link_to 'Je participe', events_url, method: :participate, :class => "btn btn-success" %>

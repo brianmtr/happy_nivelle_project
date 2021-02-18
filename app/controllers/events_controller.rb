@@ -13,14 +13,9 @@ def new
   @event = Event.new
 end
   
-
-
-  def show
-  
-  end
-    
+  def show; end
+    #creation events for users
   def create
-    
     @event = Event.new(event_params)
 
     respond_to do |format|
@@ -79,13 +74,13 @@ end
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_event
-    @event = Event.find(params[:id])
+    @event = Event.find_by(params[:id])
   end
 
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:title, :date, :adress, :description, :image, :id)
+    params.require(:event).permit(:title, :date, :adress, :description, :image)
 
   end
 

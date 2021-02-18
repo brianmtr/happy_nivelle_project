@@ -6,6 +6,8 @@ class Admin::EventsController < AdminController
     @events = Event.all
     @comments = Comment.all
     @events_proposed    = Event.proposed.where('date >= ?', Date.today)
+    @events_accepted    = Event.proposed.where('date >= ?', Date.today)
+
   end
 
   # GET /events/1 or /events/1.json
