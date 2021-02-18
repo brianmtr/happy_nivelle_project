@@ -1,4 +1,7 @@
-<table class="table table-striped">
+
+
+
+  <table class="table table-striped">
 
   <tbody>
 
@@ -14,11 +17,7 @@
             <%= link_to 'Refuser', events_url, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
             <%=  link_to 'Accepter',events_url, method: :validate %>
         <% end %>
-        <% if user_signed_in? %>
-            <%=  link_to 'Je participe', events_url, method: :participate, :class => "btn btn-success" %>
-            <%=  link_to 'Peut-être', events_url, method: :validate, :class => "btn btn-warning" %>
-            <%=  link_to 'Je ne participe pas',events_url, method: :validate, :class => "btn btn-danger" %>
-        <% end %>
+      
       
         </button>
       </h5>

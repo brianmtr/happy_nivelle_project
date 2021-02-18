@@ -17,16 +17,20 @@
     <nav>
       <div class="container">
         <ul class="navbar">
-          <li><a class ="" href="/">Accueil</a></li>
-          <li><a class ="" href="#">À propos</a></li>
-          <li><a class ="" href="/events">Boite à idées</a></li>
-          <li><a class ="" href="/agenda/index">Agenda</a></li>       
-          <li><a class ="" href="/contacts/new">Contact</a></li>
-          <% if user_signed_in? && current_user.admin === true %>
+          
           <li>
-          <a class ="" href="/admin/events">Admin</a>
+          <%= link_to 'évènements', admin_events_path %>
           </li>
-          <% end %>
+          <li>
+          <%= link_to 'commentaires', admin_comments_path %>
+          </li>
+          <li>
+          <%= link_to 'Utilisateurs', admin_users_path %>
+          </li>
+
+
+          <li><a class ="" href="/">Retour à l'accueil</a></li>
+
           <li>
             <% if user_signed_in? %>
             <%= link_to 'Se deconnecter', destroy_user_session_path, method: :delete %>
@@ -34,7 +38,7 @@
             <%= link_to 'Se connecter', new_user_session_path %>
             <% end %>
           </li> 
-           <li><a class ="" href="/users/edit">Mon compte</a></li>
+
     
         </ul>
       </div>

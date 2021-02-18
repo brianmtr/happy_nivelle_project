@@ -1,17 +1,3 @@
-  <% @events.each do |event| %>
-  <% if event.status === 'proposed' %>
-   <h2>Les évent proposés</h2> 
- 
-  <% elsif event.status === 'accepted' %>
-    <h2>Les évent acceptés</h2>
-
-  <% elsif event.status === 'past' %>
-    <h2>Les évent passés</h2>
-  <% end %>
-  
-  <% if event.status === 'proposed' || event.status === 'accepted' || event.status === 'past' %>
-
-  
   <table class="table table-striped">
   <tbody>
     <div id="accordion">
@@ -37,5 +23,3 @@
     </div>
   </tbody>
 </table>
-<% end %>
-<% end %>

@@ -1,4 +1,4 @@
-class Admin::CommentsController < ApplicationController
+class Admin::CommentsController < AdminController
   before_action :set_comment, only: %i[ show edit update destroy ]
 
   # GET /comments or /comments.json

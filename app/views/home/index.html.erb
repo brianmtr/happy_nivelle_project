@@ -6,11 +6,23 @@
 <% end %>
 </p>
 
-<%= render 'status', home: @home %>
+ <h2>Les évents acceptés</h2>
+
+<% @events_in_progress.each do |event| %>
+  <%= render 'status', event: event %>
+<% end %>
+
+<h2>Les évent proposés</h2>
+ <% @events_proposed.each do |event| %>
+  <%= render 'status', event: event %>
+<% end %>
 
 
- <%= render 'comments', home: @home %>
- 
+<h2>Les évent passés</h2>
+ <% @events_past.each do |event| %>
+  <%= render 'status', event: event %>
+<% end %>
+
 <br>
 <% if user_signed_in? %>
 <%= link_to 'Ajouter commentaire', new_comment_path %>

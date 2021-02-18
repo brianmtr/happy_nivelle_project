@@ -1,10 +1,12 @@
 class AdminController < ApplicationController
     before_action :authorized?
     
-    def index
-        @events = Event.all
-        @comments = Comment.all
-    end
+    layout 'administration'
+    
+    # def index
+    #     @events = Event.all
+    #     @comments = Comment.all
+    # end
 
 
     private

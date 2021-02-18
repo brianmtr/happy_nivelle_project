@@ -3,12 +3,17 @@
 <h1>Events</h1>
 
 
+<% @events_in_progress.each do |event| %>
+    <%= render 'status', event: event %>
+<% end %>
 
-    <%= render 'status', home: @home %>
-
+<% @events_proposed.each do |event| %>
+    <%= render 'status', event: event %>
+<% end %>
 
 <br>
 
 <% if user_signed_in? %>
+
 <%= link_to 'Créer un évènement', new_event_path %>
 <% end %>
