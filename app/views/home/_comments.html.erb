@@ -1,0 +1,33 @@
+ <tbody>
+    <% @comments.each do |comment| %>
+
+
+        <% if comment.accepted %>
+    
+    <div class="list-group" style="margin-left: 20%">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true" style="width: 60%">
+    <div class="d-flex w-100 justify-content-between">
+    
+      <h5 class="mb-1">
+      <% if user_signed_in? %>
+        <%= current_user.firstname %>
+      <% end %>
+      </h5>
+      
+      <%= comment.title %>
+
+
+      <p class="mb-1"><%= comment.description %></p>
+      
+    </div>
+    <div class=""><%= comment.created_at %></div>
+  </a>
+  <% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Supprimer', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+<% end %>
+<% end %>
+
+</div>
+
+    <% end %>
+  </tbody>

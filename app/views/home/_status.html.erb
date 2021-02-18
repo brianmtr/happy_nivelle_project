@@ -12,8 +12,6 @@
   <% if event.status === 'proposed' || event.status === 'accepted' || event.status === 'past' %>
 
   
-
-
   <table class="table table-striped">
   <tbody>
     <div id="accordion">
@@ -22,7 +20,7 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <%= event.title %> <br>
-                        <%= link_to 'Voir évenement', events_path(event.id) %>
+                        <%= link_to 'Voir événement', event_path(event.id) %>
                     </button>
                 </h5>
             </div>

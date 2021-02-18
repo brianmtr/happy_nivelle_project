@@ -7,3 +7,12 @@
 </p>
 
 <%= render 'status', home: @home %>
+
+
+ <%= render 'comments', home: @home %>
+ 
+<br>
+<% if user_signed_in? %>
+<%= link_to 'Ajouter commentaire', new_comment_path %>
+<% end %>
+<br>

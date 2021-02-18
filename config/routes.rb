@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/agenda/index'
   
   post '/events/:id', to: 'events#validate'
-
-  resources :comments, only: [:index, :create, :new, :show]
+  post '/comments/:id', to: 'comments#accepted'
+  resources :comments
   resources :events
   resources :admin, only: [:index]
 

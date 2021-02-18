@@ -1,7 +1,14 @@
 
 <% @events.each do |event| %>
-<% if event.status === 'accepted' %>
-<h2>Les évènements acceptés</h2>
+  <% if event.status === 'proposed' %>
+   <h2>Les évent proposés</h2> 
+ 
+  <% elsif event.status === 'accepted' %>
+    <h2>Les évent acceptés</h2>
+
+  <% end %>
+<% if event.status === 'proposed' || event.status === 'accepted'%>
+
   <table class="table table-striped">
 
   <tbody>
@@ -23,6 +30,7 @@
             <%=  link_to 'Peut-être', event, method: :validate, :class => "btn btn-warning" %>
             <%=  link_to 'Je ne participe pas', event, method: :validate, :class => "btn btn-danger" %>
         <% end %>
+      
         </button>
       </h5>
     </div>

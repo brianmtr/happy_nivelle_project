@@ -3,6 +3,7 @@ class AdminController < ApplicationController
     
     def index
         @events = Event.all
+        @comments = Comment.all
     end
 
 

@@ -42,3 +42,31 @@
 <% if user_signed_in? %>
 <%= link_to 'Créer un évènement', new_event_path %>
 <% end %>
+
+<h2>Commentaire à valider</h2>
+
+ <% @comments.each do |comment| %>
+<% if comment.accepted === false %>
+    <%= comment.created_at %>
+    <%= comment.description %>
+  
+
+   
+      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <%= link_to 'Show', comment %>
+        <%= link_to 'Edit', edit_comment_path(comment) %>
+        <%= link_to 'Refuser', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+        <%= link_to 'Accepter', comment, method: :accepted %>
+      </button>
+     
+      <br>
+
+
+</div>
+
+
+</table>
+
+
+<% end %>
+<% end %>
