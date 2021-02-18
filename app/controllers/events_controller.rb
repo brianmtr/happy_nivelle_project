@@ -1,15 +1,10 @@
 class EventsController < ApplicationController
-    before_action :set_event, only: %i[ show edit ]
+    before_action :set_event, only: %i[ show edit destroy ]
 
     def index
         @events = Event.all
         @users = User.all
     end
-
-     # GET /events/1 or /events/1.json
-  def show
-    # @event = Event.new
-  end
 
   # GET /events/new
   def new
@@ -30,6 +25,15 @@ class EventsController < ApplicationController
       end
     end
   end
+
+    # DELETE /events/1 or /events/1.json
+    def destroy
+      @event.destroy
+      respond_to do |format|
+        format.html { redirect_to events_url, notice: "Event was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    end
 
   def validate
     @event = Event.find(params[:id])
