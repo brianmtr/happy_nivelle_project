@@ -1,7 +1,7 @@
 <div class="card" style="width: 60%; margin-left: 20%">
   <div class="card-header" id="headingOne">       
       <% if user_signed_in? %>
-        <%= link_to 'Je participe', event_url, method: :participate, :class => "btn btn-success" %>
+        <%= link_to 'Je participe', events_url, method: :participate, :class => "btn btn-success" %>
         <%= link_to 'Peut-être', events_url, method: :maybe, :class => "btn btn-warning" %>
         <%= link_to 'Je ne participe pas',events_url, method: :notparticipate, :class => "btn btn-danger" %>
      
