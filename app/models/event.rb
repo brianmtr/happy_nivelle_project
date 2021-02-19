@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+    acts_as_votable
     include ImageUploader::Attachment.new(:image)
     validates :title, presence: true
     validates :description, presence: true

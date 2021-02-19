@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-    before_action :set_event, only: %i[ show edit update]
+    before_action :set_event, only: %i[ show edit update participate]
 
     def index    
       @events = Event.all
@@ -68,7 +68,26 @@ end
 #   end
 
 
+def participate
+  @event = Event.find(params[:id])
+  @event.participate = 1
+  @event.save
+  redirect_to event_path
+end
 
+def maybe
+  @event = Event.find(params[:id])
+  @event.maybe_participate = 1
+  @event.save
+  redirect_to event_path
+end
+
+def notparticipate
+  @event = Event.find(params[:id])
+  @event.not_participate = 1
+  @event.save
+  redirect_to event_path
+end
 
 
   private
@@ -80,7 +99,7 @@ end
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:title, :date, :adress, :description, :image)
+    params.require(:event).permit(:title, :date, :adress, :description, :image, :participate)
 
   end
 

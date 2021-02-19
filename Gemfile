@@ -59,3 +59,4 @@ gem 'devise'
 
 gem 'shrine'
 gem 'fastimage'
+gem 'acts_as_votable'

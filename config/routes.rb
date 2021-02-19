@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   post '/events/:id', to: 'validate#validate'
   # post '/comments/:id', to: 'comments#accepted'
   resources :comments
-  resources :events
+  resources :events do
+    member do
+      put "participate" => "events#participate"
+      put "maybe_participate" => "events#maybe_participate"
+      put "not_participate" => "events#not_participate"
+    end
+  end
 
 
   namespace :admin do
