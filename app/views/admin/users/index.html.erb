@@ -1,1 +1,26 @@
-<h1>Admin users </h1>
+<h1>Utilisateurs</h1>
+
+<% @users.each do |user| %>    
+     
+    <ul class="list-group">
+        <li class="list-group-item active" aria-current="true" style="width: 80%; margin-left: 10%">
+            <% if user.admin === 'true' %>
+                <strong>Admin</strong>
+            <% else %>
+                <strong>Utilisateur classique</strong>
+            <% end %>
+        </li>
+        <li class="list-group-item" style="width: 80%; margin-left: 10%">
+            <%= user.firstname %>
+            <br>
+            <%= user.lastname %>
+            <br>
+            <%= user.email %>
+            <br>
+            <%= link_to 'Changer rôle', @admin_user_path, method: :role, data: { confirm: 'Êtes-vous sûr ?' } %>
+
+        </li>
+
+    </ul>
+    <br>
+<% end %>

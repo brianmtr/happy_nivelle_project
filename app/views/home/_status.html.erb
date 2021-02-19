@@ -1,25 +1,19 @@
-  <table class="table table-striped">
-  <tbody>
-    <div id="accordion">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <%= event.title %> <br>
-                        <%= link_to 'Voir événement', event_path(event.id) %>
-                    </button>
-                </h5>
-            </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
+
+<div class="card" style="width: 60%; margin-left: 20%">
+<div class="card-header" id="headingOne">
+             
+                <scope="col"><%= image_tag event.image_url, height: 200 if event.image %><br>
                 <scope="col">Titre: <%= event.title %><br>
                 <scope="col">Date: <%= event.date %><br>
                 <scope="col">Adresse: <%= event.adress %><br><br>
                 <scope="col">Description:<br> <%= event.description %><br>
-                <scope="col">Image: <%= image_tag event.image_url, height: 200 if event.image %><br>
+                
+                <%= link_to 'Voir événement', event_path(event.id) %>
+
             </div>
         </div>
-        </div>
-    </div>
-  </tbody>
-</table>
+<br>
+
+
+
+

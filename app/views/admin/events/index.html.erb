@@ -14,7 +14,7 @@
         <td><%= event.adress %></td><br>
         <br>
         <td><%= event.description %></td><br>
-        <td><%= link_to 'Voir événement', event_path(event.id) %></td>
+        <td><%= link_to 'Voir événement', event_url(event) %></td>
         <%= link_to 'Edit', event %>
         <%= link_to 'Refuser', @admin_event_path, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
         <%= link_to 'Accepter', event, method: :accepted %>
@@ -32,12 +32,17 @@
     <%= render 'status', event: event %>
 <% end %>
 <br>
-<h2>Les évènements acceptés</h2>
 
-<% @events_accepted.each do |event| %>
+<h2>Les évènements acceptés</h2>
+<% @events_in_progress.each do |event| %>
     <%= render 'status', event: event %>
 <% end %>
 
 <% if user_signed_in? %>
 <%= link_to 'Créer un évènement', new_admin_event_path %>
 <% end %>
+
+
+
+
+
