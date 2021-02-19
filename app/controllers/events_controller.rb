@@ -68,26 +68,7 @@ end
 #   end
 
 
-def participate
-  @event = Event.find(params[:id])
-  @event.participate = 1
-  @event.save
-  redirect_to event_path
-end
 
-def maybe
-  @event = Event.find(params[:id])
-  @event.maybe_participate = 1
-  @event.save
-  redirect_to event_path
-end
-
-def notparticipate
-  @event = Event.find(params[:id])
-  @event.not_participate = 1
-  @event.save
-  redirect_to event_path
-end
 
 
   private
