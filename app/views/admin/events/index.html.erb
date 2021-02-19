@@ -17,13 +17,13 @@
         <td><%= link_to 'Voir événement', event_url(event) %></td>
         <%= link_to 'Edit', event %>
         <%= link_to 'Refuser', @admin_event_path, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-        <%= link_to 'Accepter', event, method: :accepted %>
+        <%= link_to 'Accepter', event, method: :validate %>
       </tr>
   </tbody>  
 </div>
 </div>
 <% end %>
-
+<br>
 <% end %>
 <br>
 <h2>Les évènements proposés</h2>
@@ -35,6 +35,12 @@
 
 <h2>Les évènements acceptés</h2>
 <% @events_in_progress.each do |event| %>
+    <%= render 'status', event: event %>
+<% end %>
+
+
+<h2>Les évènements passée</h2>
+<% @events_past.each do |event| %>
     <%= render 'status', event: event %>
 <% end %>
 

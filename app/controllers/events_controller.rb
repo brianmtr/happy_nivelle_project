@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
-    before_action :set_event, only: %i[ show create new ]
+    before_action :set_event, only: %i[ show edit update]
 
     def index    
       @events = Event.all
       @events_in_progress = Event.accepted.where('date >= ?', Date.today).limit(3)
       @events_proposed    = Event.proposed.where('date >= ?', Date.today).limit(3)
-      @events_past        = Event.accepted.where('date <= ?', Date.today).limit(3)
+      @events_past        = Event.past.where('date <= ?', Date.today).limit(3)
     end
 
  #GET /events/new
@@ -74,7 +74,7 @@ end
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_event
-    @event = Event.find_by(params[:id])
+    @event = Event.find(params[:id])
   end
 
 

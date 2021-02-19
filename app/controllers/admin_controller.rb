@@ -3,10 +3,11 @@ class AdminController < ApplicationController
     
     layout 'administration'
     
-    # def index
-    #     @events = Event.all
-    #     @comments = Comment.all
-    # end
+    def index
+        @events = Event.all
+        @comments = Comment.all
+        @users = User.all
+    end
 
 
     private

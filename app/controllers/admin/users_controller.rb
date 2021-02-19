@@ -21,11 +21,11 @@ class Admin::UsersController < AdminController
     
       # POST /events or /events.json
       def create
-        user = User.new(user_params)
+        @user = User.new(user_params)
     
         respond_to do |format|
           if @user.save
-            format.html { redirect_to @user, notice: "User was successfully created." }
+            format.html { redirect_to @user, notice: "Event was successfully created." }
             format.json { render :show, status: :created, location: @user }
           else
             format.html { render :new, status: :unprocessable_entity }
@@ -56,15 +56,10 @@ class Admin::UsersController < AdminController
         end
       end
 
-      def role
-        @user = User.find(params[:id])
-         if user.admin === 'false'
-             user.admin === 'true'
-         elsif user.admin === 'true'
-             user.admin === 'false'
-         end
-        end
+
       
+
+
     
       private
         # Use callbacks to share common setup or constraints between actions.
@@ -74,6 +69,6 @@ class Admin::UsersController < AdminController
     
         # Only allow a list of trusted parameters through.
         def user_params
-            params.require(:user).permit(:admin)
+          params.require(:user).permit(:firstname, :lastname, :email, :admin)
         end
  end

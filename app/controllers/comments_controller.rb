@@ -50,7 +50,7 @@ def new
     @comment = Comment.find(params[:id])
     @comment.accepted = true
     @comment.save
-    redirect_to '/admin', notice: "l'évenement a bien été accepté."
+    redirect_to '/admin/events', notice: "l'évenement a bien été accepté."
   end
 
 
