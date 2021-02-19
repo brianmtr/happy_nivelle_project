@@ -59,3 +59,5 @@ gem 'devise'
 
 gem 'shrine'
 gem 'fastimage'
+gem 'simple_form'
+gem 'mail_form'

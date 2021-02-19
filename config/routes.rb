@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, :comments, :events
   end
+
+  resources "contacts", only: [:new, :create]
+  
 end

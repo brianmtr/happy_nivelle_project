@@ -1,0 +1,18 @@
+<div align="center">
+  <h3>Envoyez-nous un message ! :)</h3>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, label: 'Nom', :required => true %>
+    <%= f.input :email, label: 'E-mail', :required => true %>
+    <%= f.input :message, :as => :text, :required => true %>
+    <%= f.check_box :rgpd, :required => true %>
+    <%= f.label :rg, 'J\'accepte d\'être recontacté via les informations fournies dans ce formulaire. Aucune donnée n\'est conservé.' %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <%= f.button :submit, 'Envoyer', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
