@@ -5,50 +5,98 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </head>
-
   <body>
   <header>
+    <div class ="contact-bar">
+    <div class="logo">
+      <%= image_tag("logo-hpn.png", :alt => "logo_happy_nivelle") %>
 
-    <nav>
+    </div>
+    <div class="item-contact-bar">
+      <ul>
+        <li class="item_contact_bar">
+        <div class="image-center-contact-bar">
+          <%= image_tag("logo_mail.png", :alt => "logo_mail") %>
+        </div>
+          <p>exemple.test@hotmail.fr</p>
+        </li>
+        <li class="item_contact_bar">
+        <div class="image-center-contact-bar">
+          <%= image_tag("logo-phone.png", :alt => "logo_phone") %>
+         </div>
+          <p>+33 (0)7.10.20.30.40</p>
+        </li>
+        <li>
+      
+          <%= image_tag("logo-facebook.png", :alt => "logo_facebook") %>
+        </li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Connexion', new_user_session_path %>
+          <% end %>
+        </li> 
+        <li>
+          <button class="ham"></button>
+        </li>
+
+      </ul>  
+      </div> 
+    </div>
+    <nav class="nav-ham">
       <div class="container">
         <ul class="navbar">
-          <li><a class ="" href="/">Accueil</a></li>
-          <li><a class ="" href="#">À propos</a></li>
-          <li><a class ="" href="/events">Boite à idées</a></li>
-          <li><a class ="" href="/agenda/index">Agenda</a></li>       
-          <li><a class ="" href="/contacts/new">Contact</a></li>
+          <li><a class ="menuLink" href="/">Accueil</a></li>
+          <li><a class ="menuLink" href="#">À propos</a></li>
+          <li><a class ="menuLink" href="/events">Boite à idées</a></li>
+          <li><a class ="menuLink" href="/agenda/index">Agenda</a></li>       
+          <li><a class ="menuLink" href="/contacts/new">Contact</a></li>
           <% if user_signed_in? && current_user.admin === 'true' %>
           <li>
           <a class ="" href="/admin/events">Admin</a>
           </li>
           <% end %>
-          <li>
-            <% if user_signed_in? %>
-            <%= link_to 'Se deconnecter', destroy_user_session_path, method: :delete %>
-            <% else %>
-            <%= link_to 'Se connecter', new_user_session_path %>
-            <% end %>
-          </li> 
+
            <li><a class ="" href="/users/edit">Mon compte</a></li>
     
         </ul>
       </div>
+
     </nav>
-  </header>
+    <div class="covid_band">
+      <p>Les événements peuvent être annulés en raison du COVID-19</p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
   
            
       </ul>
     </div>
   </div>
-</nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+    <div class="header-image">
+    <p class="title">Happy Nivelle</p>
+    <p class="subtitle">Association d’évènementielle</p>
+      <% if current_page?('/') %>
+        <%= image_tag("header-home.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/events') %>
+        <%= image_tag("header-events.png", :alt => "logo_facebook") %>
+      <%  %>
+    <% end %>
+      
+
+     </div>
+
+
     <%= yield %>
+        <% javascript_pack_tag 'custom.js' %>
+
   </body>
 </html>

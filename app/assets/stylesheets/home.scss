@@ -1,8 +1,104 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.contact-bar{
-    width: 100%;
-    height: 50px;
-    background-color: red;
+
+//Navbar
+*{
+    margin: auto 0;
 }
+.contact-bar{
+
+    height: 40px;
+    background-color: #494848;
+    color: #aae;
+    text-align: center;
+    display: flex;
+    
+}
+
+.contact-bar, ul, li{
+    display: inline-block;
+    display: flex;
+    
+}
+
+.item-contact-bar li{
+    
+    width: 100%;
+    display: flex;
+    height: 30px;
+    
+
+}
+
+
+
+.image-center-contact-bar{
+    padding-bottom: 10px;
+
+}
+
+.contact-bar ul {
+    padding-top: 10px;
+}
+
+.container {
+    // padding-top: 10px;
+}
+
+.covid_band {
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+// card events
+
+.card {
+   
+    display: flex;
+   justify-content: center;
+   width: 20%;
+}
+
+.card-header {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.card-header img {
+    width: 200px;
+    height: 200px;
+}
+
+
+h5{
+    text-align: center;
+}
+
+.card{
+   width: 60%; 
+   margin-left: 20%;
+   display: flex;
+   justify-content: center;
+}
+
+
+
+
+.logo {
+    position: relative;
+    
+    
+}
+
+
+
+
+//Media Querry 375 x 812

@@ -1,24 +1,23 @@
 
-<p id="notice"><%= notice %></p>
-<p>Bonjour  
-<% if user_signed_in? %>
-  <%= current_user.firstname %>
-<% end %>
-</p>
 
- <h2>Les évents acceptés</h2>
+<p id="notice"><%= notice %></p>
+
+
+
+
+ <h5>Les évènements acceptés</h5>
 
 <% @events_in_progress.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
 
-<h2>Les évent proposés</h2>
+<h5>Les évènements proposés</h5>
  <% @events_proposed.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
 
 
-<h2>Les évent passés</h2>
+<h5>Les évènements passés</h5>
  <% @events_past.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
