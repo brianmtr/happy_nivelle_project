@@ -3,7 +3,7 @@ class Contact < MailForm::Base
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message,   :validate => true
   attribute :nickname,  :captcha  => true
-  attribute :rgpd,      :validate => true
+  validates_acceptance_of :rgpd, accept: "1"
     # Declare the e-mail headers. It accepts anything the mail method
     # in ActionMailer accepts.
     def headers

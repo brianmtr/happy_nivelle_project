@@ -5,8 +5,8 @@
     <%= f.input :name, label: 'Nom', :required => true %>
     <%= f.input :email, label: 'E-mail', :required => true %>
     <%= f.input :message, :as => :text, :required => true %>
-    <%= f.check_box :rgpd, :required => true %>
-    <%= f.label :rg, 'J\'accepte d\'être recontacté via les informations fournies dans ce formulaire. Aucune donnée n\'est conservé.' %>
+    <%= f.check_box :rgpd %>
+    <%= f.label :rg, '*Champs obligatoire. J\'accepte d\'être recontacté via les informations fournies dans ce formulaire. Aucune donnée n\'est conservé.' %>
     <div class= "hidden">
       <%= f.input :nickname, :hint => 'Leave this field blank!' %>
     </div>
