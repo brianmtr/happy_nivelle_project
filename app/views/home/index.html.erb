@@ -11,11 +11,12 @@
   <%= render 'status', event: event %>
 <% end %>
 
+<div class="grey-box">
 <h5>Les évènements proposés</h5>
  <% @events_proposed.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
-
+</div>
 
 <h5>Les évènements passés</h5>
  <% @events_past.each do |event| %>
@@ -24,6 +25,8 @@
 
 <br>
 <% if user_signed_in? %>
+
 <%= link_to 'Ajouter commentaire', new_comment_path %>
+
 <% end %>
 <br>

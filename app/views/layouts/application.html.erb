@@ -88,7 +88,17 @@
         <%= image_tag("header-home.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/events') %>
         <%= image_tag("header-events.png", :alt => "logo_facebook") %>
-      <%  %>
+      <% elsif current_page? ('/about') %>
+        <%= image_tag("header-about.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/agenda') %>
+        <%= image_tag("header-agenda.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users/sign_in') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users/sign_up') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users/edit') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+
     <% end %>
       
 

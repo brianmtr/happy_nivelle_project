@@ -1,19 +1,28 @@
 
-<div class="card">
-<div class="card-header" >
+<div class="card-events" >
+                          
+                    <scope="col" ><p class="title-event"><%= event.title %></p>
+                        <div class="bar"></div>
              
-                <scope="col_image"><%= image_tag event.image_url %><br>
-                <scope="col">Titre: <%= event.title %><br>
-                <scope="col">Date: <%= event.date %><br>
-                <scope="col">Adresse: <%= event.adress %><br><br>
-                <scope="col">Description:<br> <%= event.description %><br>
+
+                <scope="col_image"><%= image_tag event.image_url %>
+   
+
+                <scope="col"><p class="description-event"><%= event.date %><br>
+                <scope="col"><%= event.adress %><br></p>
+                <scope="col"><p class="description-event"><%= event.description %></p>
                 
+
+                <div class="show-event">
+<button class="button">
                 <%= link_to 'Voir événement', event_path(event.id) %>
+</button>
+                </div>
 
             </div>
-        </div>
+       
 <br>
-
+<br>
 
 
  
