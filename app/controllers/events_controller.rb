@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-    before_action :set_event, only: %i[ show edit update participate]
+    before_action :set_event, only: %i[ show edit update ]
 
     def index    
       @events = Event.all
@@ -20,7 +20,7 @@ end
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: "Event was successfully created." }
+        format.html { redirect_to @event, notice: "L'évènement a été créé avec succès." }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -30,7 +30,7 @@ end
   end
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: "Event was successfully created." }
+        format.html { redirect_to @event, notice: "L'évènement a été créé avec succès." }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new, status: :unprocessable_entity }

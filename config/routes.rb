@@ -11,13 +11,14 @@ Rails.application.routes.draw do
   resources :comments
   resources :events do
     member do
-      put "participate" => "events#participate"
-      put "maybe_participate" => "events#maybe_participate"
-      put "not_participate" => "events#not_participate"
+      put "participates" => "participates#participate"
+      put "maybes" => "maybes#maybe"
+      put "notparticipates" => "notparticipates#notparticipate"
     end
   end
 
 
+resources :participates, only: [ :update ]
   namespace :admin do
     resources :users, :comments, :events
   end
