@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :userevents
   root 'home#index'
   devise_for :users
 
@@ -11,9 +12,9 @@ Rails.application.routes.draw do
   resources :comments
   resources :events do
     member do
-      put "participates" => "participates#participate"
-      put "maybes" => "maybes#maybe"
-      put "notparticipates" => "notparticipates#notparticipate"
+      put "participates" => "participates#update"
+      put "maybes" => "maybes#update"
+      put "notparticipates" => "notparticipates#update"
     end
   end
 
