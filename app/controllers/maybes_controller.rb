@@ -4,7 +4,7 @@ class MaybesController < EventsController
       # PATCH/PUT /events/1 or /events/1.json
   def update
     @event.increment!(:maybe_participate)
-    @userevents_in_maybe  = 'maybe'
+    @userevents.state  = 'maybe'
   end
 
 

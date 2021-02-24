@@ -2,10 +2,9 @@
   <div class="card-header" id="headingOne event-<%= event.id %>">       
       <% if user_signed_in? %>
       
-        <%= link_to 'Je participe', participates_event_path(event), method: :put , remote: true, :class => "btn btn-success" %>
-     
-        <%= link_to 'Peut-être', maybes_event_path(event), method: :put , remote: true, :class => "btn btn-warning" %>
-        <%= link_to 'Je ne participe pas',notparticipates_event_path(event), method: :put , remote: true, :class => "btn btn-danger" %>
+        <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "btn btn-success" %>
+        <%= link_to 'Peut-être', maybes_event_path(event), method: :put, remote: true, :class => "btn btn-warning" %>
+        <%= link_to 'Je ne participe pas',notparticipates_event_path(event), method: :put, remote: true, :class => "btn btn-danger" %>
      
        
 <% end %>

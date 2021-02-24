@@ -5,7 +5,7 @@ before_action :set_event, only: [:update ]
   # PATCH/PUT /events/1 or /events/1.json
   def update
     @event.increment!(:participate)
-    @userevents_in_yes  = 'yes'
+    @userevents.state  = 'yes'
   end
 
     private

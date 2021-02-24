@@ -3,8 +3,11 @@ class NotparticipatesController < EventsController
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
-    @event.increment!(:not_participate)
-    @userevents_in_no  = 'no'
+    if @event.increment!(:not_participate)
+    @event = userevent.id
+    @user = userevent.id
+    @userevent.state  = 'no'
+    end
   end
 
   private
