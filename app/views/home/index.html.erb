@@ -4,26 +4,47 @@
 
 
 
-
- <h5>Les évènements acceptés</h5>
-
+<div class="image_comming">
+<%= image_tag("smiley_coming.png", :alt => "logo_happy_nivelle") %>
+ <h5>À venir</h5>
+</div>
 <% @events_in_progress.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
 
 <div class="grey-box">
-<h5>Les évènements proposés</h5>
+
+  <div class="image_comming">
+    <%= image_tag("Clock-proposed.png", :alt => "logo_happy_nivelle") %>
+    <h5>Les proposés</h5>
+  </div>
+
+
  <% @events_proposed.each do |event| %>
   <%= render 'status', event: event %>
+      <div class="circle">
+      <%= image_tag("circle.png", :alt => "logo_happy_nivelle") %>
+    </div>
 <% end %>
+<div class="quart-disque">
+<%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
+</div>
 </div>
 
-<h5>Les évènements passés</h5>
+
+<div class="image_comming">
+<%= image_tag("flag_past.png", :alt => "logo_happy_nivelle") %>
+ <h5>Les terminés</h5>
+</div>
+
+
  <% @events_past.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
 
 <br>
+
+
 <% if user_signed_in? %>
 
 <%= link_to 'Ajouter commentaire', new_comment_path %>

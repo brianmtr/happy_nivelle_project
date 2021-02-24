@@ -49,7 +49,7 @@
       </ul>  
       </div> 
     </div>
-    <nav class="nav-ham">
+    <nav class="nav-ham mobile" >
       <div class="container">
         <ul class="navbar">
           <li><a class ="menuLink" href="/">Accueil</a></li>
@@ -69,12 +69,29 @@
       </div>
 
     </nav>
+    <nav class="pc" >
+     <ul class="navbar">
+          <li><a class ="menuLink" href="/">Accueil</a></li>
+          <li><a class ="menuLink" href="#">À propos</a></li>
+          <li><a class ="menuLink" href="/events">Boite à idées</a></li>
+          <li><a class ="menuLink" href="/agenda/index">Agenda</a></li>       
+          <li><a class ="menuLink" href="/contacts/new">Contact</a></li>
+          <% if user_signed_in? && current_user.admin === 'true' %>
+          <li>
+          <a class ="" href="/admin/events">Admin</a>
+          </li>
+          <% end %>
+
+           <li><a class ="" href="/users/edit">Mon compte</a></li>
+    
+        </ul>
+        </nav>
     <div class="covid_band">
       <p>Les événements peuvent être annulés en raison du COVID-19</p>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
-
+</header>
   
            
       </ul>
@@ -106,7 +123,21 @@
 
 
     <%= yield %>
-        <% javascript_pack_tag 'custom.js' %>
+        
+<footer>
+<div class="logo-footer">
+  <%= image_tag("logo-hpn.png", :alt => "logo_facebook") %>
+</div>
+          <a class ="contact-footer" href="/contacts/new">Contactez-nous</a><br>
+          <p class="address-footer">Addresse: 75 rue exemple, 59230 Nivelle</p>
+<br>
+<div class="facebook-footer">
+  <a><%= image_tag("logo-facebook.png", :alt => "logo_facebook") %></a>
+</div>
+<br>
+ <p class="copyright">COPYRIGHT-Happy Nivelle 2021</p>
 
+</footer>
+<% javascript_pack_tag 'custom.js' %>
   </body>
 </html>

@@ -141,3 +141,38 @@
         text-shadow:  1px 3px 0px #494848;
         font-weight: bold;
     }
+
+
+    footer{
+      background-color: #494848;
+      width: 100%;
+      
+    }
+
+    .logo-footer, .facebook-footer{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    .contact-footer, .address-footer, .copyright{
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+
+    @media screen and (min-width: 772px){
+      .logo {
+        display: block;
+        
+    }
+
+
+  .ham{
+    display: none;
+  }
+  
+
+    }
