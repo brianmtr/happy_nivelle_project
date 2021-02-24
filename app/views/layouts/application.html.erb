@@ -18,18 +18,20 @@
 
     </div>
     <div class="item-contact-bar">
-      <ul>
+      <ul class="position-bar">
         <li class="item_contact_bar">
         <div class="image-center-contact-bar">
           <%= image_tag("logo_mail.png", :alt => "logo_mail") %>
-        </div>
           <p>exemple.test@hotmail.fr</p>
+        </div>
+          
         </li>
         <li class="item_contact_bar">
         <div class="image-center-contact-bar">
           <%= image_tag("logo-phone.png", :alt => "logo_phone") %>
-         </div>
           <p>+33 (0)7.10.20.30.40</p>
+         </div>
+          
         </li>
         <li>
       
@@ -42,7 +44,7 @@
             <%= link_to 'Connexion', new_user_session_path %>
           <% end %>
         </li> 
-        <li>
+        <li class="li-ham">
           <button class="ham"></button>
         </li>
 

@@ -45,6 +45,9 @@
         
     }
 
+    .pc {
+      display: none;
+    }
 
     .ham {
         position: absolute;
@@ -55,7 +58,8 @@
         height: 25px;
         border: none;
         cursor: pointer;
-        background-color: transparent;
+        background-color: #fba627;
+        border-radius: 3px;
         background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
         background-size: 100%;
         visibility: visible;
@@ -121,6 +125,10 @@
         width: 100%;
     }
 
+    .position-bar li {
+      display: flex;
+      justify-content: center;
+    }
 
     .title{
         color: #fff;
@@ -141,7 +149,7 @@
         text-shadow:  1px 3px 0px #494848;
         font-weight: bold;
     }
-
+ 
 
     footer{
       background-color: #494848;
@@ -162,17 +170,69 @@
       margin-bottom: 0;
     }
 
+    @media screen and (min-width: 600px){
+      .title, .subtitle {
+        font-size: 30px;
+      }
+      .title {
+        top: 120px;
+      }
+      .subtitle {
+        top: 150px;
+      }
+    }
 
     @media screen and (min-width: 772px){
       .logo {
         display: block;
         
     }
+    .title, .subtitle {
+      font-size: 40px;
+    }
+    .title {
+      top: 130px;
+    }
+    .subtitle {
+      top: 170px;
+    }
 
-
-  .ham{
-    display: none;
+ 
+  
+  .navbar li a {
+    color: black;
   }
   
+    }
+
+
+    @media screen and (min-width: 992px){
+      .navbar {
+    display: flex;
+    justify-content: space-evenly !important;
+  }
+
+      .pc {
+    display: block;
+  }
+  
+  .li-ham {
+    display: none !important;
+  }
+
+  .item_contact_bar p {
+    display: block;
+}
+
+.image-center-contact-bar {
+  display: flex;
+  padding-top: 5px;
+  
+}
+
+.image-center-contact-bar p {
+  margin-bottom: 0 !important;
+  padding-left: 5px;
+}
 
     }
