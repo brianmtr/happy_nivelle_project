@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
 
-    has_many :userevent
-    has_many :user, through: :userevent
+    has_many :userevents
+    has_many :users, through: :userevents
     
     include ImageUploader::Attachment.new(:image)
     validates :title, presence: true
