@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :userevent
-  has_many :event, through: :userevent
+  has_many :userevents
+  has_many :events, through: :userevents
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
