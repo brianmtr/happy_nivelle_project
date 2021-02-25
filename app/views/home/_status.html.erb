@@ -1,19 +1,28 @@
 
-<div class="card" style="width: 60%; margin-left: 20%">
-<div class="card-header" id="headingOne">
+<div class="card-events" >
+                          
+                    <scope="col" ><p class="title-event"><%= event.title %></p>
+                        <div class="bar"></div>
              
-                <scope="col"><%= image_tag event.image_url, height: 200 if event.image %><br>
-                <scope="col">Titre: <%= event.title %><br>
-                <scope="col">Date: <%= event.date %><br>
-                <scope="col">Adresse: <%= event.adress %><br><br>
-                <scope="col">Description:<br> <%= event.description %><br>
+
+                <scope="col_image"><%= image_tag event.image_url %>
+   
+
+                <scope="col"><p class="description-event"><%= event.date %><br>
+                <scope="col"><%= event.adress %><br></p>
+                <scope="col"><p class="description-event"><%= event.description %></p>
                 
-                <%= link_to 'Voir événement', event_path(event.id) %>
+
+                <div class="show-event">
+<button class="button">
+                <%= link_to 'Agenda', event_path(event.id) %>
+</button>
+                </div>
 
             </div>
-        </div>
+       
+<br>
 <br>
 
 
-
-
+ 

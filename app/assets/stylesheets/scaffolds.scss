@@ -14,14 +14,32 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000; }
+  color: #000;
+  text-decoration: none !important;
+ }
 
 a:visited {
-  color: #666; }
+  color: #000;
+  
+ }
 
-a:hover {
-  color: #fff;
-  background-color: #000; }
+// a:hover {
+//   color: #000 !important;
+//   text-decoration: underline 3px solid #fba627 !important ;
+//    }
+
+
+   .menuLink:after {
+    display: block;
+    content:'';
+    border-bottom: 3px solid #fba627;
+    transform: scaleX(0);  
+    transition: transform 0.4s ease-in-out;
+  }
+  .menuLink:hover:after {
+    transform: scaleX(1.5);
+  }
+
 
 th {
   padding-bottom: 5px; }

@@ -1,5 +1,5 @@
-<div class="card" style="width: 60%; margin-left: 20%">
-  <div class="card-header" id="headingOne event-<%= event.id %>">       
+<div class="card">
+  <div class="card-header" id="headingOne">       
       <% if user_signed_in? %>
       
         <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "btn btn-success" %>
@@ -19,7 +19,7 @@
       <scope="col">Adresse: <%= event.adress %><br><br>
       <scope="col">Description:<br> <%= event.description %><br>
 
-      <%= link_to 'Voir évenement', event_path(event.id) %>
+    <%= link_to 'Voir évenement', event_path(event.id) %>
   </div>
 </div>
 <br>

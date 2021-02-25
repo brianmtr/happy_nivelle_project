@@ -1,8 +1,315 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.contact-bar{
-    width: 100%;
-    height: 50px;
-    background-color: red;
+
+//Navbar
+*{
+    margin: auto 0;
 }
+.contact-bar{
+
+    height: 40px;
+    background-color: #494848;
+    color: #aae;
+    text-align: center;
+    display: flex;
+    
+}
+
+.contact-bar, ul, li{
+    display: inline-block;
+    display: flex;
+    
+}
+
+.item-contact-bar li{
+    
+    width: 100%;
+    display: flex;
+    height: 30px;
+    
+
+}
+
+
+
+.image-center-contact-bar{
+    padding-bottom: 10px;
+
+}
+
+.contact-bar ul {
+    padding-top: 10px;
+}
+
+.container {
+    // padding-top: 10px;
+}
+
+.covid_band {
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+// card events
+
+
+
+.card-events {
+    // background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+}
+
+.card-events img {
+    max-width: 80%;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 10%;
+    
+}
+
+
+h5{
+    text-align: center;
+}
+
+
+
+
+
+
+.logo {
+    position: relative;
+    
+    
+}
+
+
+
+.title-event{
+    
+    transform: rotate(270deg);
+    position: relative;
+    left: 10px;
+    top: 330px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px !important;
+    text-align: left;
+    margin-right: 100%;
+ 
+
+}
+
+.bar {
+    transform: rotate(270deg);
+    position: relative;
+    top: 80px;
+    right: 50px;
+    border-radius: 10px;
+    width: 200px;
+    height: 3px;
+    background-color: #FBA627;
+    margin-bottom: 10px;
+}
+
+
+.show-event {
+    text-align: center;
+    color: #fff;
+}
+
+.description-event{
+    text-align: center;
+
+}
+
+
+.grey-box{
+    background-color: #494848;
+    color: #fff;
+
+}
+
+.button{
+    position: relative;
+    bottom: 120px;
+    left: 80px;
+    background-color: #EC2727;
+    border-radius: 5px;
+    border: none;
+   
+}
+
+.button a{
+    color: #fff !important;
+}
+
+
+
+.image_comming{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.quart-disque img{
+    width: 15%;
+    margin-left: 85%;
+}
+
+
+
+.circle{
+    padding-left: 50px;
+
+}
+
+.circle img{
+
+    width: 7%;
+}
+
+//Media Querry 375 x 812
+
+
+@media screen and(min-width: 480px){
+    .bar {
+        right: 20px;
+    }
+}
+
+@media screen and(min-width: 576px){
+    .button{
+    
+        left: 140px;
+
+    }
+}
+
+
+
+@media screen and(min-width: 772px){
+    .button{
+    
+        left: 170px;
+
+    }
+
+
+
+    
+}
+
+@media screen and(min-width: 1200px){
+    .card-events{
+        width: 20%;
+        display: flex;
+       flex-direction:  column;
+    }
+    .button{
+        left: 55px;
+    }
+
+    .align-card{
+        display: flex;
+
+    }
+    
+    .bar {
+        transform: rotate(270deg);
+        position: relative;
+        top: 80px;
+        right: 50px;
+        border-radius: 10px;
+        width: 200px;
+        height: 3px;
+        background-color: #FBA627;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 1900px){
+
+
+.card-events img {
+    max-width: 70%;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 10%;
+} 
+
+.bar{
+    right: 30px;
+}
+
+.circle{
+    border: 8px solid #fba627;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: 5%;
+  }
+  .quart-disque{
+    height: 150px;
+  }
+
+  .quart-disque img{
+    height: 150px;
+    width: 10%;
+    margin-left: 90%;
+  }
+
+  .circletitle{
+    border: 8px solid #fba627;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    
+  }
+
+
+}
+
+
+@media screen and (min-width: 1900px){
+
+    .circle{
+        border: 8px solid #fba627;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        margin-left: 5%;
+      }
+      .quart-disque{
+        height: 150px;
+      }
+
+      .quart-disque img{
+        height: 150px;
+        width: 10%;
+        margin-left: 90%;
+      }
+
+    .circletitle{       
+         margin-right: 5%;
+        }
+
+      .test{
+          display: flex;
+          justify-content: space-between;
+      }
+
+  }
