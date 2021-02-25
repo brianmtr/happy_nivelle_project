@@ -1,3 +1,100 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container-about{
+    width: 100%;
+    height: 600px;
+   
+    text-align: justify;
+}
+
+.text-about{
+    width: 100%;
+}
+
+.text-about p, h2{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.image-about{
+    width: 80%;
+    background-color: #fba627;
+    transform: rotate(-5deg);
+    margin-top: 50px;
+margin-left: 10%;
+}
+
+.image-about img{
+    width: 100%;
+    transform: rotate(5deg);
+}
+
+.title-decoration{
+    padding-bottom: 10px;
+}
+
+.title-deco{
+    font-size: 50px;
+    color: #F1F0F0;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.stats{
+    width: 100%;
+    height: 200px;
+    background-color: #494848;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.image-stats img{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.image-stats{
+    height: 200px;
+    padding-top: 100px;
+}
+
+.text-stats{
+    color: #fff;
+    height: 200px;
+    width: 40%;
+    display: flex;
+    margin-left: 30%;
+}
+
+.text-stats {
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-stats p{
+    font-size: 30px;
+
+}
+
+//members of happy nivelle
+
+
+
+.title-members p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.pictures-members{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.pictures-members img{
+    width: 20%;
+    margin: 1%;
+}
