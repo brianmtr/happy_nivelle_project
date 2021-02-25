@@ -1,10 +1,10 @@
-class RoleController < UsersController
+class Admin::RoleController < Admin::UsersController
     def index
         @users = User.all
       end
 
 
-      def role
+      def update
         @user = User.find(params[:id])
          role = @user.admin
          case role
@@ -12,7 +12,7 @@ class RoleController < UsersController
        when 'false'
          @user.admin = 'true'
          @user.save
-         redirect_to '/admin/users/', notice: "L'utilisateur est devenu admin."
+         redirect_to '/admin/users/', notice: "L'utilisateur classique est devenu admin."
        
        when 'true' 
          @user.admin = 'false'

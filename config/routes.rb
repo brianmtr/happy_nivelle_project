@@ -21,8 +21,13 @@ Rails.application.routes.draw do
 
 
 resources :participates, only: [ :update ]
+
   namespace :admin do
-    resources :users, :comments, :events
+    resources :users, :comments, :events do
+      member do
+        put "role" => "role#update"
+      end
+    end
   end
 
   resources "contacts", only: [:new, :create]
