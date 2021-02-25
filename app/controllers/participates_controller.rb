@@ -1,6 +1,7 @@
 class ParticipatesController < EventsController
 
 before_action :set_userevent, only: %i[ new create ]
+before_action :set_user
 
 
 
@@ -42,10 +43,14 @@ before_action :set_userevent, only: %i[ new create ]
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testing upsert_all in the functionality
   def set_user
     @user = User.find(params[:id])
   end
 
+<<<<<<< HEAD
   def set_userevent
     @userevent = UserEvent.find(params[:id])
   end
@@ -54,6 +59,8 @@ before_action :set_userevent, only: %i[ new create ]
     params.fetch(:userevent, {}).permit(:state)
  
 =======
+=======
+>>>>>>> testing upsert_all in the functionality
   def set_userevent
     @userevent = Userevent.find(params[:id])
   end
