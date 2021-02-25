@@ -1,6 +1,7 @@
 class ParticipatesController < EventsController
 
 before_action :set_userevent, only: %i[ new create ]
+before_action :set_user
 
 
 
@@ -40,7 +41,6 @@ before_action :set_userevent, only: %i[ new create ]
     @event = Event.find(params[:id])
   end
 
-<<<<<<< HEAD
   def set_user
     @user = User.find(params[:id])
   end
@@ -51,15 +51,7 @@ before_action :set_userevent, only: %i[ new create ]
 
   def userevent_params
     params.fetch(:userevent, {}).permit(:state)
-=======
-  def set_userevent
-    @userevent = Userevent.find(params[:id])
-  end
-
-  def userevent_params
-    params.fetch(:userevent, {})
->>>>>>> writing logic for uservote
-  end
+ 
   
 end
 
