@@ -8,24 +8,31 @@
 <%= image_tag("smiley_coming.png", :alt => "logo_happy_nivelle") %>
  <h5>À venir</h5>
 </div>
+<div class="align-card">
 <% @events_in_progress.each do |event| %>
   <%= render 'status', event: event %>
 <% end %>
-
+</div>
 <div class="grey-box">
 
   <div class="image_comming">
     <%= image_tag("Clock-proposed.png", :alt => "logo_happy_nivelle") %>
     <h5>Les proposés</h5>
+    
   </div>
-
+<div class="test">
+       <div class="circle"></div>
+<div class="circletitle"></div>
+    </div>
+<div class="align-card">
 
  <% @events_proposed.each do |event| %>
+
+    
   <%= render 'status', event: event %>
-      <div class="circle">
-      <%= image_tag("circle.png", :alt => "logo_happy_nivelle") %>
-    </div>
+
 <% end %>
+</div>
 <div class="quart-disque">
 <%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
 </div>

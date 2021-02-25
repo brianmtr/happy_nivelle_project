@@ -37,7 +37,7 @@
       
           <%= image_tag("logo-facebook.png", :alt => "logo_facebook") %>
         </li>
-        <li>
+        <li class="connexion">
           <% if user_signed_in? %>
             <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %>
           <% else %>
@@ -45,7 +45,7 @@
           <% end %>
         </li> 
         <li class="li-ham">
-          <button class="ham"></button>
+          <button class="ham"><%= image_tag("burger.png", :alt => "logo_facebook") %></button>
         </li>
 
       </ul>  
@@ -80,11 +80,11 @@
           <li><a class ="menuLink" href="/contacts/new">Contact</a></li>
           <% if user_signed_in? && current_user.admin === 'true' %>
           <li>
-          <a class ="" href="/admin/events">Admin</a>
+          <a class ="menuLink" href="/admin/events">Admin</a>
           </li>
           <% end %>
 
-           <li><a class ="" href="/users/edit">Mon compte</a></li>
+           <li><a class ="menuLink" href="/users/edit">Mon compte</a></li>
     
         </ul>
         </nav>
@@ -103,13 +103,14 @@
     <div class="header-image">
     <p class="title">Happy Nivelle</p>
     <p class="subtitle">Association d’évènementielle</p>
+    <p class="catch_phrase">Organisateur de soirée a thème, weekend , et voyage à modifier...</p>
       <% if current_page?('/') %>
         <%= image_tag("header-home.png", :alt => "logo_facebook") %>
-      <% elsif current_page? ('/events') %>
+      <% elsif current_page? ('/events') && ('/events/new') %>
         <%= image_tag("header-events.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/about') %>
         <%= image_tag("header-about.png", :alt => "logo_facebook") %>
-      <% elsif current_page? ('/agenda') %>
+      <% elsif current_page? ('/agenda/index') %>
         <%= image_tag("header-agenda.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/users/sign_in') %>
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
@@ -117,6 +118,9 @@
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/users/edit') %>
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/contacts/new') %>
+              <%= image_tag("header-contact.png", :alt => "logo_facebook") %>
+
 
     <% end %>
       
@@ -130,11 +134,13 @@
 <div class="logo-footer">
   <%= image_tag("logo-hpn.png", :alt => "logo_facebook") %>
 </div>
+<div class="container-footer">
           <a class ="contact-footer" href="/contacts/new">Contactez-nous</a><br>
           <p class="address-footer">Addresse: 75 rue exemple, 59230 Nivelle</p>
 <br>
 <div class="facebook-footer">
   <a><%= image_tag("logo-facebook.png", :alt => "logo_facebook") %></a>
+</div>
 </div>
 <br>
  <p class="copyright">COPYRIGHT-Happy Nivelle 2021</p>
