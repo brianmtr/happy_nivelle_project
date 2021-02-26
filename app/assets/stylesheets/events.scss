@@ -14,10 +14,13 @@
     width: 80%;
     margin-left: 10%;
     margin-top: 10%;
+    border-radius: 50px !important;
+    box-shadow: -6px -6px 10px rgba(145, 145, 145, 0.8), 6px 6px 10px rgba(255, 255, 255, 0.4);
 }
 
 .card-header {
     width: 100%;
+    border-radius: 50px !important;
 }
 
 .image-event img {
@@ -58,6 +61,7 @@
     margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 //show
 .image-show img{
     width: 100%;
@@ -69,6 +73,30 @@
     margin-left: 10%;
 }
 
+=======
+.create-event button{
+    border: 3px solid #fba627;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.create-event button a:hover{
+    color: #fba627 !important;
+}
+
+.show-event {
+    background-color: #EC2727;
+    border: none;
+    box-shadow: 1px 3.5px 5px rgb(0, 0, 0);
+}
+
+.show-event a {
+    color: white !important;
+    font-weight: bold;
+}
+>>>>>>> add style to card, card-header and button
 //media querry
 @media screen and (min-width: 576px){
     .btn {
