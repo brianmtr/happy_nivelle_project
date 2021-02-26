@@ -1,25 +1,31 @@
 <div class="card">
-  <div class="card-header" id="headingOne">       
+  <div class="card-header" id="headingOne">  
+  
       <% if user_signed_in? %>
-      
+        <div class="button-voted">   
         <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "btn btn-success" %>
         <%= link_to 'Peut-être', maybes_event_path(event), method: :put, remote: true, :class => "btn btn-warning" %>
         <%= link_to 'Je ne participe pas',notparticipates_event_path(event), method: :put, remote: true, :class => "btn btn-danger" %>
-     
+     </div>
        
 <% end %>
       
 
 
 <div class="composant-event">
+<div class="image-date-event">
       <scope="col"><%= event.date %><br>
       <scope="col"><div class="image-event"><%= image_tag event.image_url %></div><br>
+      </div>
+      <div class="title-description-event">
       <strong><scope="col"><%= event.title %></strong><br>
-      
       <scope="col"><%= event.adress %><br><br>
       <scope="col"><%= event.description %><br>
+       <%= link_to 'Voir évenement', event_path(event.id) %>
+      </div>
       <br>
-    <%= link_to 'Voir évenement', event_path(event.id) %>
+
+   
   </div>
 </div>
 </div>
