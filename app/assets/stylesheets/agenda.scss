@@ -1,3 +1,39 @@
 // Place all the styles related to the agenda controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.cards{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px !important;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+}
+
+.cards:hover{
+    opacity: 0.6;
+    box-shadow: -6px -6px 10px rgba(211, 211, 211, 0.7), 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-headers{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px !important;
+    background-color: rgb(253, 253, 253) !important;
+}
+
+.container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.button-agenda{
+    border: 1px solid rgb(180, 180, 180) !important;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.4);
+border-radius: 50px;
+background-color: #FBA627;
+padding: 5px;
+}
+

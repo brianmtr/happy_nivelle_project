@@ -66,6 +66,7 @@
     width: 80%;
     margin-left: 10%;
     align-items: center;
+
 }
 
 .card-events img {
@@ -73,7 +74,13 @@
     height: 300px;
     object-fit: cover;
     margin-left: 10%;
-    
+    box-shadow: -6px -6px 10px rgba(117, 117, 117, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.card-events img:hover{
+    box-shadow: -6px -6px 10px rgba(211, 211, 211, 0.7), 6px 6px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 

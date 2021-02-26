@@ -1,24 +1,22 @@
-<table>
-
-  <thead>
-   
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
 <% @events.each do |event| %>
+
   <td><% if event.status === "accepted" %>
-    <tbody>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.date %></td>
-        <td><%= link_to 'Voir événement', event_path(event.id) %></td>
-      </tr>
+    <div class="cards">
+  <div class="card-headers" id="headingOne">  
+   
+      
+        <strong><%= event.title %></strong>
+        <%= event.date %>
+        <button class="button-agenda">
+        <%= link_to 'Voir événement', event_path(event.id) %>
+      </button>
+         </div>
+    </div>
       <% else %>
+
         <% end %>
+
     <% end %>
-  </tbody>
-</table>
+
+</div>
