@@ -1,6 +1,13 @@
 // Place all the styles related to the agenda controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+
+@media screen and (min-width: 1900px){
+
+
 .cards{
     width: 70%;
     margin-left: 15%;
@@ -37,3 +44,4 @@ background-color: #FBA627;
 padding: 5px;
 }
 
+}
