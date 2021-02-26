@@ -1,7 +1,34 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>La Boîte à idées</h1>
+<h1 class="event-title">La Boîte à idées</h1>
+
+<div class="container-top-event">
+<div class="event-top-image">
+  <%= image_tag("presentation-event.png", :alt => "logo_facebook") %>
+</div>
+<div class="event-top-text">
+<p>
+    Vous pouvez voir ici les événements qui ont retenu 
+    l’attention du public, qui ont été proposé et qui 
+    sont en cours de vote.
+</p>
+<p>
+    Vérifiez les événements qui vont se produire pour ne
+     pas les louper, votez pour ceux qui vous intéresse.
+</p>
+<p>
+    Vous avez une idée d’évènement qui pourrait vous intéresser
+    ainsi que vos amis et voisins ?
+</p>
+<p>
+    N’hésitez pas, vous pouvez également proposer
+     l’évènement de votre choix en bas de page !
+</p>
+</div>
+</div>
+
+
 
 
 <% @events_in_progress.each do |event| %>
@@ -15,6 +42,7 @@
 <br>
 
 <% if user_signed_in? %>
-
+<div class="create-event">
 <%= link_to 'Créer un évènement', new_event_path %>
+</div>
 <% end %>

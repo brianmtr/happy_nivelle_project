@@ -11,17 +11,18 @@
       
 
 
+<div class="composant-event">
+      <scope="col"><%= event.date %><br>
+      <scope="col"><div class="image-event"><%= image_tag event.image_url %></div><br>
+      <strong><scope="col"><%= event.title %></strong><br>
+      
+      <scope="col"><%= event.adress %><br><br>
+      <scope="col"><%= event.description %><br>
       <br>
-      <br>
-      <scope="col"><%= image_tag event.image_url, height: 200 if event.image %><br>
-      <scope="col">Titre: <%= event.title %><br>
-      <scope="col">Date: <%= event.date %><br>
-      <scope="col">Adresse: <%= event.adress %><br><br>
-      <scope="col">Description:<br> <%= event.description %><br>
-
     <%= link_to 'Voir évenement', event_path(event.id) %>
   </div>
 </div>
-<br>
+</div>
+
 
 
