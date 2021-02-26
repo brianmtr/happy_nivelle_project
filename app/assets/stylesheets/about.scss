@@ -34,7 +34,7 @@ margin-left: 10%;
     padding-bottom: 10px;
 }
 
-.title-deco{
+.title-deco {
     font-size: 50px;
     color: #F1F0F0;
     font-weight: bold;
@@ -141,4 +141,30 @@ justify-content: center;
     .title-deco{
         margin-top: 250px;
     }
+}
+
+@media screen and(min-width: 1900px){
+    .image-about{
+margin-top: 200px;
+    }
+
+    .text-about{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .text-about p{
+        font-size: 20px;
+
+}
+
+.title-decoration {
+    margin-top: 800px;
+    margin-bottom: 50px;
+}
+
+.title-deco{
+    font-size: 150px;
+
+}
+
 }
