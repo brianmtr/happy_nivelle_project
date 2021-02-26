@@ -1,3 +1,225 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container-about{
+    width: 100%;
+    height: 600px;
+   
+    text-align: justify;
+}
+
+.text-about{
+    width: 100%;
+}
+
+.text-about p, h2{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.image-about{
+    width: 80%;
+    background-color: #fba627;
+    transform: rotate(-5deg);
+    margin-top: 50px;
+margin-left: 10%;
+}
+
+.image-about img{
+    width: 100%;
+    transform: rotate(5deg);
+}
+
+.title-decoration{
+    padding-bottom: 10px;
+}
+
+.title-deco {
+    font-size: 50px;
+    color: #F1F0F0;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.stats{
+    width: 100%;
+    height: 200px;
+    background-color: #494848;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.image-stats img{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.image-stats{
+    height: 200px;
+    padding-top: 100px;
+}
+
+.text-stats{
+    color: #fff;
+    height: 200px;
+    width: 40%;
+    display: flex;
+    margin-left: 30%;
+}
+
+.text-stats {
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-stats p{
+    font-size: 30px;
+
+}
+
+//members of happy nivelle
+
+
+
+.title-members p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.pictures-members{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.pictures-members img{
+    width: 20%;
+    margin: 1%;
+}
+
+
+
+@media screen and(min-width: 576px){
+    .image-stats{
+        width: 30%;
+        }
+        .title-deco{
+            margin-top: 50px;
+        }
+
+}
+
+
+
+@media screen and(min-width: 772px){
+    .text-stats{
+        padding-top: 100px;
+    }
+
+
+
+    .image-about{
+        width: 65%;
+        margin-left: 17.5%;
+    }
+
+    .title-deco{
+        margin-top: 100px;
+    }
+
+}
+
+@media screen and(min-width: 992px){
+    .title-deco{
+        margin-top: 200px;
+    }
+}
+
+@media screen and(min-width: 1200px){
+    .title-deco{
+        margin-top: 0px;
+        font-size: 100px;
+        margin-bottom: 50px;
+    }
+    .image-about{
+
+        width: 40%;
+        
+            }
+        
+            .text-about{
+                width: 40%;
+                
+            }
+            .text-about p{
+                font-size: 15px;
+        
+        }
+        .container-about{
+            display: flex;
+            padding: 100px;
+        }
+        .text-legal{
+            
+            margin-left: 20%;
+            width: 60%;
+        }
+
+        .text-legal p{
+            font-size: 15px;
+
+        }
+
+        .text-legal h2{
+            text-align: center;
+        }
+
+        .image-stats{
+            width: 10%;
+            margin-left: 20%;
+        }
+}
+
+@media screen and(min-width: 1900px){
+    .image-about{
+
+width: 30%;
+
+    }
+
+    .text-about{
+        width: 40%;
+        
+    }
+    .text-about p{
+        font-size: 20px;
+
+}
+
+.title-decoration {
+   
+    margin-bottom: 50px;
+}
+
+.title-deco{
+    font-size: 150px;
+
+}
+
+// .image-stats{
+//     width: 10%;
+//     margin-left: 20%;
+//     }
+
+    .container-about{
+        display: flex;
+        padding: 100px;
+    }
+
+    .text-legal p{
+        font-size: 20px;
+
+    }
+}
