@@ -98,3 +98,47 @@ justify-content: center;
     width: 20%;
     margin: 1%;
 }
+
+
+
+@media screen and(min-width: 576px){
+    .image-stats{
+        width: 30%;
+        }
+        .title-deco{
+            margin-top: 50px;
+        }
+
+}
+
+
+
+@media screen and(min-width: 772px){
+    .text-stats{
+        padding-top: 100px;
+    }
+
+
+
+    .image-about{
+        width: 65%;
+        margin-left: 17.5%;
+    }
+
+    .title-deco{
+        margin-top: 100px;
+    }
+
+}
+
+@media screen and(min-width: 992px){
+    .title-deco{
+        margin-top: 200px;
+    }
+}
+
+@media screen and(min-width: 1200px){
+    .title-deco{
+        margin-top: 250px;
+    }
+}
