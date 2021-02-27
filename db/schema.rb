@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
   create_table "events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.datetime "date"
-    t.string "adress"
+    t.string "address"
     t.text "description"
     t.integer "status"
     t.integer "participate"
@@ -36,12 +36,10 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
 
   create_table "userevents", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "state"
-    t.bigint "users_id"
-    t.bigint "events_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["events_id"], name: "index_userevents_on_events_id"
-    t.index ["users_id"], name: "index_userevents_on_users_id"
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_userevents_on_event_id"
+    t.index ["user_id"], name: "index_userevents_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -73,6 +71,6 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "userevents", "events", column: "events_id"
-  add_foreign_key "userevents", "users", column: "users_id"
+  add_foreign_key "userevents", "events"
+  add_foreign_key "userevents", "users"
 end
