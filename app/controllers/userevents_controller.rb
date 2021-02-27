@@ -15,7 +15,7 @@ class UsereventsController < ApplicationController
 
   # GET /userevents/new
   def new
-    @userevent = Userevent.new
+    @userevent = UserEvent.new
   end
 
   # GET /userevents/1/edit
@@ -24,7 +24,7 @@ class UsereventsController < ApplicationController
 
   # POST /userevents or /userevents.json
   def create
-    @userevent = Userevent.new(userevent_params)
+    @userevent = UserEvent.new(userevent_params)
 
     respond_to do |format|
       if @userevent.save
