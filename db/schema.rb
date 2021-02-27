@@ -35,8 +35,13 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
     t.integer "state"
     t.bigint "user_id"
     t.bigint "event_id"
+<<<<<<< HEAD
     t.index ["event_id"], name: "index_user_events_on_event_id"
     t.index ["user_id"], name: "index_user_events_on_user_id"
+=======
+    t.index ["event_id"], name: "index_userevents_on_event_id"
+    t.index ["user_id"], name: "index_userevents_on_user_id"
+>>>>>>> modifying naming convention in models, migrations and add files in gitignore and create database.yml.example
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
