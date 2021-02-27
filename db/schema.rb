@@ -34,12 +34,12 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "userevents", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "user_events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "state"
     t.bigint "user_id"
     t.bigint "event_id"
-    t.index ["event_id"], name: "index_userevents_on_event_id"
-    t.index ["user_id"], name: "index_userevents_on_user_id"
+    t.index ["event_id"], name: "index_user_events_on_event_id"
+    t.index ["user_id"], name: "index_user_events_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -71,6 +71,6 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "userevents", "events"
-  add_foreign_key "userevents", "users"
+  add_foreign_key "user_events", "events"
+  add_foreign_key "user_events", "users"
 end

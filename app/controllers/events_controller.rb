@@ -80,7 +80,7 @@ end
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:title, :date, :adress, :description, :image, :participate)
+    params.require(:event).permit(:title, :date, :address, :description, :image, :participate)
 
   end
 

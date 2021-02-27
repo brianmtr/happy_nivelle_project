@@ -16,7 +16,7 @@
       <scope="col"><%= image_tag event.image_url, height: 200 if event.image %><br>
       <scope="col">Titre: <%= event.title %><br>
       <scope="col">Date: <%= event.date %><br>
-      <scope="col">Adresse: <%= event.adress %><br><br>
+      <scope="col">Adresse: <%= event.address %><br><br>
       <scope="col">Description:<br> <%= event.description %><br>
 
     <%= link_to 'Voir évenement', event_path(event.id) %>
