@@ -3,7 +3,7 @@ class UsereventsController < ApplicationController
 
   # GET /userevents or /userevents.json
   def index
-    @userevents         = Userevent.all
+    @userevents         = UserEvent.all
     # @userevents_in_yes  = Userevent.yes.where(event.participate)
     # @userevents_maybe   = Userevent.maybe.where(state)
     # @userevents_no      = Userevent.no.where(state)
@@ -15,7 +15,7 @@ class UsereventsController < ApplicationController
 
   # GET /userevents/new
   def new
-    @userevent = Userevent.new
+    @userevent = UserEvent.new
   end
 
   # GET /userevents/1/edit
@@ -24,7 +24,7 @@ class UsereventsController < ApplicationController
 
   # POST /userevents or /userevents.json
   def create
-    @userevent = Userevent.new(userevent_params)
+    @userevent = UserEvent.new(userevent_params)
 
     respond_to do |format|
       if @userevent.save
@@ -68,7 +68,7 @@ class UsereventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_userevent
-      @userevent = Userevent.find(params[:id])
+      @userevent = UserEvent.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
