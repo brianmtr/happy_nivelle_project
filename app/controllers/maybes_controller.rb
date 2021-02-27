@@ -44,7 +44,7 @@ class MaybesController < EventsController
     end
   
     def set_userevent
-      @userevent = UserEvent.find(params[:id])
+      @userevent = Userevent.find(params[:id])
     end
   
     def userevent_params
