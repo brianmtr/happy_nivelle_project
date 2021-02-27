@@ -6,11 +6,13 @@ before_action :set_user
   # PATCH/PUT /events/1 or /events/1.json
   def update
     if @event.increment!(:participate)
-    @userevent = Userevent.upsert(
-      state: "yes",
-      events_id: @event.id,
-      users_id: current_user.id
-    )
+      user = User.find(params[:user_id])
+      event = Event.find(params[:event_id])
+      user_event = UserEvent.new
+      user_event.user = user
+      user_event.event = event
+      user_event.save
+      user_event.yes!  | user_event.maybe!  | user_event.no!
     end
   end
 
