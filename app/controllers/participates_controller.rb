@@ -42,15 +42,10 @@ before_action :set_user
     @event = Event.find(params[:id])
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> testing upsert_all in the functionality
   def set_user
     @user = User.find(params[:id])
   end
 
-<<<<<<< HEAD
   def set_userevent
     @userevent = UserEvent.find(params[:id])
   end
@@ -58,18 +53,7 @@ before_action :set_user
   def userevent_params
     params.fetch(:userevent, {}).permit(:state)
  
-=======
-=======
->>>>>>> testing upsert_all in the functionality
-  def set_userevent
-    @userevent = Userevent.find(params[:id])
-  end
 
-  def userevent_params
-    params.fetch(:userevent, {})
-  end
->>>>>>> writing logic for uservote
-  
 end
 
 
