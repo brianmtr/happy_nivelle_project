@@ -1,11 +1,11 @@
 class ParticipatesController < EventsController
-before_action :set_event, only: %i[ update ]
+
 before_action :set_userevent, only: %i[ new create ]
-before_action :set_user
+
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
-  user = User.find(params[:id])
+  user = current_user.id
   event = Event.find(params[:id])
 
     if UserEvent.where(:state => 'maybe')
@@ -40,7 +40,7 @@ before_action :set_user
   end
 
   def set_userevent
-    @userevent = Userevent.find(params[:id])
+    @userevent = UserEvent.find(params[:id])
   end
 
   def userevent_params
