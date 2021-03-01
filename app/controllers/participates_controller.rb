@@ -1,7 +1,7 @@
 class ParticipatesController < EventsController
 
 before_action :set_userevent, only: %i[ new create ]
-before_action :set_user
+
 
 
 
