@@ -35,3 +35,71 @@
     color: #468847;
     text-align: left;
     }
+
+
+@media screen and (min-width: 375px){
+
+    .title-form{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .form{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .button-submit{
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (min-width: 772px){
+    .form{
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .button-submit{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 50px;
+        
+        }
+}
+
+@media screen and (min-width: 1200px){
+    .form{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+@media screen and (min-width: 1900px){
+.form{
+    
+    width: 30%;
+    margin-left: 35%;
+}
+
+.title-form{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button-submit{
+display: flex;
+flex-direction: row-reverse;
+margin-bottom: 50px;
+
+}
+
+.rotate{
+    width: 300;
+    height: 40px;
+    position: relative;
+    top: 40px;
+    z-index: 0;
+}
+}
