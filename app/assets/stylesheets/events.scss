@@ -2,7 +2,151 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.image-show{
+.image-show {
     margin-left: 10px;
 }
 
+.event-title {
+    text-align: center;
+}
+
+.card {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.card-header {
+    width: 100%;
+}
+
+.image-event img {
+    width: 100%;
+}
+
+.btn {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.composant-event {
+    margin-top: 10%;
+    text-align: center;
+}
+
+
+.event-top-image img {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.event-top-text {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.event-top-text p {
+    text-align: justify; 
+}
+
+.create-event {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+//media querry
+@media screen and (min-width: 576px){
+    .btn {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 772px){
+
+    .event-top-image img {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 50px;
+    }
+
+    .event-top-text {
+        width: 60%;
+        margin-top: 50px;
+        margin-left: 20%;
+        margin-bottom: 50px;
+    }
+
+    .button-voted{
+        display: flex;
+    }
+
+    .btn {
+        display: flex;
+        width: 30%;
+        margin-left: 2.33%;
+    
+    }
+
+    .image-event img {
+        width: 60%;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .event-top-text p{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .container-top-event{
+        display: flex;
+    }
+
+    .event-top-image{
+        width: 60%;
+    }
+
+    .event-top-text{
+        width: 40%;
+        margin: 10%;
+    }
+
+    .button-voted{
+        display: flex;
+        margin-left: 25%;
+    }
+
+    .btn {
+        display: flex;
+        width: 30%;
+       
+    
+    }
+
+    .composant-event{
+        display: flex;
+    }
+
+    .image-event{
+        width: 50%;
+    }
+
+    .image-event img{
+        width: 100%;
+    }
+
+    .title-description-event {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

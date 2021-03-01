@@ -106,7 +106,7 @@
     <p class="catch_phrase">Organisateur de soirée a thème, weekend , et voyage à modifier...</p>
       <% if current_page?('/') %>
         <%= image_tag("header-home.png", :alt => "logo_facebook") %>
-      <% elsif current_page? ('/events') && ('/events/new') %>
+      <% elsif current_page? ('/events') || ('/events/new') %>
         <%= image_tag("header-events.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/about/index') %>
         <%= image_tag("header-about.png", :alt => "logo_facebook") %>
@@ -120,7 +120,8 @@
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/contacts/new') %>
               <%= image_tag("header-contact.png", :alt => "logo_facebook") %>
-
+      <% elsif current_page? ('/events/new') %>
+              <%= image_tag("header-events.png", :alt => "logo_facebook") %>
 
     <% end %>
       
