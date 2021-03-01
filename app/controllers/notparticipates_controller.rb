@@ -45,11 +45,7 @@ before_action :set_userevent, only: %i[ new create ]
   end
 
   def set_userevent
-<<<<<<< HEAD
     @userevent = UserEvent.find(params[:id])
-=======
-    @userevent = Userevent.find(params[:id])
->>>>>>> entire function vote is working, had to change migration, controllers(check update) and views for showing results
   end
 
   def userevent_params
