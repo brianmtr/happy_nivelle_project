@@ -1,11 +1,11 @@
 class MaybesController < EventsController
-  before_action :set_event, only: %i[ update ]
+  
   before_action :set_userevent, only: %i[ new create ]
-  before_action :set_user
+ 
   
     # PATCH/PUT /events/1 or /events/1.json
     def update
-      user = User.find(params[:id])
+      user = current_user
       event = Event.find(params[:id])
 
       if UserEvent.where(:state => 'yes')
@@ -17,15 +17,16 @@ class MaybesController < EventsController
       end
 
       if @event.increment!(:maybe_participate)
-          if UserEvent.exists?
-            user_event = UserEvent.update(state: 'maybe')
-          else
-            user_event = UserEvent.new
-            user_event.user = user
-            user_event.event = event
-            user_event.save
-            user_event.maybe!
-          end
+        if UserEvent.nil?
+          user_event = UserEvent.where(user: current_user, event: @event).update(state: 'maybe')
+      else UserEvent.where(user: current_user, event: @event).exists?
+          user_event = UserEvent.new
+          user_event.user = user
+          user_event.event = event
+          user_event.save
+          user_event.maybe!
+        
+        end
       end
     end
   
