@@ -21,13 +21,14 @@ when nil
   when 'proposed' 
     @event.status = 'accepted'
     @event.save
-    if @event.status === 'accepted' && Date.today >= @event.date 
+
+  when 'accepted' || 'proposed' && Date.today >= @event.date
     @event.status = 'past'
     @event.save
     redirect_to '/events/', notice: "l'évenement a bien été accepté."
     end
   end
-end
+
 
 private
 
