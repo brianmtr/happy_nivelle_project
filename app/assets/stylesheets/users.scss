@@ -1,3 +1,36 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+//users edit
+
+.field {
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    padding-left: 33%;
+
+}
+
+.actions{
+    display: flex;
+    padding-left: 40.5%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.devise-shared-links{
+    padding-left: 33%;
+    width: 80%;
+    margin-bottom: 50px;
+    margin-left: 10%;
+
+}
+
+.title-devise{
+    display: flex;
+    justify-content: center;
+}
+
+//devise password new
+

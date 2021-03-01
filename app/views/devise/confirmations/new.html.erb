@@ -1,4 +1,4 @@
-<h2>Renvoyer un mail de confirmation</h2>
+<h2 class="title-devise">Renvoyer un mail de confirmation</h2>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -12,5 +12,6 @@
     <%= f.submit "Valider" %>
   </div>
 <% end %>
-
+<div class="devise-shared-links">
 <%= render "devise/shared/links" %>
+</div>
