@@ -3,30 +3,31 @@
 </div>
 <p id="notice"><%= notice %></p>
 
-
+<div class="container-event-show">
+<div class="date-title-address-show">
 <p>
-  <strong>Titre:</strong>
-  <%= @event.title %>
+  <strong><%= @event.title %></strong>
+  
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @event.date.to_formatted_s(:long) %>
+  <strong><%= @event.date.to_formatted_s(:long) %></strong>
+  
 </p>
 
 <p>
-  <strong>Adresse:</strong>
-  <%= @event.address %>
+  <strong><%= @event.address %></strong>
+  
 </p>
-
+</div>
 <p>
-  <strong>Description:</strong>
+  
   <%= @event.description %>
 </p>
 
 <p class="image-show">
   
-  <scope="col"><%= image_tag @event.image_url, height: 200 if @event.image %>
+  <scope="col"><%= image_tag @event.image_url %>
 </p>
 
 
@@ -35,3 +36,4 @@
 <% end %>
 
 <%= link_to 'Retour', events_path %>
+</div>
