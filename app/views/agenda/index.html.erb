@@ -6,8 +6,8 @@
   <div class="card-headers" id="headingOne">  
    
       
-        <strong><%= event.title %></strong>
-        <%= event.date %>
+        <strong><p class="test"><%= event.title %></p></strong>
+        <p class="test"><%= event.date %></p>
         <button class="button-agenda">
         <%= link_to 'Voir événement', event_path(event.id) %>
       </button>
