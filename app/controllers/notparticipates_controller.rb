@@ -33,7 +33,7 @@ class NotparticipatesController < EventsController
   end
 
   def set_userevent
-    @userevent = Userevent.find(params[:id])
+    @userevent = UserEvent.find(params[:id])
   end
 
   def userevent_params
