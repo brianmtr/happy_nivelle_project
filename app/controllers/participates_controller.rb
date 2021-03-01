@@ -5,7 +5,7 @@ before_action :set_userevent, only: %i[ new create ]
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
-  user = current_user.id
+  user = current_user
   event = Event.find(params[:id])
 
     if UserEvent.where(:state => 'maybe')
@@ -17,14 +17,15 @@ before_action :set_userevent, only: %i[ new create ]
     end
     
     if @event.increment!(:participate)
-        if UserEvent.exists?
-          user_event = UserEvent.update(state: 'yes')
-        else
-          user_event = UserEvent.new
+        if UserEvent.nil?
+         user_event = UserEvent.new
           user_event.user = user
           user_event.event = event
           user_event.save
           user_event.yes!
+        else
+          user_event = UserEvent.where(:event_id => @event).update(state: 'yes')
+          
         end
     end
   end
