@@ -122,6 +122,10 @@
               <%= image_tag("header-contact.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/events/new') %>
               <%= image_tag("header-events.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users/confirmation/new.user') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users/password/new') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
 
     <% end %>
       

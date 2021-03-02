@@ -4,13 +4,6 @@
 
 //users edit
 
-.field {
-    width: 80%;
-    align-items: center;
-    margin-left: 10%;
-    padding-left: 33%;
-
-}
 
 .actions{
     display: flex;
@@ -20,17 +13,72 @@
 }
 
 .devise-shared-links{
-    padding-left: 33%;
-    width: 80%;
+
+    width: 30%;
     margin-bottom: 50px;
-    margin-left: 10%;
+    margin-left: 36.5%;
 
 }
 
 .title-devise{
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
-//devise password new
+//devise confirmayion new
 
+.input-button{
+    display: flex;
+    
+    width: 30%;
+    margin-left: 35%;
+    justify-content: space-around;
+}
+
+//actions-password-new
+
+.actions-password-new{
+    padding-top: 10px;
+}
+
+
+.devise-shared-links-confirmation{
+    width: 30%;
+    margin-bottom: 50px;
+    margin-left: 38%;
+}
+
+.field-registration{
+   
+    width: 30%;
+    margin-left: 35%;
+    padding-left: 8.5%;
+    
+}
+
+.actions-registration{
+    display: flex;
+    padding-left: 40.5%;
+    width: 80%;
+    margin-left: 12.2%;
+    margin-top: 10px;
+}
+
+.devise-shared-links-registration{
+    width: 30%;
+    margin-bottom: 50px;
+    margin-left: 43%;
+}
+
+.field_sign_in{
+    width: 30%;
+    margin-left: 35%;
+    padding-left: 8.5%;
+}
+
+.devise-shared-links-sign_in{
+    width: 30%;
+    margin-bottom: 50px;
+    margin-left: 43%;
+}
