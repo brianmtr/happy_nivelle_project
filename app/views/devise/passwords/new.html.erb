@@ -2,8 +2,8 @@
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-<div class="input-button">
-  <div class="field">
+<div class="input-button-password-new">
+  <div class="field-password-new">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -13,6 +13,6 @@
   </div>
   </div>
 <% end %>
-<div class="devise-shared-links">
+<div class="devise-shared-links-password">
 <%= render "devise/shared/links" %>
 </div>
