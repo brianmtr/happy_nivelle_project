@@ -346,4 +346,30 @@ h5{
         left: -80px;
         top: 180px;
     }
+
+    .card-events:hover{
+
+        .title-event{
+       
+        position: relative;
+        left: 43px;
+        top: 0px;
+        transform: rotate(0deg);
+        transition: 0.7s;
+    }
+    
+    .bar {
+        position: relative;
+        left: 41px;
+        top: 3px;
+        transform: rotate(0deg);
+        transition: 0.7s;
+    }
+
+    img, button {
+        transform: rotate3d(1, 1, 1, 360deg);
+        transition: 1.0s;
+    }
+}
+    
   }
