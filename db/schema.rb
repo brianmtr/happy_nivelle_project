@@ -26,9 +26,6 @@ ActiveRecord::Schema.define(version: 2021_02_23_153742) do
     t.string "address"
     t.text "description"
     t.integer "status"
-    t.integer "participate"
-    t.integer "maybe_participate"
-    t.integer "not_participate"
     t.text "image_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

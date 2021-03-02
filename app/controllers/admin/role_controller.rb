@@ -1,7 +1,7 @@
 class Admin::RoleController < Admin::UsersController
-  def index
-    @users = User.all
-  end
+    # def index
+    #     @users = User.all
+    #   end
 
   def update
     @user = User.find(params[:id])
