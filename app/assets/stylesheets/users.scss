@@ -2,9 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-//users edit
 
+//sign-in 
+.title-devise{
+    margin-top: 50px;
+}
+.field_sign_in{
+    width: 80%;
+    margin-left: 10%;
+}
 
+.actions{
+    padding-left: 50%;
+}
+
+.devise-shared-links-sign_in{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+//registration new
+.field-registration{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.actions-registration{
+    padding-left: 56%;
+    margin-top: 10px;
+}
+
+.devise-shared-links-registration{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 480px){
+
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 772px){
+
+}
+
+@media screen and (min-width: 992px){
+
+}
+
+@media screen and (min-width: 1200px){
+    
+}
+
+@media screen and (min-width: 1900px){
 .actions{
     display: flex;
     padding-left: 40.5%;
@@ -81,4 +134,5 @@
     width: 30%;
     margin-bottom: 50px;
     margin-left: 43%;
+}
 }
