@@ -5,6 +5,11 @@
 
 <div class="container-event-show">
 <div class="date-title-address-show">
+  <div class= "vote">
+      <p><%= @vote_participated %> Présents</p>
+      <p><%= @vote_maybe_participated%> Peut-être</p>
+      <p><%= @vote_not_participated%> Absents</p>
+  </div>
 <p>
   <strong><%= @event.title %></strong>
   

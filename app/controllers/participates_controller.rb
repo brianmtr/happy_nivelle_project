@@ -15,8 +15,10 @@ before_action :set_userevent, only: %i[ new create ]
       else
         UserEvent.where(user_id: user, event_id: event).upsert(state: "yes", user_id: user, event_id: event) 
       end
-      @user_events = UserEvent.where(event_id: event)
-      @vote_participated = @user_events.yes.count
+
+      respond_to do |format|
+      format.html { redirect_to events_path, notice: "Le vote à été validé, nous avons hâte de vous voir à l'évènement ;)" }
+      end
 
     #     if UserEvent.nil?
     #      user_event = UserEvent.new

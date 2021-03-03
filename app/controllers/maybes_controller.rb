@@ -16,6 +16,9 @@ class MaybesController < EventsController
           UserEvent.where(user: user, event: event).upsert(state: "maybe", user_id: user, event_id: event) 
         end
 
+        respond_to do |format|
+          format.html { redirect_to events_path, notice: "Le vote à été validé, nous avons hâte que vous vous décidiez ;)" }
+          end
       # if @event.increment!(:maybe_participate)
       #   if UserEvent.nil?
       #     user_event = UserEvent.where(user: current_user, event: @event).update(state: 'maybe')
