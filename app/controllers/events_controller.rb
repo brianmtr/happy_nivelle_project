@@ -6,10 +6,7 @@ class EventsController < ApplicationController
       @events_in_progress = Event.accepted.where('date >= ?', Date.today).limit(3)
       @events_proposed    = Event.proposed.where('date >= ?', Date.today).limit(3)
       @events_past        = Event.past.where('date <= ?', Date.today).limit(3)
-      @user_events = UserEvent.where(event_id: params[:id]) 
-      @vote_participated = @user_events.yes.count
-      @vote_not_participated = @user_events.no.count
-      @vote_maybe_participated = @user_events.maybe.count
+      
     end
 
  #GET /events/new
@@ -17,7 +14,12 @@ def new
   @event = Event.new
 end
   
-  def show; end
+  def show
+      @user_events = UserEvent.where(event_id: params[:id]) 
+      @vote_participated = @user_events.yes.count
+      @vote_not_participated = @user_events.no.count
+      @vote_maybe_participated = @user_events.maybe.count
+   end
     #creation events for users
   def create
     @event = Event.new(event_params)

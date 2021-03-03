@@ -2,8 +2,11 @@
   <%= image_tag("header-events.png", :alt => "logo_facebook") %>
 </div>
 <p id="notice"><%= notice %></p>
-
-
+  <div class= "vote">
+      <p><%= @vote_participated %> Présents</p>
+      <p><%= @vote_maybe_participated%> Peut-être</p>
+      <p><%= @vote_not_participated%> Absents</p>
+  </div>
 <p>
   <strong>Titre:</strong>
   <%= @event.title %>
