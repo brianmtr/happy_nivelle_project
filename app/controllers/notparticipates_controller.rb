@@ -12,6 +12,7 @@ before_action :set_userevent, only: %i[ new create ]
 
       if UserEvent.where(user_id: user, event_id: event).exists?
         UserEvent.where(user: current_user, event: @event).update(state: 'no')
+         @vote_participated 
       else
         UserEvent.where(user: user, event: event).upsert(state: "no", user_id: user, event_id: event) 
       end

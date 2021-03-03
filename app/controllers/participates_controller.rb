@@ -15,7 +15,8 @@ before_action :set_userevent, only: %i[ new create ]
       else
         UserEvent.where(user_id: user, event_id: event).upsert(state: "yes", user_id: user, event_id: event) 
       end
- 
+      @user_events = UserEvent.where(event_id: event)
+      @vote_participated = @user_events.yes.count
 
     #     if UserEvent.nil?
     #      user_event = UserEvent.new
