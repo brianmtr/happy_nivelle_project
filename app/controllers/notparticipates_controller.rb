@@ -8,15 +8,8 @@ before_action :set_userevent, only: %i[ new create ]
     user = current_user
     event = Event.find(params[:id])
 
-    if UserEvent.where(state: 'maybe', user_id: user, event_id: event).exists?
-      @event.decrement!(:maybe_participate)
-    end
-    
-    if UserEvent.where(state: 'yes', user_id: user, event_id: event).exists?
-      @event.decrement!(:participate)
-    end
 
-    if @event.increment!(:not_participate)
+
       if UserEvent.where(user_id: user, event_id: event).exists?
         UserEvent.where(user: current_user, event: @event).update(state: 'no')
       else
@@ -32,7 +25,7 @@ before_action :set_userevent, only: %i[ new create ]
       #     user_event.no!
         
       #   end
-    end
+ 
   end
 
   private
