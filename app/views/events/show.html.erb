@@ -31,9 +31,7 @@
 </p>
 
 
-<% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'Supprimer', @admin_event_path, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-<% end %>
+
 
 <%= link_to 'Retour', events_path %>
 </div>

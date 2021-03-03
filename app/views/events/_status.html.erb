@@ -21,7 +21,9 @@
       <strong><scope="col"><%= event.title %></strong><br>
       <scope="col"><%= event.address %><br><br>
       <scope="col"><%= event.description %><br>
+      <div class="button-event">
        <%= link_to 'Voir évenement', event_path(event.id) %>
+       </div>
       </div>
       <br>
 

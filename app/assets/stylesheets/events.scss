@@ -134,9 +134,28 @@
 
 
 @media screen and (min-width: 1200px){
-    .container-top-event{
+    .button-event{
         display: flex;
+        flex-direction: row-reverse;
     }
+
+}
+
+@media screen and (min-width: 1900px){
+    .container-event-show p{
+        font-size: 15px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .container-top-event {
+        display: flex;
+        
+    }
+
+
+
+
 
     .event-top-image{
         width: 60%;
@@ -149,43 +168,25 @@
 
     .button-voted{
         display: flex;
-        margin-left: 25%;
+        width: 60%;
+        margin-left: 20%;
     }
 
-    .btn {
-        display: flex;
-        width: 30%;
-       
-    
-    }
+   
 
-    .composant-event{
-        display: flex;
-    }
 
-    .image-event{
-        width: 50%;
-    }
+  
 
     .image-event img{
-        width: 100%;
+        width: 60%;
     }
 
     .title-description-event {
-        width: 100%;
-        margin-left: 0;
+        width: 60%;
+        margin-left: 20%;
     }
 
     .image-show img{
-        width: 80%;
-        margin-left: 10%;
-    }
-
-}
-
-@media screen and (min-width: 1900px){
-    .container-event-show p{
-        font-size: 15px;
         width: 80%;
         margin-left: 10%;
     }
