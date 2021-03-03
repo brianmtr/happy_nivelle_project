@@ -5,10 +5,9 @@ class Admin::EventsController < AdminController
   def index
     @events = Event.all
     @comments = Comment.all
-    @events_proposed    = Event.proposed.where('date >= ?', Date.today)
-    @events_in_progress = Event.accepted.where('date >= ?', Date.today)
-    @events_past        = Event.past.where('date <= ?', Date.today)
-
+    @events_proposed = Event.proposed.where("date >= ?", Date.today)
+    @events_in_progress = Event.accepted.where("date >= ?", Date.today)
+    @events_past = Event.past.where("date <= ?", Date.today)
   end
 
   # GET /events/1 or /events/1.json
@@ -62,16 +61,14 @@ class Admin::EventsController < AdminController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def event_params
-      params.require(:event).permit(:title, :date, :address, :description, :image)
-  
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    
+  # Only allow a list of trusted parameters through.
+  def event_params
+    params.require(:event).permit(:title, :date, :address, :description, :image)
+  end
 end

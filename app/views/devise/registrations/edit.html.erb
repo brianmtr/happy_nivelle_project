@@ -1,40 +1,40 @@
 <h2>Editer mon profil</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+<div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+</div>
 
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<% end %>
 
-  <div class="field">
+<div class="field">
     <%= f.label :nouveau_mot_de_passe %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> Caractères minimum</em>
+    <br />
+    <em><%= @minimum_password_length %> Caractères minimum</em>
     <% end %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :confirmer_nouveau_mot_de_passe %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+</div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :mot_de_passe_actuel %><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+</div>
 
-  <div class="actions">
+<div class="actions">
     <%= f.submit "Mettre à jour" %>
-  </div>
+</div>
 <% end %>
 
 <h3>Supprimer mon compte ?</h3>

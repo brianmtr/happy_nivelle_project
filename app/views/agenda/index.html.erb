@@ -1,22 +1,24 @@
 <div class="container">
-<% @events.each do |event| %>
+    <% @events.each do |event| %>
 
-  <td><% if event.status === "accepted" %>
-    <div class="cards">
-  <div class="card-headers" id="headingOne">  
-   
-      
-        <strong><p class="test"><%= event.title %></p></strong>
-        <p class="test"><%= event.date %></p>
-        <button class="button-agenda">
-        <%= link_to 'Voir événement', event_path(event.id) %>
-      </button>
-         </div>
-    </div>
-      <% else %>
+    <td><% if event.status === "accepted" %>
+        <div class="cards">
+            <div class="card-headers" id="headingOne">
+
+
+                <strong>
+                    <p class="test"><%= event.title %></p>
+                </strong>
+                <p class="test"><%= event.date %></p>
+                <button class="button-agenda">
+                    <%= link_to 'Voir événement', event_path(event.id) %>
+                </button>
+            </div>
+        </div>
+        <% else %>
 
         <% end %>
 
-    <% end %>
+        <% end %>
 
 </div>

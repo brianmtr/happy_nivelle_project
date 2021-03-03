@@ -3,7 +3,7 @@ class UsereventsController < ApplicationController
 
   # GET /userevents or /userevents.json
   def index
-    @userevents         = Userevent.all
+    @userevents = Userevent.all
     # @userevents_in_yes  = Userevent.yes.where(event.participate)
     # @userevents_maybe   = Userevent.maybe.where(state)
     # @userevents_no      = Userevent.no.where(state)
@@ -59,20 +59,15 @@ class UsereventsController < ApplicationController
     end
   end
 
-
-
-
-
-
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_userevent
-      @userevent = Userevent.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def userevent_params
-      params.fetch(:userevent, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_userevent
+    @userevent = Userevent.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def userevent_params
+    params.fetch(:userevent, {})
+  end
 end

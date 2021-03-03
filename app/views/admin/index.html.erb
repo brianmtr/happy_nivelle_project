@@ -2,37 +2,37 @@
 
 
 <% if event.status == nil %>
-  <table class="table table-striped">
+<table class="table table-striped">
 
-  <tbody>
+    <tbody>
 
-    <div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-               <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= event.title %> <br><%= link_to 'Voir évenement', event_path(event.id) %>
-        <%= link_to 'Refuser', event, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-        <%=  link_to 'Accepter', event, method: :validate %>
-      </h5>
-    </div>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <%= event.title %> <br><%= link_to 'Voir évenement', event_path(event.id) %>
+                            <%= link_to 'Refuser', event, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+                            <%=  link_to 'Accepter', event, method: :validate %>
+                    </h5>
+                </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-     
-      <scope="col">Titre: <%= event.title %><br>
-      <scope="col">Date: <%= event.date %><br>
-      <scope="col">Adresse: <%= event.adress %><br><br>
-      <scope="col">Description:<br> <%= event.description %><br>
-      <scope="col">Image: <%= image_tag event.image_url, height: 200 if event.image %><br>
-   
-      </div>
-    </div>
-  </div>
-</div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
 
-    
-  </tbody>
+                        <scope="col">Titre: <%= event.title %><br>
+                            <scope="col">Date: <%= event.date %><br>
+                                <scope="col">Adresse: <%= event.adress %><br><br>
+                                    <scope="col">Description:<br> <%= event.description %><br>
+                                        <scope="col">Image: <%= image_tag event.image_url, height: 200 if event.image %><br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </tbody>
 </table>
 
 <% end %>
@@ -45,21 +45,21 @@
 
 <h2>Commentaire à valider</h2>
 
- <% @comments.each do |comment| %>
+<% @comments.each do |comment| %>
 <% if comment.accepted === false %>
-    <%= comment.created_at %>
-    <%= comment.description %>
-  
+<%= comment.created_at %>
+<%= comment.description %>
 
-   
-      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <%= link_to 'Show', comment %>
-        <%= link_to 'Edit', edit_comment_path(comment) %>
-        <%= link_to 'Refuser', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-        <%= link_to 'Accepter', comment, method: :accepted %>
-      </button>
-     
-      <br>
+
+
+<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <%= link_to 'Show', comment %>
+    <%= link_to 'Edit', edit_comment_path(comment) %>
+    <%= link_to 'Refuser', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+    <%= link_to 'Accepter', comment, method: :accepted %>
+</button>
+
+<br>
 
 
 </div>
