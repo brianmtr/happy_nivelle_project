@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   # get '/home/index'
- 
   get '/agenda/index'
   post '/users/:id', to: 'role#role'
   post '/events/:id', to: 'validate#validate'
