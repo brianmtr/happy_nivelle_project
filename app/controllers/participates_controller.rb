@@ -3,7 +3,6 @@ class ParticipatesController < EventsController
 before_action :set_userevent, only: %i[ new create ]
 
 
-
   # PATCH/PUT /events/1 or /events/1.json
   def update
   user = current_user
@@ -43,11 +42,19 @@ before_action :set_userevent, only: %i[ new create ]
   def set_user
     @user = User.find(params[:id])
   end
+<<<<<<< HEAD
 
   def set_userevent
     @userevent = UserEvent.find(params[:id])
   end
 
+=======
+
+  def set_userevent
+    @userevent = UserEvent.find(params[:id])
+  end
+
+>>>>>>> 6e1ee662aee8ec4d562d799395b35a1ee72f48e8
   def userevent_params
     params.fetch(:userevent, {}).permit(:state)
   end
