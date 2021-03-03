@@ -11,11 +11,15 @@ before_action :set_userevent, only: %i[ new create ]
 
 
       if UserEvent.where(user_id: user, event_id: event).exists?
-        UserEvent.where(user: current_user, event: @event).update(state: 'no')
+        UserEvent.where(user: current_user, event: event).update(state: 'no')
          @vote_participated 
       else
         UserEvent.where(user: user, event: event).upsert(state: "no", user_id: user, event_id: event) 
       end
+
+      respond_to do |format|
+        format.html { redirect_to events_path, notice: "Le vote à été validé, nous avons hâte de vous voir une prochaine fois ;)" }
+        end
       # if UserEvent.nil?
       #     user_event = UserEvent.where(user: current_user, event: @event).update(state: 'no')
       # else UserEvent.where(user: current_user, event: @event).exists?

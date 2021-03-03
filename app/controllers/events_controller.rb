@@ -1,21 +1,26 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[ show edit update destroy ]
 
-  def index
-    @events = Event.all
-    @events_in_progress = Event.accepted.where("date >= ?", Date.today).limit(3)
-    @events_proposed = Event.proposed.where("date >= ?", Date.today).limit(3)
-    @events_past = Event.past.where("date <= ?", Date.today).limit(3)
-  end
+    def index    
+      @events = Event.all
+      @events_in_progress = Event.accepted.where('date >= ?', Date.today).limit(3)
+      @events_proposed    = Event.proposed.where('date >= ?', Date.today).limit(3)
+      @events_past        = Event.past.where('date <= ?', Date.today).limit(3)
+      
+    end
 
-  #GET /events/new
-  def new
-    @event = Event.new
-  end
-
-  def show; end
-
-  #creation events for users
+ #GET /events/new
+def new
+  @event = Event.new
+end
+  
+  def show
+      @user_events = UserEvent.where(event_id: params[:id]) 
+      @vote_participated = @user_events.yes.count
+      @vote_not_participated = @user_events.no.count
+      @vote_maybe_participated = @user_events.maybe.count
+   end
+    #creation events for users
   def create
     @event = Event.new(event_params)
 
