@@ -8,21 +8,14 @@ class MaybesController < EventsController
       user = current_user
       event = Event.find(params[:id])
 
-      if UserEvent.where(state: 'yes', user_id: user, event_id: event).exists?
-        @event.decrement!(:participate)
-      end
-      
-      if UserEvent.where(state: 'no', user_id: user, event_id: event).exists?
-        @event.decrement!(:not_participate)
-      end
 
-      if @event.increment!(:maybe_participate)
+
         if UserEvent.where(user_id: user, event_id: event).exists?
           UserEvent.where(user: current_user, event: @event).update(state: 'maybe')
         else
           UserEvent.where(user: user, event: event).upsert(state: "maybe", user_id: user, event_id: event) 
         end
-      end
+
       # if @event.increment!(:maybe_participate)
       #   if UserEvent.nil?
       #     user_event = UserEvent.where(user: current_user, event: @event).update(state: 'maybe')
