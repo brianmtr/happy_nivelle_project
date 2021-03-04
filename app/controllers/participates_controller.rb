@@ -52,7 +52,7 @@ before_action :set_userevent, only: %i[ new create ]
 
   def userevent_params
     params.fetch(:userevent, {}).permit(:state)
- 
+  end
 
 end
 

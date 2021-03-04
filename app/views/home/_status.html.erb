@@ -4,7 +4,7 @@
   <scope="col" ><p class="title-event"><%= event.title %></p>
      <div class="bar"></div>
              <div class="show-event">
-                     <scope="col_image"><%= image_tag event.image_url %>
+                     <scope="col_image"><%= image_tag event.image %>
 
             <button class="button">
                 <%= link_to 'Agenda', event_path(event.id) %>
