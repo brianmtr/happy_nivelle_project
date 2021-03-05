@@ -1,4 +1,14 @@
-<h2>Demande d'évènement</h2>
+<% if user_signed_in? %>
+<div class="create-event">
+<button><%= link_to 'Créer un évènement', new_admin_event_path %></button>
+</div>
+
+
+
+
+<% end %>
+
+<h2 class="event-boucle">Demande d'évènement</h2>
 <br>
 <% @events.each do |event| %>
 
@@ -8,15 +18,17 @@
         <tbody>
             <tr>
                 <td><%= image_tag event.image, height: 50 if event.image %></td>
-                <td><strong><%= event.title %></td></strong><br>
+                <td><%= event.title %></td></strong><br>
                 <td><%= event.date %></td><br>
                 <td><%= event.address %></td><br>
                 <br>
                 <td><%= event.description %></td><br>
-                <td><%= link_to 'Voir événement', event_url(event) %></td>
+                <div class="buttons-vera">
+                <td><a><strong><%= link_to 'Voir événement', event_url(event) %></td>
                 <%= link_to 'Edit', event %>
                 <%= link_to 'Refuser', @admin_event_path, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-                <%= link_to 'Accepter', event, method: :validate %>
+                <%= link_to 'Accepter', event, method: :validate %></a>
+            </div>
             </tr>
         </tbody>
     </div>
@@ -25,24 +37,22 @@
 <br>
 <% end %>
 <br>
-<h2>Les évènements proposés</h2>
+
+<h2 class="event-boucle">Les évènements proposés</h2>
 
 <% @events_proposed.each do |event| %>
 <%= render 'status', event: event %>
 <% end %>
 <br>
 
-<h2>Les évènements acceptés</h2>
+<h2 class="event-boucle">Les évènements acceptés</h2>
 <% @events_in_progress.each do |event| %>
 <%= render 'status', event: event %>
 <% end %>
 
 
-<h2>Les évènements passée</h2>
+<h2 class="event-boucle">Les évènements passée</h2>
 <% @events_past.each do |event| %>
 <%= render 'status', event: event %>
 <% end %>
 
-<% if user_signed_in? %>
-<%= link_to 'Créer un évènement', new_admin_event_path %>
-<% end %>

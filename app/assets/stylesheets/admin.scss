@@ -4,3 +4,55 @@
 .admin {
     background-color: cadetblue;
 }
+
+.event-boucle{
+    text-align: center;
+    background-color: #FBA627;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.card-admin{
+    width: 60%;
+    padding: 20px;
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 20px !important;
+    box-shadow: -6px -6px 10px rgba(145, 145, 145, 0.8), 6px 6px 10px rgba(255, 255, 255, 0.4);
+}
+
+.card-header-admin{
+    width: 100%;
+    border-radius: 50px !important;
+}
+
+
+.create-event button{
+    border: 3px solid #fba627;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.create-event button a:hover{
+    color: #fba627 !important;
+}
+
+.buttons-vera{
+  border-top: 1px solid black;
+  margin-top: 20px;
+ display: flex;
+ justify-content: space-around;
+   
+}
+
+@media screen and (max-width: 375px){
+    .buttons-vera{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+    }
+}
