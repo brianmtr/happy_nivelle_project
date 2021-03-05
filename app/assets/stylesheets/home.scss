@@ -258,6 +258,17 @@ h5{
     
 }
 
+@media screen and(min-width: 992px){
+    .button{
+        top: 127px;
+        left: -80px; 
+    }
+    
+    .bar {
+        left: 68px;
+    }
+}
+
 @media screen and(min-width: 1200px){
     .card-events{
         width: 20%;
@@ -265,17 +276,13 @@ h5{
        flex-direction:  column;
     }
 
-
     .align-card{
         display: flex;
-
+        margin-bottom: 50px;
     }
-    
 
     .button{
-   
         left: 70px;
-    
     }
     
     .title-event{
@@ -283,11 +290,10 @@ h5{
     }
 
     .bar {
-        left: -30px;
+        left: -37px;
+        top: -32px;
     }
-
 }
-
 
 @media screen and (min-width: 1500px){
 .button{
