@@ -22,7 +22,7 @@ when nil
     @event.status = 'accepted'
     @event.save
 
-  when 'accepted' || 'proposed' && Date.today >= @event.date
+  when 'accepted' && Date.today >= @event.date
     @event.status = 'past'
     @event.save
     redirect_to '/events/', notice: "l'évenement a bien été accepté."

@@ -4,9 +4,6 @@ class UsereventsController < ApplicationController
   # GET /userevents or /userevents.json
   def index
     @userevents = Userevent.all
-    # @userevents_in_yes  = Userevent.yes.where(event.participate)
-    # @userevents_maybe   = Userevent.maybe.where(state)
-    # @userevents_no      = Userevent.no.where(state)
   end
 
   # GET /userevents/1 or /userevents/1.json

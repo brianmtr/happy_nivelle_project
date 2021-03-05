@@ -8,13 +8,13 @@ class Admin::RoleController < Admin::UsersController
     role = @user.admin
     case role
 
-    when "false"
-      @user.admin = "true"
+    when false
+      @user.admin = true
 
       @user.save
       redirect_to "/admin/users/", notice: "L'utilisateur classique est devenu admin."
-    when "true"
-      @user.admin = "false"
+    when true
+      @user.admin = false
 
       @user.save
 
