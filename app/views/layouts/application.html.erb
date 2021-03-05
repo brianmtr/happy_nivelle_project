@@ -62,7 +62,7 @@
           <li><a class ="menuLink" href="/events">Boite à idées</a></li>
           <li><a class ="menuLink" href="/agenda/index">Agenda</a></li>       
           <li><a class ="menuLink" href="/contacts/new">Contact</a></li>
-          <% if user_signed_in? && current_user.admin === 'true' %>
+          <% if user_signed_in? && current_user.admin? %>
           <li>
           <a class ="" href="/admin/events">Admin</a>
           </li>
@@ -81,7 +81,7 @@
           <li><a class ="menuLink" href="/events">Boite à idées</a></li>
           <li><a class ="menuLink" href="/agenda/index">Agenda</a></li>       
           <li><a class ="menuLink" href="/contacts/new">Contact</a></li>
-          <% if user_signed_in? && current_user.admin === 'true' %>
+          <% if user_signed_in? && current_user.admin? %>
           <li>
           <a class ="menuLink" href="/admin/events">Admin</a>
           </li>
