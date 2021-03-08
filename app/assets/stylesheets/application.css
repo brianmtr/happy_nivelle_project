@@ -163,7 +163,6 @@
     footer{
       background-color: #494848;
       width: 100%;
-      
     }
 
     .logo-footer, .facebook-footer{
@@ -297,6 +296,10 @@
       .catch_phrase{
         top: 350px;
         font-size: 20px;
+      }
+
+      footer p{
+        font-size: 17px;
       }
     }
 
