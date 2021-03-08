@@ -30,5 +30,6 @@ resources :participates, only: [ :update ]
   end
 
   resources "contacts", only: [:new, :create]
+  get '/contacts', to: redirect('/contacts/new')
   
 end
