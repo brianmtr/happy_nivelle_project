@@ -14,6 +14,16 @@
  *= require_self
  */
 
+ .navbar{
+  font-family: 'Belleza', sans-serif;
+}
+
+.item-contact-bar li, .item-contact-bar p{
+  font-family: 'Belleza', sans-serif;
+
+}
+
+
  .header-image-events-show img{
   width: 100%;
 }
@@ -125,6 +135,7 @@
         top: 100px;
         left: 30px;
         font-size: 15px;
+        font-family: 'Boogaloo', cursive;
     }
 
 
@@ -137,6 +148,7 @@
         font-size: 15px;
         text-shadow:  1px 3px 0px #494848;
         font-weight: bold;
+        font-family: 'Boogaloo', cursive;
     }
 
     .catch_phrase{
@@ -273,7 +285,7 @@
 
     @media screen and (min-width: 1200px){
       .title, .subtitle {
-        font-size: 40px;
+        font-size: 60px;
       }
       .title {
         top: 250px;
@@ -292,12 +304,15 @@
       .logo img{
         width: 160px;
       }
+
       .title, .subtitle {
-        font-size: 60px;
+        font-size: 80px;
       }
+
       .title {
         top: 300px;
       }
+
       .subtitle {
         top: 380px;
       }
@@ -313,18 +328,16 @@
         margin-top: 10px;
       }
 
+    
+
+      
+      .connexion a{
+        font-size: 20px !important;
+      }
+
       .item-text{
         font-size: 20px;
-    }
-
-    .covid_band p {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .connexion a{
-      font-size: 20px !important;
-    }
+      }
 
     }
 
