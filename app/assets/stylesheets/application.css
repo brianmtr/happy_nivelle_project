@@ -290,7 +290,7 @@
 
     @media screen and (min-width: 1900px){
       .logo img{
-        width: 130px;
+        width: 160px;
       }
       .title, .subtitle {
         font-size: 60px;
@@ -306,6 +306,25 @@
         top: 450px;
         font-size: 20px;
       }
+
+      .navbar li a {
+        color: black;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .item-text{
+        font-size: 20px;
+    }
+
+    .covid_band p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .connexion a{
+      font-size: 20px !important;
+    }
 
     }
 
