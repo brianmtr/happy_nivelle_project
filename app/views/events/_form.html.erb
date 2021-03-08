@@ -1,13 +1,9 @@
 <%= form_with(model: event) do |form| %>
   <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-        <% event.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <div class="center_errors" style="display:flex; justify-content:center;">
+    <div id="error_explanation" style="text-align:center;">
+      <p style="color:red; font-weight:bold; text-align:center;" >Un ou plusieurs champs sont incorrects.</p>
+  </div>
     </div>
   <% end %>
 
