@@ -1,11 +1,9 @@
-
-
 <div class="container-about">
     <div class="text-about">
-    <br>
+        <br>
         <h2>Notre association</h2>
         <br>
-       <p><strong>"Lorem ipsum dolor sit amet, consectetur adipiscing</strong></p>
+        <p><strong>"Lorem ipsum dolor sit amet, consectetur adipiscing</strong></p>
         <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -18,22 +16,27 @@
         </p>
     </div>
     <div class="image-about">
-    <%= image_tag("image-about.png", :alt => "logo_happy_nivelle") %>
-    <div class="test"></div>
+        <%= image_tag("image-about.png", :alt => "logo_happy_nivelle") %>
+        <div class="test"></div>
     </div>
 </div>
 <div class="title-decoration">
-<p class="title-deco">Happy Nivelle</div>
+    <p class="title-deco">Happy Nivelle
+</div>
 </div>
 <div class="stats">
-<div class="text-stats"><p>Statistique</p></div>
-<div class="image-stats">
-    <%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
-</div>
+    <div class="text-stats">
+        <p>Statistique</p>
+    </div>
+    <div class="image-stats">
+        <%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
+    </div>
 </div>
 
 <div class="container-members">
-<div class="title-members"><p>Membre du bureau</p></div>
+    <div class="title-members">
+        <p>Membre du bureau</p>
+    </div>
 </div>
 
 <div class="pictures-members">
@@ -44,37 +47,45 @@
 </div>
 <br>
 <br>
-  <div class="text-legal">
-        <h2>Renseignement légal</h2>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum."
-        </p>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum."
-        </p>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum."
-        </p>
-    </div>
-    <br>
+<div class="text-legal">
+    <h2 id="legalnotice">Mentions légales</h2>
+
+    <h3>Présentation du site</h3>
+    <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site http://happy-nivelle.fr/ l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+    <p>Le présent site est édité par : PETIT Sabrina, association loi 1901 ayant pour numéro de SIRET W596010078 et qui est domiciliée au 200 rue hauterive 59230 Nivelle</p>
+    <p>Responsable de la publication : PETIT Sabrina, joignable par téléphone au 0605141076 et par email petitsabou@gmail.com</p>
+    <p>Webmaster du site: association loi 1901, joingnable par téléphone au 0605141076</p>
+    <p>Hébergeur du site: ONLINE SAS BP 438 75366 PARIS CEDEX 08 FRANCE, qui est domicilé 8 rue de la Ville l'Evêque, 75008 Paris, France et joignable par téléphone au +33 (0)1 84 13 00 00</p>
+    <h3>Propriété intellectuelle et contrefaçons</h3>
+    <p>L'entreprise Happy-Nivelle est propriétaire des droits de propriété intellectuelle ou détient les droits d'usage sur tous les éléments accessibles sur le site, notamment : les textes, les images, les graphismes, le logo, les icônes,…
+        Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de l'entreprise Happy-Nivelle.
+        Toute exploitation non autorisée du site ou d'un quelconque élément qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+    
+    <h3>Formulaire de contact et commentaires</h3>
+    <p>Vous pouvez être amené à nous indiquer votre adresse e-mail lorsque vous remplissez notre formulaire de contact ou déposez un commentaire sur l'un des articles du site http://happy-nivelle.fr/.
+        En aucun cas, votre adresse e-mail ne sera cédée à des tiers.
+    </p>
+
+    <%
+=begin%>
+ <h3>Modération des commentaires</h3>
+    <p>
+        Le choix de validation d'un commentaire sur le site http://happy-nivelle.fr/ est laissé à l'entière appréciation du responsable de publication. Les commentaires peuvent être supprimés, modifiés et corrigés pour une meilleure compréhension des visiteurs (notamment pour l'orthographe).
+        L'internaute peut signer son commentaire de son nom ou pseudo ou nom de son entreprise. Il peut également renseigné une URL dans le champ « site web ». Ce lien peut ne pas apparaitre si il a été jugé que le commentaire n'apportait pas réellement de plus value à l'article. Ceci, même si le commentaire est publié.
+        Voici des exemples de cas ou un commentaire peut-être modéré ou supprimé :<br>
+        Il a été supprimé par l'anti-spam<br>
+        Il n'apporte pas réellement de plus value et n'est pas utile pour les internautes<br>
+        Il est truffé de fautes d'orthographe ou incompréhensible<br>
+        Il semble être déposé uniquement dans un but auto-promotionnel<br>
+        Le mail indiqué est visiblement faux<br>
+        Il est jugé diffamatoire pour un tiers<br>
+    </p> 
+<%
+=end%>
+
+    <h3>Liens hypertextes</h3>
+    <p>Ce site internet contient un certain nombre de liens hypertextes vers d'autres sites. Cependant, http://happy-nivelle.fr/ n'a pas la possibilité de suivre et vérifier le contenu de ces sites, et n'assumera en conséquence aucune responsabilité de ce fait.
+    </p>
+
+</div>
+<br>
