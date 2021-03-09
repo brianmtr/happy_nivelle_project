@@ -91,6 +91,16 @@
     font-weight: bold;
 }
 
+.vote{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+}
+
+.date-title-address-show{
+  text-align: center;
+}
+
 //new/events
 .field{
     margin-left: 10%;
@@ -117,6 +127,11 @@
     .title-new-event{
         text-align: center;
         margin-top: 50px;
+    }
+    
+    .date-title-address-show{
+        display: flex;
+        justify-content: space-around;
     }
 }
 

@@ -1,40 +1,31 @@
-
 <p id="notice"><%= notice %></p>
 
 <div class="container-event-show">
-<div class="date-title-address-show">
-  <div class= "vote">
-      <p><%= @vote_participated %> Présents</p>
-      <p><%= @vote_maybe_participated%> Peut-être</p>
-      <p><%= @vote_not_participated%> Absents</p>
-  </div>
-<p>
-  <strong><%= @event.title %></strong>
-  
-</p>
+    <div class="date-title-address-show">
 
-<p>
-  <strong><%= @event.date.to_formatted_s(:long) %></strong>
-  
-</p>
+        <p>
+            <strong><%= @event.title %></strong>
+        </p>
 
-<p>
-  <strong><%= @event.address %></strong>
-  
-</p>
-</div>
-<p>
-  
-  <%= @event.description %>
-</p>
+        <p>
+            <strong><%= @event.date.to_formatted_s(:long) %></strong>
+        </p>
+        <p>
+            <strong><%= @event.address %></strong>
+        </p>
+    </div>
+        <div class="vote">
+            <p><%= @vote_participated %> Présents</p>
+            <p><%= @vote_maybe_participated%> Peut-être</p>
+            <p><%= @vote_not_participated%> Absents</p>
+        </div>
+    <p>
+        <%= @event.description %>
+    </p>
 
-<p class="image-show">
-  
-  <scope="col"><%= image_tag @event.image %>
-</p>
+    <p class="image-show">
+        <scope="col"><%= image_tag @event.image %>
+    </p>
 
-
-
-
-<%= link_to 'Retour', events_path %>
+    <%= link_to 'Retour', events_path %>
 </div>
