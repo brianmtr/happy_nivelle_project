@@ -1,8 +1,42 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.admin {
-    background-color: cadetblue;
+//for media querry to 375px
+.card-header {
+    width: 100%;
+    text-align: center;
+}
+
+.card-header-admin{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-header-admin img{
+    height: auto;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.card{
+    width: 80% !important;
+    margin-left: 10% !important;
+}
+
+.card-admin{
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 10px !important;
+    box-shadow: -6px -6px 10px rgba(65, 64, 64, 0.8), 6px 6px 10px rgba(255, 255, 255, 0.4);
+}
+
+.buttons-vera{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top: 20px;
 }
 
 .event-boucle{
@@ -11,24 +45,9 @@
     border-radius: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-
+    
 }
-
-.card-admin{
-    width: 60%;
-    padding: 20px;
-    margin-left: 20%;
-    margin-top: 20px;
-    border-radius: 20px !important;
-    box-shadow: -6px -6px 10px rgba(145, 145, 145, 0.8), 6px 6px 10px rgba(255, 255, 255, 0.4);
-}
-
-.card-header-admin{
-    width: 100%;
-    border-radius: 50px !important;
-}
-
-
+    
 .create-event button{
     border: 3px solid #fba627;
     background-color: white;
@@ -36,23 +55,42 @@
     margin: 10px 0;
     padding: 5px;
 }
-
+    
 .create-event button a:hover{
     color: #fba627 !important;
 }
 
-.buttons-vera{
-  border-top: 1px solid black;
-  margin-top: 20px;
- display: flex;
- justify-content: space-around;
-   
+//media querry to 480px
+@media screen and(min-width: 480px){
+    .card-admin{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
 }
 
-@media screen and (max-width: 375px){
+//media querry to 772px
+@media screen and(min-width: 772px){
     .buttons-vera{
-       display: flex;
-       flex-direction: column;
-       text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+//media querry to 1200px
+@media screen and(min-width: 1200px){
+    .card-header-admin img{
+        height: auto;
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+//media querry to 1900px
+@media screen and(min-width: 1900px){
+    .card-header-admin img{
+        height: auto;
+        width: 40%;
+        margin-left: 30%;
     }
 }
