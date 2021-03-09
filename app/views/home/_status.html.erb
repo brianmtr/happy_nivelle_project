@@ -1,13 +1,13 @@
 
 <div class="card-events" >
                           
-  <scope="col" ><p class="title-event"><%= event.title %></p>
+  <scope="col" ><p class="title-event"><%= event.title.upcase %></p>
      <div class="bar"></div>
              <div class="show-event">
                      <scope="col_image"><%= image_tag event.image %>
 
             <button class="button">
-                <%= link_to 'Agenda', event_path(event.id) %>
+                <%= link_to 'Agenda', agenda_index_path %>
             </button>
         </div>
         <scope="col"><p class ="address-date"><%= event.date %><br></p>

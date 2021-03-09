@@ -3,23 +3,24 @@
 <div class="container-event-show">
     <div class="date-title-address-show">
 
-        <p>
-            <strong><%= @event.title %></strong>
+        <p class="title-event-show">
+            <strong><%= @event.title.upcase %></strong>
         </p>
+<div class="align-address-date">
+        <p>
+            <strong><%= @event.date.to_formatted_s(:db) %></strong>
 
-        <p>
-            <strong><%= @event.date.to_formatted_s(:long) %></strong>
-        </p>
-        <p>
             <strong><%= @event.address %></strong>
         </p>
-    </div>
-        <div class="vote">
-            <p><%= @vote_participated %> Présents</p>
-            <p><%= @vote_maybe_participated%> Peut-être</p>
-            <p><%= @vote_not_participated%> Absents</p>
         </div>
-    <p>
+    </div>
+    <div class="border-vote"></div>
+    <div class="vote">
+        <p class="participate"><%= @vote_participated %> Présents</p>
+        <p class="maybe"><%= @vote_maybe_participated%> Peut-être</p>
+        <p class="notparticipate"><%= @vote_not_participated%> Absents</p>
+    </div>
+    <p class="event-describe">
         <%= @event.description %>
     </p>
 

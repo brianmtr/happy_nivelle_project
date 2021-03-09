@@ -47,7 +47,17 @@
     margin-bottom: 50px;
     
 }
-    
+
+.event-edit-boucle{
+    text-align: center;
+    background-color: #FBA627;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+
 .create-event button{
     border: 3px solid #fba627;
     background-color: white;
@@ -83,6 +93,12 @@
         height: auto;
         width: 50%;
         margin-left: 25%;
+    }
+
+    .create-event button{
+        border: 5px solid #fba627 !important;
+        font-size: 25px;
+        padding: 10px !important;
     }
 }
 
