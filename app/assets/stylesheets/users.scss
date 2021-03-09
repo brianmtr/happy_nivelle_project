@@ -77,6 +77,13 @@
     text-align: center;
     padding-bottom: 20px;
 }
+.items-center{
+    text-align: center;
+}
+
+.button_to{
+   text-align: center;
+}
 
 @media screen and (min-width: 480px){
     .field_sign_in{
@@ -278,9 +285,6 @@
             padding-left: 34%;
         }
 
-        .actions {
-            padding-left: 51.5%;
-        }
 
         .devise-shared-links-sign_in {
             margin-left: 44%;
