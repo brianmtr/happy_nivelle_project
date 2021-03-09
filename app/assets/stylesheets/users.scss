@@ -78,6 +78,26 @@
     padding-bottom: 20px;
 }
 
+.treuc{
+    display: flex !important;
+    
+    flex-wrap: wrap;
+}
+
+.list-group{
+  width: 400px;
+    display: flex !important;
+  margin: 50px auto;
+ 
+}
+
+.list-group-item{
+ 
+
+}
+
+
+
 @media screen and (min-width: 480px){
     .field_sign_in{
         padding-left: 10%;

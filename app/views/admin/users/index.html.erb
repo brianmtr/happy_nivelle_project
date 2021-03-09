@@ -1,16 +1,16 @@
 <h1 class="title-admin-event">Utilisateurs</h1>
-
+<div class="treuc">
 <% @users.each do |user| %>
 
 <ul class="list-group">
-    <li class="list-group-item active" aria-current="true" style="width: 80%; margin-left: 10%">
+    <li class="list-group-item active" aria-current="true">
         <% if user.admin === true %>
         <strong>Admin</strong>
         <% else %>
         <strong>Utilisateur classique</strong>
         <% end %>
     </li>
-    <li class="list-group-item" style="width: 80%; margin-left: 10%">
+    <li class="list-group-item">
         <%= user.firstname %>
         <br>
         <%= user.lastname %>
@@ -25,3 +25,4 @@
 </ul>
 <br>
 <% end %>
+</div>
