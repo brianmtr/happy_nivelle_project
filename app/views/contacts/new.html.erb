@@ -1,11 +1,15 @@
 <h3 class="title-form">Envoyez-nous un message ! :)</h3>
 <div class="form">
     <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-
+    <div class="contact-name">
     <%= f.input :name, label: 'Nom', :required => true %>
-
+    </div>
+    <div class="contact-email">
     <%= f.input :email, label: 'E-mail', :required => true %>
+    </div>
+    <div class="contact-message">
     <%= f.input :message, :as => :text, :required => true %>
+    </div>
     <%= f.check_box :rgpd %>
     <%= f.label :rg, '*Champs obligatoire. J\'accepte d\'être recontacté via les informations fournies dans ce formulaire. Aucune donnée n\'est conservé.' %>
     <div class="hidden">
