@@ -47,30 +47,19 @@
         width: 90%;
         margin-left: 5%;
     }
-    .form input, textarea {
-        margin: 15px 0;
+
+    .contact-name, .contact-email, .contact-message {
+        margin: 25px 0;
+       background: linear-gradient(rgb(255, 255, 255) 50%, rgb(0, 0, 0));
+       rotate: 2deg;
     }
-    .contact-name, .contact-message {
-       background: linear-gradient(rgb(255, 255, 255) 70%, rgb(0, 0, 0));
-       rotate: 1deg;
-    }
-    .contact-name input, .contact-message textarea{
-        rotate: -1deg;
-     }
-     .contact-name label, .contact-message label{
+    .contact-name input, .contact-email input, .contact-message textarea{
+        box-shadow: 0 0 0px 2px black;
         rotate: -2deg;
      }
-
-     .contact-email {
-        background: linear-gradient(rgb(255, 255, 255) 70%, rgb(0, 0, 0));
-        rotate: -1deg;
+     .contact-name label, .contact-email label, .contact-message label{
+        rotate: -3deg;
      }
-     .contact-email input{
-       rotate: 1deg;
-      }
-      .contact-email label{
-         
-      }
 
     .button-submit{
         margin-bottom: 20px;

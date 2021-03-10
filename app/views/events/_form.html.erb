@@ -9,12 +9,12 @@
 
 
   <div class="field">
-    <%= form.label :titre %>
+    <p class="event-field"><%= form.label :titre %> (12 caractères maximum)</p>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
+    <p class="event-field"><%= form.label :date %> et heure (exemple: 20/03/2000 18:20)</p>
     <%= form.datetime_field :date %>
   </div>
 

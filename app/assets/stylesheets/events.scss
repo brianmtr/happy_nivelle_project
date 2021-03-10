@@ -172,6 +172,11 @@ span{
     display: flex;
 }
 
+.event-field {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
 //media querry
 @media screen and (min-width: 576px){
     .btn {
