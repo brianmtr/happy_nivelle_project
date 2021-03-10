@@ -14,6 +14,9 @@
  *= require_self
  */
 
+p{
+  font-family: 'Boogaloo', sans-serif;
+}
  .navbar{
   font-family: 'Belleza', sans-serif;
 }
@@ -22,7 +25,6 @@
   font-family: 'Belleza', sans-serif;
 
 }
-
 
  .header-image-events-show img{
   width: 100%;
@@ -281,6 +283,10 @@
     }
 
     @media screen and (min-width: 1200px){
+
+      .covid_band p{
+        font-size: 17px;
+      }
       .title, .subtitle {
         font-size: 60px;
       }
@@ -339,7 +345,6 @@
       .item-text{
         font-size: 20px;
       }
-
     }
 
  

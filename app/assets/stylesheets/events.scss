@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
 .image-show {
     margin-left: 10px;
 }
@@ -59,6 +60,10 @@
 .create-event {
     text-align: center;
     margin-bottom: 25px;
+}
+
+span{
+    color: #fba627;
 }
 
 
@@ -300,6 +305,10 @@
     .event-top-text{
         width: 40%;
         margin: 10%;
+    }
+
+    .event-top-text p{
+        font-size: 22px;
     }
 
     .button-voted{
