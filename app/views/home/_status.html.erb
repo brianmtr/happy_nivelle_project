@@ -10,7 +10,7 @@
                 <%= link_to 'Agenda', agenda_index_path %>
             </button>
         </div>
-        <scope="col"><p class ="address-date"><%= event.date %><br></p>
+        <scope="col"><p class ="address-date"><%= event.date.to_formatted_s(:db)  %><br></p>
         <scope="col"><p class ="address-date"><%= event.address %><br></p>
         <scope="col"><p class="description-event"><%= event.description %></p>
                 
