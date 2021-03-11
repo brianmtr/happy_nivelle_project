@@ -26,6 +26,12 @@ p{
 
 }
 
+#notice {
+  font-size: 29px;
+  text-align: center;
+  margin-top: 10px;
+}
+
  .header-image-events-show img{
   width: 100%;
 }

@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+
+<p id="notice" class="animate__animated animate__tada"><%= notice %></p>
 
 <div class="container-event-show">
     <div class="date-title-address-show">
@@ -9,8 +10,9 @@
 <div class="align-address-date">
         <p>
             <strong><%= @event.date.to_formatted_s(:db) %></strong>
-
-            <strong><%= @event.address %></strong>
+        </p>
+        <p>
+            <stong><%= @event.address %></strong>
         </p>
         </div>
     </div>

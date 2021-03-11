@@ -293,6 +293,20 @@ span{
           font-size: 18px;
       }
 
+      .align-address-date p{
+          font-size: 20px;
+          
+      }
+
+      .align-address-date {
+          display: flex;
+          justify-content: space-around;
+      }
+
+      .participate, .notparticipate, .maybe {
+          font-size: 20px;
+      }
+
 }
 
 @media screen and (min-width: 1900px){
@@ -338,6 +352,20 @@ span{
     .image-show img{
         width: 80%;
         margin-left: 10%;
+    }
+
+    .align-address-date p, 
+    .participate,
+    .notparticipate, 
+    .maybe,
+    .event-describe {
+        font-size: 25px !important;
+        margin-top: 10px;
+    }
+
+    .align-address-date {
+        display: flex;
+        justify-content: space-around;
     }
 
 
