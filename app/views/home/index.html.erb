@@ -1,54 +1,50 @@
-
-<div>
 <p id="notice" class="animate__animated animate__tada"><%= notice %></p>
 
 
 
-<div class="image_comming">
-<%= image_tag("smiley_coming.png", :alt => "logo_happy_nivelle") %>
- <h3>À venir</h3>
+<div class="image_comming animate__animated animate__fadeInLeft">
+    <%= image_tag("smiley_coming.png", :alt => "logo_happy_nivelle") %>
+    <h3>À venir</h3>
 </div>
 
 <div class="align-card">
-<% @events_in_progress.each do |event| %>
-  <%= render 'status', event: event %>
-<% end %>
+    <% @events_in_progress.each do |event| %>
+    <%= render 'status', event: event %>
+    <% end %>
 </div>
 <div class="grey-box">
 
-  <div class="image_comming">
-    <%= image_tag("Clock-proposed.png", :alt => "logo_happy_nivelle") %>
-    <h3>Les proposés</h3>
-    
-  </div>
-<div class="test">
-       <div class="circle"></div>
-<div class="circletitle"></div>
+    <div class="image_comming">
+        <%= image_tag("Clock-proposed.png", :alt => "logo_happy_nivelle") %>
+        <h3>Les proposés</h3>
+
     </div>
-<div class="align-card">
- <% @events_proposed.each do |event| %>
+    <div class="test">
+        <div class="circle"></div>
+        <div class="circletitle"></div>
+    </div>
+    <div class="align-card">
+        <% @events_proposed.each do |event| %>
 
-    
-  <%= render 'status', event: event %>
 
-<% end %>
+        <%= render 'status', event: event %>
 
+        <% end %>
+
+    </div>
+    <div class="quart-disque">
+        <%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
+    </div>
 </div>
-<div class="quart-disque">
-<%= image_tag("quart-disque.png", :alt => "logo_happy_nivelle") %>
-</div>
-</div>
-
 
 <div class="image_comming">
-<%= image_tag("flag_past.png", :alt => "logo_happy_nivelle") %>
- <h3>Les terminés</h3>
+    <%= image_tag("flag_past.png", :alt => "logo_happy_nivelle") %>
+    <h3>Les terminés</h3>
 </div>
 
 <div class="align-card">
- <% @events_past.each do |event| %>
-  <%= render 'status', event: event %>
-<% end %>
+    <% @events_past.each do |event| %>
+    <%= render 'status', event: event %>
+    <% end %>
 </div>
 <br>
-
