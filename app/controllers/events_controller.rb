@@ -26,7 +26,7 @@ end
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: "L'évènement a été créé avec succès." }
+        format.html { redirect_to @event, notice: "Bravo votre événement est en attente de validation par l'admin !" }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ end
 def destroy
   @event.destroy
   respond_to do |format|
-    format.html { redirect_to events_url, notice: "Event was successfully destroyed." }
+    format.html { redirect_to events_url, notice: "L'événement a été detruit avec succès !" }
     format.json { head :no_content }
   end
 end
