@@ -91,7 +91,7 @@
           </li>
           <% end %>
 
-           <li><a class ="menuLink" href="/users/edit">Mon compte</a></li>
+           <li><a class ="menuLink" href="/users">Mon compte</a></li>
     
         </ul>
         </nav>
@@ -122,6 +122,8 @@
       <% elsif current_page? ('/agenda/index') %>
         <%= image_tag("header-agenda.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/users/sign_in') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/users') %>
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/users/sign_up') %>
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>

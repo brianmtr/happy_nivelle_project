@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :userevents
   root 'home#index'
   devise_for :users
+  resource :users
 
   # get '/home/index'
   get '/agenda/index'
