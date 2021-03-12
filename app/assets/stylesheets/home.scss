@@ -318,7 +318,7 @@ h5{
 @media screen and (min-width: 1900px){
 
     .card-events img {
-        max-width: 70%;
+        width: 250px;
         height: 400px;
         object-fit: cover;
         margin-left: 10%;
@@ -360,8 +360,8 @@ h5{
       }
 
     .button{
-        left: -80px;
-        top: 180px;
+        left: 102px;
+        top: -32px;
     }
 
     .card-events:hover{

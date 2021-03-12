@@ -53,7 +53,12 @@ class Admin::EventsController < AdminController
 
   # DELETE /events/1 or /events/1.json
   def destroy
+    @userevent = UserEvent.find_by(params[:id])
+    if  UserEvent.exists?
+      @userevent.destroy
+    end
     @event.destroy
+   
     respond_to do |format|
       format.html { redirect_to admin_events_url, notice: "L'événement a été supprimé." }
       format.json { head :no_content }

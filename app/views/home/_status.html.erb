@@ -7,7 +7,7 @@
                      <scope="col_image"><%= image_tag event.image %>
 
             <button class="button">
-                <%= link_to 'Agenda', agenda_index_path %>
+                <%= link_to 'Infos +', event_path(event.id) %>
             </button>
         </div>
         <scope="col"><p class ="address-date"><%= event.date.to_formatted_s(:db)  %><br></p>
