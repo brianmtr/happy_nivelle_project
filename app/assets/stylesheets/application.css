@@ -138,7 +138,7 @@ p{
     .title{
         color: #fff;
         position: absolute;
-        top: 45px;
+        top: 100px;
         left: 30px;
         font-size: 15px;
         font-family: 'Boogaloo', cursive;
@@ -149,7 +149,7 @@ p{
     .subtitle{
         color: #fff;
         position: absolute;
-        top: 60px;
+        top: 120px;
         left: 30px;
         font-size: 15px;
         text-shadow:  1px 3px 0px #494848;
