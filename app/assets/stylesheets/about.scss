@@ -4,7 +4,6 @@
 .container-about{
     width: 100%;
     height: 600px;
-   
     text-align: justify;
 }
 
@@ -52,7 +51,6 @@
 .image-stats img{
     width: 100%;
     height: 100px;
-    
 }
 
 .image-stats{
@@ -86,43 +84,38 @@
 //members of happy nivelle
 
 
-
 .title-members p{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     font-style: italic;
 }
+
 .pictures-members{
-width: 100%;
-display: flex;
-justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
 .pictures-members img{
     width: 20%;
     margin: 1%;
 }
 
-
-
 @media screen and(min-width: 576px){
     .image-stats{
         width: 30%;
-        }
-        .title-deco{
-            margin-top: 50px;
-        }
+    }
 
+    .title-deco{
+        margin-top: 50px;
+    }
 }
-
-
 
 @media screen and(min-width: 772px){
     .text-stats{
         padding-top: 100px;
     }
-
-
 
     .image-about{
         width: 65%;
@@ -132,7 +125,6 @@ justify-content: center;
     .title-deco{
         margin-top: 100px;
     }
-
 }
 
 @media screen and(min-width: 992px){
@@ -151,77 +143,66 @@ justify-content: center;
         margin-bottom: 50px;
     }
     .image-about{
-
         width: 40%;
+    }
         
-            }
-        
-            .text-about{
-                width: 40%;
-                
-            }
-            .text-about p{
-                font-size: 15px;
-        
-        }
-        .container-about{
-            display: flex;
-            padding: 100px;
-        }
-        .text-legal{
-            
-            margin-left: 20%;
-            width: 60%;
-        }
+    .text-about{
+        width: 40%;      
+    }
 
-        .text-legal p{
-            font-size: 15px;
+    .text-about p{
+        font-size: 20px;
+    }
 
-        }
+    .container-about{
+        display: flex;
+        padding: 100px;
+    }
 
-        .text-legal h2{
-            text-align: center;
-        }
+    .text-legal{
+        margin-left: 20%;
+        width: 60%;
+    }
 
-        .image-stats{
-            width: 10%;
-            margin-left: 20%;
-        }
+    .text-legal p{
+        font-size: 15px;
+     }
+
+    .text-legal h2{
+        text-align: center;
+    }
+
+    .image-stats{
+        width: 10%;
+        margin-left: 20%;
+    }
 }
 
 @media screen and(min-width: 1900px){
-    .association-title{
+    .association-title {
         margin-left: 10%;
     }
-    .image-about{
 
-width: 30%;
-
+    .image-about {
+        width: 30%;
     }
 
-    .text-about{
+    .text-about {
         width: 40%;
         
     }
-    .text-about p{
-        font-size: 20px;
 
-}
+    .text-about p {
+        font-size: 25px;
+    }
 
-.title-decoration {
-   
-    margin-bottom: 50px;
-}
+    .title-decoration {
+        margin-bottom: 50px;
+    }
 
-.title-deco{
-    font-size: 150px;
-
-}
-
-// .image-stats{
-//     width: 10%;
-//     margin-left: 20%;
-//     }
+    .title-deco{
+        font-size: 150px;
+    }
 
     .container-about{
         display: flex;
@@ -230,6 +211,5 @@ width: 30%;
 
     .text-legal p{
         font-size: 20px;
-
     }
 }
