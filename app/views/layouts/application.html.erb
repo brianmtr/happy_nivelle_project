@@ -71,7 +71,11 @@
           </li>
           <% end %>
 
-           <li><a class ="" href="/users/edit">Mon compte</a></li>
+           <% if user_signed_in? %>
+            <li><a class ="menuLink" href="/users">Mon compte</a></li>
+          <% else %>
+            <li><a class ="menuLink" href="/users/sign_in">Mon compte</a></li>
+          <% end %>
     
         </ul>
       </div>
@@ -90,7 +94,11 @@
           </li>
           <% end %>
 
-           <li><a class ="menuLink" href="/users">Mon compte</a></li>
+          <% if user_signed_in? %>
+            <li><a class ="menuLink" href="/users">Mon compte</a></li>
+          <% else %>
+            <li><a class ="menuLink" href="/users/sign_in">Mon compte</a></li>
+          <% end %>
     
         </ul>
         </nav>

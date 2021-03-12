@@ -101,6 +101,57 @@
     margin: 50px auto;
 }
 
+//account show page
+.account-show {
+    margin-top: 30px !important;
+    margin-bottom: 60px !important;
+}
+
+.account-show-p p {
+    font-size: 20px !important;
+}
+
+.account-show-p-participate p {
+    font-size: 20px !important;
+    margin-top: 80px;
+}
+
+.button-account {
+    width: 250px;
+    margin: 30px 0;
+    border: 2px solid #FBA627;
+    border-radius: 10px;
+    padding: 6px 24px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FBA627;
+    background-color: #ffffff;
+    transition: all 0.25s ease-in-out;
+
+      &:hover {
+          background-color: #FBA627;
+          border-color: #FBA627;
+          color: #ffffff;
+      }
+      &:active {
+          background-color: #FBA627;
+          border-color: #FBA627;
+          color: #ffffff;
+          box-shadow: none;
+      }
+      &:focus, &:active:focus {
+          background-color: #FBA627;
+          border-color: #FBA627;
+          color: #ffffff;
+          outline: 5px auto #FBA627;
+      }
+      &:visited {
+          background-color: #FBA627;
+          border-color: #FBA627;
+      }
+  }
+
 
 @media screen and (min-width: 480px){
     .field_sign_in{
