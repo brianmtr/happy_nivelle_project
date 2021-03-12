@@ -1,23 +1,24 @@
-<% if current_user %>
-<h2 class="items-center">Mon profil</h2>
+<% if user_signed_in? %>
+<h3 class="title-form">Mon profil</h3>
 
 
-<div class="items-center">
-<h2>Bonjour <%= @user.firstname %> :)</h2>
+<div class="items-center account-show">
+<h4>Bonjour <%= @user.firstname %> :)</h4>
 </div>
-<div class="field">
+<div class="field account-show-p">
 <p>Votre adresse E-mail est : <%= @user.email %></p>
 </div>
 
-<div class="field">
+<div class="field account-show-p">
 <p>Votre compte a été crée le : <%= @user.created_at.to_formatted_s(:db) %></p>
 </div>
 
 
-<div class="field">
-<p>Les évènements auxquels je participe : </p>
+<div class="field account-show-p-participate">
+<p>Les évènements auxquels vous participez : </p>
+</div>
+<div class="container account-show">
 <% @events.each do |event| %>
-
     <% if event.user_events.where(state: "yes", user_id: current_user).exists? %>
         <div class="cards">
             <div class="card-headers" id="headingOne">
@@ -30,16 +31,17 @@
                 </button>
             </div>
         </div>
-        <% else %>
-        <% end %>
-        <% end %>
+    <% else %>
+    <% end %>
+<% end %>
+
 </div>
 
 
 
 
 <div class="items-center">
-<a href="/users/edit"><button>Éditer mon compte</button></a>
+<a href="/users/edit"><button class="button-account">Éditer mon compte</button></a>
 </div>
 
-<%end%>
+<% end %>
