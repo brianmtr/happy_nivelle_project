@@ -26,6 +26,8 @@
 
 .image-event img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .btn {
@@ -178,6 +180,12 @@ span{
     margin-bottom: 0;
 }
 //media querry
+
+@media screen and (min-width: 480px){
+    .image-event img{
+        height: 350px;
+    }
+}
 @media screen and (min-width: 576px){
     .btn {
         width: 40%;
@@ -199,6 +207,15 @@ span{
         display: flex;
         justify-content: space-around;
     }
+
+    .card-header {
+        text-align: left;
+
+    }
+
+    .button-voted {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 772px){
@@ -206,7 +223,7 @@ span{
     .event-top-image img {
         width: 60%;
         margin-left: 20%;
-        margin-top: 50px;
+        margin-top: 15px !important;
     }
 
     .event-top-text {
@@ -259,8 +276,28 @@ span{
         justify-content: space-around;
         margin-top: 50px;
     }
-}
 
+    .composant-event {
+        margin-top: 10%;
+        display: flex;
+        text-align: left;
+    }
+
+    .title-description-event {
+        width: 55%;
+        margin-left: 5%;
+        text-align: justify;
+    }   
+
+    .image-event{
+        width: 90%;
+    }
+
+    .image-event img{
+        width: 295px;
+        margin-top: 10px;
+    }
+}
 
 @media screen and (min-width: 1200px){
     .button-event{
@@ -309,6 +346,16 @@ span{
 
 }
 
+@media screen and (min-width: 1500px){
+    .composant-event {
+        margin-left: 2%;
+    }
+
+    .title-description-event{
+        padding-left: 5%;
+    }
+}
+
 @media screen and (min-width: 1900px){
     .container-event-show p{
         font-size: 15px;
@@ -345,8 +392,8 @@ span{
     }
 
     .title-description-event {
-        width: 60%;
-        margin-left: 20%;
+        width: 100%;
+       
     }
 
     .image-show img{
@@ -368,6 +415,15 @@ span{
         justify-content: space-around;
     }
 
+    .composant-event {
+        margin-left: 10%;
+        width: 80%;
+    }
 
+    .image-event {
+        width: 550px;
+    }
+    
+    
 
 }
