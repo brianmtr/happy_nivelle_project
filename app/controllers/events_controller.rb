@@ -2,7 +2,6 @@ class EventsController < ApplicationController
   before_action :set_event, only: %i[ show edit update destroy ]
 
     def index    
-      @events = Event.all
       @events_in_progress = Event.accepted.where('date >= ?', Date.today).limit(3)
       @events_proposed    = Event.proposed.where('date >= ?', Date.today).limit(3)
       @events_past        = Event.past.where('date <= ?', Date.today).limit(3)

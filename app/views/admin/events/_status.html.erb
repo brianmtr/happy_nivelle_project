@@ -13,7 +13,7 @@
                 <%= link_to 'Voir événement', event_path(event.id) %></td>
                 <%= link_to 'Edit', edit_admin_event_path(event.id) %>
                 <%= link_to 'Refuser', admin_event_path(event.id), method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-                <%= link_to 'Accepter', event, method: :validate %>
+                <%= link_to 'Accepter', event, method: :put %>
             </div>
             </tr>
         </tbody>
