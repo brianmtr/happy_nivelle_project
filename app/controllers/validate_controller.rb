@@ -1,6 +1,6 @@
 class ValidateController < EventsController
 
-def validate
+def update
     @event = Event.find(params[:id])
     status = @event.status 
   case status

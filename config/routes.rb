@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get '/home/index'
   get '/agenda/index'
   post '/users/:id', to: 'role#role'
-  post '/events/:id', to: 'validate#validate'
+  put '/events/:id', to: 'validate#update'
   # post '/comments/:id', to: 'comments#accepted'
   resources :comments
   resources :events do
