@@ -379,6 +379,12 @@ p{
       .copyright {
        font-size: 25px;
       }
+
+      .button-ux {
+        position: absolute;
+        top: 480px ;
+        left: 30px;
+      }
     }
 
  
