@@ -122,7 +122,7 @@
       <p class="catch_phrase animate__animated animate__slideInLeft">Organisateur de soirée a thème, weekend , et voyage à modifier...</p>
 
       <% if current_page? ('/') %>
-        <%= image_tag("header-home.png", :alt => "logo_facebook") %>
+        <%= image_tag("happy-header-home.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/events') || ('/events/new') ||  %>
         <%= image_tag("header-events.png", :alt => "logo_facebook") %>
       <% elsif current_page? ('/about/index') %>
@@ -155,9 +155,13 @@
 
 
     <%= yield %>
+
 <footer>
+
 <div class="logo-footer">
+<a href="/" ><div class="logo">
   <%= image_tag("logo-hpn.png", :alt => "logo_facebook") %>
+   </div></a>
 </div>
 <div class="container-footer">
           <p><a class ="contact-footer" href="/contacts/new">Contactez-nous</a></p>
