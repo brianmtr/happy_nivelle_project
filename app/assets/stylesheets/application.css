@@ -293,12 +293,15 @@ p{
       .covid_band p{
         font-size: 17px;
       }
+
       .title, .subtitle {
         font-size: 60px;
       }
+
       .title {
         top: 250px;
       }
+
       .subtitle {
         top: 300px;
       }
@@ -311,9 +314,20 @@ p{
       footer p{
         font-size: 17px;
       }
+
+      .logo-facebook img,
+      .facebook-footer img {
+        width: 20px;
+      }
     }
 
     @media screen and (min-width: 1900px){
+
+      .logo-facebook img,
+      .facebook-footer img {
+        width: 27px;
+      }
+
       .logo img{
         width: 160px;
       }
@@ -341,15 +355,17 @@ p{
         margin-top: 10px;
       }
 
-    
-
-      
       .connexion a{
         font-size: 20px !important;
       }
 
       .item-text{
         font-size: 20px;
+      }
+
+      .container-footer p, 
+      .copyright {
+       font-size: 25px;
       }
     }
 
