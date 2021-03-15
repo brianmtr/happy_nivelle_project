@@ -430,27 +430,65 @@ h5{
 
     .card-events:hover{
 
-        .title-event{
-       
-        position: relative;
-        left: 43px;
-        top: 0px;
-        transform: rotate(0deg);
-        transition: 0.7s;
-    }
-    
-    .bar {
-        position: relative;
-        left: 41px;
-        top: 5px;
-        width: 267px;
-        transform: rotate(0deg);
-        transition: 0.7s;
+        .title-event {
+        animation: event 0.5s ease-in 1 normal forwards;
     }
 
-    img, button {
-        transform: rotate3d(1, 1, 1, 360deg);
-        transition: 1.0s;
+  .bar {
+    animation: bareffect 0.8s ease-in 1 normal forwards;
+}
+}
+
+
+@keyframes bareffect {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    80% {
+        opacity: 0%;
+    }
+
+    100% {
+        top: 0px;
+        transform: rotate(360deg);
+        left: 56px;
+        width: 235px;
+    }
+}
+
+
+
+
+
+
+
+@keyframes event {
+    0% {
+        position: relative;
+        left: -100px;
+        right: 80px;
+        top: 295px;
+        
+    }
+
+
+    50% {
+
+        
+  
+top: -30px;
+
+    }
+
+    100% {
+        top: 0px;
+        transform: rotate(360deg);
+        left: 56px;
     }
 }
     
