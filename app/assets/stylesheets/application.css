@@ -185,6 +185,7 @@ p{
       margin-bottom: 0;
     }
 
+
     @media screen and (min-width: 600px){
       .title, .subtitle {
         font-size: 30px;
@@ -323,6 +324,12 @@ p{
       .container-footer p, 
       .copyright {
        font-size: 20px;
+      }
+
+      .button-ux {
+        position: absolute;
+        top: 350px ;
+        left: 30px;
       }
     }
 
