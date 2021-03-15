@@ -327,6 +327,13 @@
 
 @media screen and (min-width: 1900px) {
         //users/confirmation/new.user
+        .container{
+            width: 60%;
+        }
+
+        .back{
+            margin-left: 10%;
+        }
         .field-confirmation {
             padding-left: 15%;
         }
