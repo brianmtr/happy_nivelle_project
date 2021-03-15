@@ -40,7 +40,7 @@
 <h3 class="items-center">Supprimer mon compte ?</h3>
 
 <div class="items-center">
-<button class="button-account"><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?" }, method: :delete %></button>
+<%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?" }, :class => "button-account", method: :delete %>
 </div>
 
 <div class="container-event-show">

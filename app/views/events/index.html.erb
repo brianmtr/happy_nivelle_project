@@ -30,7 +30,7 @@
 
 <% if user_signed_in? %>
 <div class="create-event">
-<button class="button-account event-size"><%= link_to 'Créer un évènement', new_event_path %></button>
+<%= button_to 'Créer un évènement', new_event_path, :class => "button-account event-size" %>
 </div>
 <% end %>
 

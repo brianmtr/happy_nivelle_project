@@ -102,6 +102,10 @@
     margin: 1%;
 }
 
+.font-legal h3, p, h2 {
+font-family: 'Belleza', sans-serif !important;
+}
+
 @media screen and(min-width: 576px){
     .image-stats{
         width: 30%;

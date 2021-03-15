@@ -185,6 +185,7 @@ p{
       margin-bottom: 0;
     }
 
+
     @media screen and (min-width: 600px){
       .title, .subtitle {
         font-size: 30px;
@@ -310,6 +311,11 @@ p{
 
       footer p{
         font-size: 17px;
+      }
+      .button-ux {
+        position: absolute;
+        top: 350px ;
+        left: 30px;
       }
     }
 

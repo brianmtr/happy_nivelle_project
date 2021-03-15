@@ -50,17 +50,11 @@
 
     .contact-name, .contact-email, .contact-message {
         margin: 25px 0;
-       background: linear-gradient(rgb(255, 255, 255) 50%, rgb(0, 0, 0));
-       rotate: 2deg;
     }
     .contact-name input, .contact-email input, .contact-message textarea{
         box-shadow: 0 0 0px 2px black;
-        rotate: -2deg;
-     }
-     .contact-name label, .contact-email label, .contact-message label{
-        rotate: -3deg;
-     }
-
+       
+    }
     .button-submit{
         margin-bottom: 20px;
     }
