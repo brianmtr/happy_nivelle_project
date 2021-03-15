@@ -319,6 +319,11 @@ p{
       .facebook-footer img {
         width: 20px;
       }
+
+      .container-footer p, 
+      .copyright {
+       font-size: 20px;
+      }
     }
 
     @media screen and (min-width: 1900px){
