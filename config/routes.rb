@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'legalnotice/index'
   get 'about/index'
   resources :userevents
   root 'home#index'

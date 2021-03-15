@@ -26,6 +26,7 @@ p{
 
 }
 
+
 #notice {
   font-size: 29px;
   text-align: center;
@@ -176,6 +177,10 @@ p{
       justify-content: center;
       padding-bottom: 10px;
       color: #fff;
+    }
+    
+    .copyright {
+       padding-bottom: 10px; 
     }
 
     .contact-footer, .address-footer, .copyright{

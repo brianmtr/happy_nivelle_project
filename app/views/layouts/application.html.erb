@@ -152,8 +152,11 @@
               <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>
       <% elsif current_page? (@event) %>
               <%= image_tag("header-events.png", :alt => "logo_facebook") %>
+      <% elsif current_page? ('/legalnotice/index') %>
+              <%= image_tag("header-sign_in.png", :alt => "logo_facebook") %>   
       <% else current_page? %>
               <%= image_tag("errors.png", :alt => "errors_image") %>   
+
     <% end %>
 
      </div>
@@ -171,7 +174,7 @@
 <div class="container-footer">
           <p><a class ="contact-footer" href="/contacts/new">Contactez-nous</a></p>
           <p class="address-footer">59230 Nivelle</p>
-          <p><a class ="contact-footer" href="/about/index#legalnotice">Mentions légales</a></p>
+          <p><a class ="contact-footer" href="/legalnotice/index">Mentions légales</a></p>
 <br>
 
 </div>
