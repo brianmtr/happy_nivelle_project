@@ -310,11 +310,13 @@ p{
 
       .subtitle {
         top: 300px;
+        line-height: 60px;
       }
 
       .catch_phrase{
         top: 350px;
         font-size: 20px;
+        line-height: 80px;
       }
 
       footer p{
