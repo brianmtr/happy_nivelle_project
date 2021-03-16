@@ -331,8 +331,14 @@ span{
 
       .date-title-address {
         display: flex ;
-        justify-content: space-around;
+       flex-direction: column;
         text-align: center;
+      }
+
+      .events-title {
+          font-weight: bold;
+          font-size: 2rem;
+          font-family: 'boogaloo', sans-serif;
       }
 
       .event-top-text p{
@@ -352,7 +358,74 @@ span{
       .participate, .notparticipate, .maybe {
           font-size: 20px;
       }
+      
 
+    .button-account-maybe {
+        margin: 30px 0;
+        border: 2px solid #FBA627 !important;
+        border-radius: 10px !important;
+        padding: 6px 24px !important;
+        font-size: 13px;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #FBA627 !important;
+        background-color: #ffffff !important;
+        transition: all 0.25s ease-in-out !important;
+        &:hover {
+            background-color: #FBA627 !important;
+            border-color: #FBA627 !important;
+            color: #ffffff !important;
+        }
+    }
+
+
+    .button-account-participate {
+        margin: 30px 0;
+        border: 2px solid #2ba349 !important;
+        border-radius: 10px !important;
+        padding: 6px 24px !important;
+        font-size: 13px;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #2ba349 !important;
+        background-color: #ffffff !important;
+        transition: all 0.25s ease-in-out !important;
+        &:hover {
+            background-color: #2ba349  !important;
+            border-color: #2ba349  !important;
+            color: #ffffff !important;
+        }
+
+    }
+
+    .button-account-notparticipate {
+        margin: 30px 0;
+        border: 2px solid #fb2727 !important;
+        border-radius: 10px !important;
+        padding: 6px 24px !important;
+        font-size: 13px;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fb2727 !important;
+        background-color: #ffffff !important;
+        transition: all 0.25s ease-in-out !important;
+        &:hover {
+            background-color: #fb2727 !important;
+            border-color: #fb2727!important;
+            color: #ffffff !important;
+        }
+
+    }
+
+    .button-voted{
+        justify-content: space-around;
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+    }
 }
 
 @media screen and (min-width: 1500px){
@@ -390,11 +463,7 @@ span{
         font-size: 22px;
     }
 
-    .button-voted{
-        display: flex;
-        width: 60%;
-        margin-left: 20%;
-    }
+
 
     .image-event img{
         width: 60%;
