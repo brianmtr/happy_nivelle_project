@@ -4,7 +4,8 @@
 
 
 .image-show {
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .event-title {
@@ -93,8 +94,8 @@ span{
 
 
 .image-show img{
-    width: 100%;
-  
+    width: 200px;
+    object-fit: cover;
 }
 
 .container-event-show{
@@ -115,7 +116,7 @@ span{
 }
 
 .event-size {
-    font-size: 17px !important;
+    font-size: 13px !important;
 }
 
 .show-event a {
@@ -131,11 +132,11 @@ span{
     display: flex;
     width: 60%;
     margin-left: 20%;
+    justify-content: space-around;
 }
 
 .align-address-date p{
-    display: flex;
-    justify-content: space-around;
+    margin-left: 5px;
 }
 
 .vote {
@@ -143,6 +144,11 @@ span{
     margin-left: 10%;
     display: flex;
     justify-content: space-around; 
+  }
+
+  .vote-redirect {
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
   }
 
@@ -256,6 +262,9 @@ span{
         margin-left: 30%;
         width: 40%;
     }
+    .image-show img{
+        width: 300px;
+    }
 
 }
 
@@ -264,10 +273,7 @@ span{
         font-size: 15px;
     }
 
-    .image-show img{
-        width: 100%;
-      
-    }
+    
     
     .container-event-show{
         width: 60%;
@@ -303,6 +309,10 @@ span{
 }
 
 @media screen and (min-width: 1200px){
+    .event-size {
+        font-size: 16px !important;
+    }
+
     .button-event{
         display: flex;
         flex-direction: row-reverse;
@@ -352,6 +362,15 @@ span{
       .participate, .notparticipate, .maybe {
           font-size: 20px;
       }
+
+      .align-address-date p, 
+    .participate,
+    .notparticipate, 
+    .maybe,
+    .event-describe {
+        font-size: 25px !important;
+        margin-top: 10px;
+    }
 
 }
 
@@ -410,14 +429,7 @@ span{
         margin-left: 10%;
     }
 
-    .align-address-date p, 
-    .participate,
-    .notparticipate, 
-    .maybe,
-    .event-describe {
-        font-size: 25px !important;
-        margin-top: 10px;
-    }
+    
 
     .align-address-date {
         display: flex;
@@ -433,6 +445,8 @@ span{
         width: 550px;
     }
     
-    
+    .image-show img{
+        width: 400px;
+    }
 
 }

@@ -12,7 +12,7 @@
             <strong><%= @event.date.to_formatted_s(:db) %></strong>
         </p>
         <p>
-            <stong><%= @event.address %></strong>
+            <strong><%= @event.address %></strong>
         </p>
         </div>
     </div>
@@ -22,12 +22,19 @@
         <p class="maybe"><%= @vote_maybe_participated%> Peut-être</p>
         <p class="notparticipate"><%= @vote_not_participated%> Absents</p>
     </div>
+
+<% if @event.id && @event.status === 'proposed' %>
+    <div class="vote-redirect">
+    <%= link_to 'Je souhaite voter !', events_path, :class => "button-account event-size" %>
+    </div>
+<% end %>
+
     <p class="event-describe">
         <%= @event.description %>
     </p>
 
     <p class="image-show">
-        <scope="col"><%= image_tag @event.image %>
+        <%= image_tag @event.image %>
     </p>
 
     <%= link_to 'Retour', :back %>
