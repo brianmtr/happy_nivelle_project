@@ -385,6 +385,10 @@ span{
 }
 
 @media screen and (min-width: 1900px){
+    .event-size {
+        font-size: 20px !important;
+    }
+    
     .container-event-show p{
         font-size: 15px;
         width: 80%;
