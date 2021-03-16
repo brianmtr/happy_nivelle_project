@@ -377,6 +377,15 @@ h5{
 
 @media screen and (min-width: 1900px){
 
+
+    .address-date, 
+    .description-event {
+        font-size: 17px;
+        margin-right: 0;
+    }
+    
+    
+
     .card-events img {
         width: 250px;
         height: 400px;
@@ -431,12 +440,12 @@ h5{
     .card-events:hover{
 
         .title-event {
-        animation: event 0.5s ease-in 1 normal forwards;
-    }
+            animation: event 0.5s ease-in 1 normal forwards;
+        }
 
   .bar {
     animation: bareffect 0.8s ease-in 1 normal forwards;
-}
+    }
 }
 
 
@@ -472,17 +481,11 @@ h5{
         position: relative;
         left: -100px;
         right: 80px;
-        top: 295px;
-        
+        top: 295px;  
     }
 
-
     50% {
-
-        
-  
-top: -30px;
-
+        top: -30px;
     }
 
     100% {
