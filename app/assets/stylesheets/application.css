@@ -385,6 +385,7 @@ p{
       .container-footer p, 
       .copyright {
        font-size: 25px;
+       padding-bottom: 10px;
       }
 
       .button-ux {
