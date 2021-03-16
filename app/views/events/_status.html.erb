@@ -1,6 +1,30 @@
 <div class="card">
     <div class="card-header" id="headingOne">
 
+
+        <div class="composant-event">
+            <div class="image-date-event">
+
+                <scope="col">
+                    <div class="image-event"><%= image_tag event.image %></div><br>
+            </div>
+            <div class="title-description-event">
+                <div class="date-title-address">
+                    <scope="col"><%= event.title %></scope="col">
+                    <scope="col"><%= event.date %></scope="col">
+                    <scope="col"><%= event.address %></scope="col">
+                </div>
+                <br>
+                <br>
+                <scope="col"><%= event.description %><br>
+                    <div class="button-event">
+                        <%= link_to 'Voir évenement', event_path(event.id) %>
+                    </div>
+            </div>
+            <br>
+
+        </div>
+
         <% if user_signed_in? %>
         <div class="button-voted">
             <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "btn btn-success" %>
@@ -10,24 +34,5 @@
 
         <% end %>
 
-        <div class="composant-event">
-            <div class="image-date-event">
-                <scope="col"><%= event.date %><br>
-                    <scope="col">
-                        <div class="image-event"><%= image_tag event.image %></div><br>
-            </div>
-            <div class="title-description-event">
-                <strong>
-                    <scope="col"><%= event.title %>
-                </strong><br>
-                <scope="col"><%= event.address %><br><br>
-                    <scope="col"><%= event.description %><br>
-                        <div class="button-event">
-                            <%= link_to 'Voir évenement', event_path(event.id) %>
-                        </div>
-            </div>
-            <br>
-
-        </div>
     </div>
 </div>

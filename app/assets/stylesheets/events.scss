@@ -37,7 +37,7 @@
 }
 
 .composant-event {
-    margin-top: 10%;
+    margin-top: 0% !important;
     text-align: center;
 }
 
@@ -327,6 +327,12 @@ span{
       .back-event{
           width: 60%;
           margin-left: 20%;
+      }
+
+      .date-title-address {
+        display: flex ;
+        justify-content: space-around;
+        text-align: center;
       }
 
       .event-top-text p{
