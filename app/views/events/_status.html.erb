@@ -10,7 +10,9 @@
             </div>
             <div class="title-description-event">
                 <div class="date-title-address">
-                    <scope="col"><%= event.title %></scope="col">
+                <div class="events-title">
+                    <scope="col"><%= event.title.upcase %></scope="col">
+                    </div>
                     <scope="col"><%= event.date %></scope="col">
                     <scope="col"><%= event.address %></scope="col">
                 </div>
@@ -27,9 +29,9 @@
 
         <% if user_signed_in? %>
         <div class="button-voted">
-            <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "btn btn-success" %>
-            <%= link_to 'Peut-être', maybes_event_path(event), method: :put, remote: true, :class => "btn btn-warning" %>
-            <%= link_to 'Je ne participe pas',notparticipates_event_path(event), method: :put, remote: true, :class => "btn btn-danger" %>
+            <%= link_to 'Je participe', participates_event_path(event), method: :put, remote: true, :class => "button-account-participate event-size" %>
+            <%= link_to 'Peut-être', maybes_event_path(event), method: :put, remote: true, :class => "button-account-maybe event-size" %>
+            <%= link_to 'Je ne participe pas',notparticipates_event_path(event), method: :put, remote: true, :class => "button-account-notparticipate event-size" %>
         </div>
 
         <% end %>
