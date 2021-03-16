@@ -19,7 +19,7 @@
 </div>
 <div class="container account-show">
 <% @events.each do |event| %>
-    <% if event.user_events.where(state: "yes", user_id: current_user).exists? && (event.status === "accepted" && "proposed")  %>
+    <% if event.user_events.where(state: "yes", user_id: current_user).exists? && (event.status === "accepted" || "proposed")  %>
         <div class="cards">
             <div class="card-headers" id="headingOne">
                 <strong>
