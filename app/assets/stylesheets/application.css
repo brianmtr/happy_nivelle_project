@@ -139,7 +139,7 @@ p{
     .title{
         color: #fff;
         position: absolute;
-        top: 100px;
+        top: 90px;
         left: 30px;
         font-size: 15px;
         font-family: 'Boogaloo', cursive;
@@ -150,7 +150,7 @@ p{
     .subtitle{
         color: #fff;
         position: absolute;
-        top: 120px;
+        top: 110px;
         left: 30px;
         font-size: 15px;
         text-shadow:  1px 3px 0px #494848;
@@ -161,11 +161,17 @@ p{
     .catch_phrase{
       color: #fff;
       position: absolute;
-      top: 140px ;
+      top: 130px ;
       left: 30px;
       font-size: 10px;
     }
 
+    .button-ux {
+      position: absolute;
+      top: 120px ;
+      left: 30px;
+      font-size: 7px !important;
+    }
 
     footer{
       background-color: #494848;
@@ -206,6 +212,10 @@ p{
         top: 180px;
         font-size: 15px;
       }
+      .button-ux {
+        top: 180px ;
+        font-size: 10px !important;
+      }
     }
 
     @media screen and (min-width: 772px){
@@ -231,8 +241,13 @@ p{
   .navbar li a {
     color: black;
   }
+
+  .button-ux {
+    top: 210px ;
+    font-size: 12px !important;
+  }
   
-    }
+  }
 
 
     @media screen and (min-width: 992px){
@@ -262,6 +277,10 @@ p{
       .catch_phrase{
         top: 280px;
         font-size: 20px;
+      }
+
+      .button-ux {
+        top: 280px ;
       }
 
       .navbar {
@@ -317,6 +336,11 @@ p{
         font-size: 20px;
       }
 
+      .button-ux {
+        top: 350px ;
+        font-size: 15px !important;
+      }
+
       footer p{
         font-size: 17px;
       }
@@ -331,11 +355,6 @@ p{
        font-size: 20px;
       }
 
-      .button-ux {
-        position: absolute;
-        top: 350px ;
-        left: 30px;
-      }
     }
 
     @media screen and (min-width: 1900px){
@@ -366,6 +385,11 @@ p{
         font-size: 20px;
       }
 
+      .button-ux {
+        top: 480px ;
+        font-size: 20px !important;
+      }
+
       .navbar li a {
         color: black;
         font-size: 20px;
@@ -385,11 +409,6 @@ p{
        font-size: 25px;
       }
 
-      .button-ux {
-        position: absolute;
-        top: 480px ;
-        left: 30px;
-      }
     }
 
  
