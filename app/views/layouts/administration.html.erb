@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-admin">
         <div class="contact-bar">
             <div class="logo">
                 <%= image_tag("logo-hpn.png", :alt => "logo_happy_nivelle") %>
@@ -57,19 +57,9 @@
         <nav class="nav-ham mobile">
             <div class="container">
                 <ul class="navbar">
-                    <li><a class="menuLink" href="/">Accueil</a></li>
-                    <li><a class="menuLink" href="/about/index">À propos</a></li>
-                    <li><a class="menuLink" href="/events">Boite à idées</a></li>
-                    <li><a class="menuLink" href="/agenda/index">Agenda</a></li>
-                    <li><a class="menuLink" href="/contacts/new">Contact</a></li>
-                    <% if user_signed_in? && current_user.admin === 'true' %>
-                    <li>
-                        <a class="" href="/admin/events">Admin</a>
-                    </li>
-                    <% end %>
-
-                    <li><a class="" href="/users/edit">Mon compte</a></li>
-
+                    <li><a class="menuLink"><%= link_to 'évènements', admin_events_path %></a></li>
+                    <li><a class="menuLink"><%= link_to 'Utilisateurs', admin_users_path %></a></li>
+                    <li><a class="menuLink" href="/">Retour à l'accueil</a></li>
                 </ul>
             </div>
 
@@ -77,7 +67,6 @@
         <nav class="pc">
             <ul class="navbar">
                 <li><a class="menuLink"><%= link_to 'évènements', admin_events_path %></a></li>
-                <li><a class="menuLink"><%= link_to 'commentaires', admin_comments_path %></a></li>
                 <li><a class="menuLink"><%= link_to 'Utilisateurs', admin_users_path %></a></li>
                 <li><a class="menuLink" href="/">Retour à l'accueil</a></li>
             </ul>
