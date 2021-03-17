@@ -296,6 +296,10 @@ p{
     display: none !important;
   }
 
+  .nav-ham {
+    display: none !important;
+  }
+
   .item_contact_bar p {
     display: block;
 }

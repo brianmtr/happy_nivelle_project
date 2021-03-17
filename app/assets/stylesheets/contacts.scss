@@ -48,14 +48,22 @@
         margin-left: 5%;
     }
 
-    .contact-name, .contact-email, .contact-message {
+    .contact-name, .contact-email, .contact-message, .contact-rgpd {
         margin: 25px 0;
     }
-    .contact-name input, .contact-email input, .contact-message textarea{
+    .contact-name input, .contact-email input, .contact-message textarea, .contact-rgpd input{
         box-shadow: 0 0 0px 2px black;
-       
     }
-    .button-submit{
+    .contact-rgpd {
+        display: flex;
+        align-items: flex-start;
+    }
+    .contact-rgpd input {
+        margin-right: 10px;
+    }
+    .button-submit {
+        display: flex;
+        justify-content: center;
         margin-bottom: 20px;
     }
 }
@@ -68,10 +76,7 @@
     }
 
     .button-submit{
-        display: flex;
-        flex-direction: row-reverse;
         margin-bottom: 50px;
-        
         }
 }
 
@@ -95,18 +100,4 @@
     margin-bottom: 50px;
 }
 
-.button-submit{
-display: flex;
-flex-direction: row-reverse;
-margin-bottom: 50px;
-
-}
-
-.rotate{
-    width: 300;
-    height: 40px;
-    position: relative;
-    top: 40px;
-    z-index: 0;
-}
 }

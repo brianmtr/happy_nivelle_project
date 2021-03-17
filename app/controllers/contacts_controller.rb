@@ -6,12 +6,16 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
-    if @contact.deliver
-      flash.now[:notice] = 'Merci pour votre message, nous vous recontactons très vite !'
-    else
-      flash.now[:error] = 'Le message n\'a pas pu être envoyé.'
-      render :new
+    respond_to do |format|
+      if @contact.deliver
+        format.html { redirect_to new_contact_path, notice: "Merci pour votre message, nous vous recontactons très vite !" }
+        format.json { render :new, status: :created, location: new_contact_path }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
     end
+
   end
 
   private
