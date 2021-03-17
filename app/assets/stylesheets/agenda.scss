@@ -109,9 +109,9 @@
 .button-agenda{
     border: 1px solid rgb(180, 180, 180) !important;
     box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.4);
-border-radius: 50px;
-background-color: #FBA627;
-padding: 5px;
+    border-radius: 50px;
+    background-color: #FBA627;
+    padding: 5px;
 }
 
 .test, .button-agenda{
@@ -119,4 +119,7 @@ padding: 5px;
     margin-bottom: 5px;
 }
 
+    .agenda-description {
+        font-size: 25px;
+    }
 }
