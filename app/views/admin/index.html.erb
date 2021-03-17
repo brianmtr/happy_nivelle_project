@@ -1,6 +1,5 @@
 <% @events.each do |event| %>
 
-
 <% if event.status == nil %>
 <table class="table table-striped">
 
@@ -31,11 +30,11 @@
             </div>
         </div>
 
-
     </tbody>
 </table>
 
 <% end %>
+
 <% end %>
 <br>
 
@@ -50,23 +49,14 @@
 <%= comment.created_at %>
 <%= comment.description %>
 
-
-
 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
     <%= link_to 'Show', comment %>
     <%= link_to 'Edit', edit_comment_path(comment) %>
     <%= link_to 'Refuser', comment, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
     <%= link_to 'Accepter', comment, method: :accepted %>
 </button>
-
 <br>
-
-
 </div>
-
-
 </table>
-
-
 <% end %>
 <% end %>

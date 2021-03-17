@@ -37,30 +37,41 @@
     }
 
 
-@media screen and (min-width: 375px){
+@media screen and (min-width: 375px) {
 
-    .title-form{
+    .title-form { 
         text-align: center;
         margin-top: 20px;
     }
-    .form{
+
+    .form {
         width: 90%;
         margin-left: 5%;
     }
 
-    .contact-name, .contact-email, .contact-message, .contact-rgpd {
+    .contact-name, 
+    .contact-email, 
+    .contact-message, 
+    .contact-rgpd {
         margin: 25px 0;
     }
-    .contact-name input, .contact-email input, .contact-message textarea, .contact-rgpd input{
+
+    .contact-name input, 
+    .contact-email input, 
+    .contact-message textarea, 
+    .contact-rgpd input {
         box-shadow: 0 0 0px 2px black;
     }
+
     .contact-rgpd {
         display: flex;
         align-items: flex-start;
     }
+
     .contact-rgpd input {
         margin-right: 10px;
     }
+
     .button-submit {
         display: flex;
         justify-content: center;
@@ -69,35 +80,33 @@
 }
 
 
-@media screen and (min-width: 772px){
-    .form{
+@media screen and (min-width: 772px) {
+    .form {
         width: 60%;
         margin-left: 20%;
     }
 
-    .button-submit{
+    .button-submit {
         margin-bottom: 50px;
         }
 }
 
-@media screen and (min-width: 1200px){
-    .form{
+@media screen and (min-width: 1200px) {
+    .form {
         width: 50%;
         margin-left: 25%;
     }
 }
 
-@media screen and (min-width: 1900px){
-.form{
-    
+@media screen and (min-width: 1900px) {
+.form {
     width: 30%;
     margin-left: 35%;
 }
 
-.title-form{
+.title-form {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
 }

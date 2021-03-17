@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-
-
 @media screen and (min-width: 375px){
     .cards{
         width: 90%;
@@ -48,6 +45,7 @@
     .test {
         margin-top: 12px;
     }
+
     .button-agenda:hover{
         opacity: 0.6;
         box-shadow: -6px -6px 10px rgba(211, 211, 211, 0.7), 6px 6px 10px rgba(0, 0, 0, 0.2);
@@ -63,8 +61,6 @@
     }
 }
 
-@media screen and (min-width: 992px){}
-
 @media screen and (min-width: 1200px){
     .cards{
         width: 70%;
@@ -74,6 +70,7 @@
     .test, .button-agenda{
         font-size: 20px;
     }
+    
     .agenda-description {
         font-size: 20px;
         margin: 50px;

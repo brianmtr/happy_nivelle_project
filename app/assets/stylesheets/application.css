@@ -21,21 +21,22 @@ header {
   position: fixed;
   z-index: 1000;
 }
+
 .header-image {
   padding-top: 100px;
 }
+
 p{
   font-family: 'Boogaloo', sans-serif;
 }
- .navbar{
+
+ .navbar {
   font-family: 'Belleza', sans-serif;
 }
 
-.item-contact-bar li, .item-contact-bar p{
+.item-contact-bar li, .item-contact-bar p {
   font-family: 'Belleza', sans-serif;
-
 }
-
 
 #notice {
   font-size: 29px;
@@ -43,7 +44,7 @@ p{
   margin-top: 10px;
 }
 
- .header-image-events-show img{
+ .header-image-events-show img {
   width: 100%;
 }
 
@@ -51,35 +52,34 @@ p{
         display: none;
     }
 
-    .contact-bar ul{
+    .contact-bar ul {
         padding-top: 5px;
         width: 100%;
     }
 
-    .contact-bar p{
+    .contact-bar p { 
       color: #fff;
     }
 
-    .item-contact-bar{
+    .item-contact-bar {
         width: 100%;
     }
 
-    .item-contact-bar li{
+    .item-contact-bar li {
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
 
-    .item-contact-bar li a{
+    .item-contact-bar li a {
         font-size: 10px;
     }
 
     .item_contact_bar p {
         display: none;
-        
     }
 
-    .connexion a{
+    .connexion a {
       color: #fff !important;
       font-size: 13px !important;
     }
@@ -137,7 +137,7 @@ p{
         font-size: 1.2rem;
       }
 
-      .header-image img{
+      .header-image img {
         width: 100%;
     }
 
@@ -146,7 +146,7 @@ p{
       justify-content: center;
     }
 
-    .title{
+    .title {
         color: #fff;
         position: absolute;
         top: 90px;
@@ -157,7 +157,7 @@ p{
 
 
 
-    .subtitle{
+    .subtitle {
         color: #fff;
         position: absolute;
         top: 110px;
@@ -168,7 +168,7 @@ p{
         font-family: 'Boogaloo', cursive;
     }
 
-    .catch_phrase{
+    .catch_phrase {
       color: #fff;
       position: absolute;
       top: 130px ;
@@ -183,12 +183,12 @@ p{
       font-size: 7px !important;
     }
 
-    footer{
+    footer {
       background-color: #494848;
       width: 100%;
     }
 
-    .logo-footer, .facebook-footer{
+    .logo-footer, .facebook-footer {
       display: flex;
       justify-content: center;
       padding-bottom: 10px;
@@ -199,43 +199,49 @@ p{
        padding-bottom: 10px; 
     }
 
-    .contact-footer, .address-footer, .copyright{
+    .contact-footer, 
+    .address-footer, 
+    .copyright {
       display: flex;
       justify-content: center;
       color: #fff !important;
       margin-bottom: 0;
     }
 
-
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 600px) {
       .title, .subtitle {
         font-size: 30px;
       }
+
       .title {
         top: 120px;
       }
+
       .subtitle {
         top: 150px;
       }
 
-      .catch_phrase{
+      .catch_phrase {
         top: 180px;
         font-size: 15px;
       }
+
       .button-ux {
         top: 180px ;
         font-size: 10px !important;
       }
     }
 
-    @media screen and (min-width: 772px){
+    @media screen and (min-width: 772px) {
       .logo {
         display: block;
-        
-    }
-    .title, .subtitle {
+    }   
+
+    .title, 
+    .subtitle {
       font-size: 40px;
     }
+
     .title {
       top: 130px;
     }
@@ -243,7 +249,7 @@ p{
       top: 170px;
     }
 
-    .catch_phrase{
+    .catch_phrase {
       top: 210px;
       font-size: 20px;
     }
@@ -260,31 +266,34 @@ p{
   }
 
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
 
-      .container-footer{
+      .container-footer {
         display: flex;
         margin-left: 30%;
         width: 50%;
         justify-content: space-around;
       }
 
-      .contact-footer{
+      .contact-footer {
         margin-top: 0px;
       }
 
 
-      .title, .subtitle {
+      .title, 
+      .subtitle {
         font-size: 40px;
       }
+
       .title {
         top: 180px;
       }
+
       .subtitle {
         top: 220px;
       }
   
-      .catch_phrase{
+      .catch_phrase {
         top: 280px;
         font-size: 20px;
       }
@@ -294,46 +303,45 @@ p{
       }
 
       .navbar {
-    display: flex;
-    justify-content: space-evenly !important;
-  }
+        display: flex;
+        justify-content: space-evenly !important;
+      }
 
       .pc {
-    display: block;
-  }
+        display: block;
+      }
   
-  .li-ham {
-    display: none !important;
-  }
+      .li-ham {
+        display: none !important;
+      }
 
-  .nav-ham {
-    display: none !important;
-  }
+      .nav-ham {
+        display: none !important;
+      }
 
-  .item_contact_bar p {
-    display: block;
-}
+      .item_contact_bar p {
+        display: block;
+      }
 
-.image-center-contact-bar {
-  display: flex;
-  padding-top: 5px;
-  
-}
+      .image-center-contact-bar {
+        display: flex;
+        padding-top: 5px;
+      }
 
-.image-center-contact-bar p {
-  margin-bottom: 0 !important;
-  padding-left: 5px;
-}
-
+      .image-center-contact-bar p {
+        margin-bottom: 0 !important;
+        padding-left: 5px;
+      }
     }
 
-    @media screen and (min-width: 1200px){
+    @media screen and (min-width: 1200px) {
 
-      .covid_band p{
+      .covid_band p {
         font-size: 17px;
       }
 
-      .title, .subtitle {
+      .title, 
+      .subtitle {
         font-size: 60px;
       }
 
@@ -346,7 +354,7 @@ p{
         line-height: 60px;
       }
 
-      .catch_phrase{
+      .catch_phrase {
         top: 350px;
         font-size: 20px;
         line-height: 80px;
@@ -357,7 +365,7 @@ p{
         font-size: 15px !important;
       }
 
-      footer p{
+      footer p {
         font-size: 17px;
       }
 
@@ -373,7 +381,7 @@ p{
 
     }
 
-    @media screen and (min-width: 1900px){
+    @media screen and (min-width: 1900px) {
 
       .logo-facebook img,
       .facebook-footer img {
@@ -412,11 +420,11 @@ p{
         margin-top: 10px;
       }
 
-      .connexion a{
+      .connexion a { 
         font-size: 20px !important;
       }
 
-      .item-text{
+      .item-text {
         font-size: 20px;
       }
 
@@ -425,7 +433,6 @@ p{
        font-size: 25px;
        padding-bottom: 10px;
       }
-
     }
 
  

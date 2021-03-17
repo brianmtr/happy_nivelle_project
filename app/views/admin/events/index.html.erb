@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <div class="create-event">
-<%= link_to 'Créer un évènement', new_admin_event_path, :class => 'button-account'  %>
+    <%= link_to 'Créer un évènement', new_admin_event_path, :class => 'button-account'  %>
 </div>
 <% end %>
 
@@ -12,7 +12,6 @@
 <%= render 'status', event: event %>
 <% end %>
 <% end %>
-
 
 <h2 class="event-boucle">Les évènements proposés</h2>
 
