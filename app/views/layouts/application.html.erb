@@ -127,39 +127,36 @@
 
       
       <% if current_page? ('/') %>
-        <%= image_tag("happy-header-home.png", :alt => "picture-header-home") %>
+          <%= image_tag("happy-header-home.png", :alt => "picture-header-home") %>
       <% elsif current_page? ('/events') || ('/events/new') ||  %>
-        <%= image_tag("header-events.png", :alt => "picture-header-event") %>
+          <%= image_tag("header-events.png", :alt => "picture-header-event") %>
       <% elsif current_page? ('/about/index') %>
-        <%= image_tag("header-about.png", :alt => "picture-header-about") %>
+          <%= image_tag("header-about.png", :alt => "picture-header-about") %>
       <% elsif current_page? ('/agenda/index') %>
-        <%= image_tag("header-agenda.png", :alt => "picture-header-agenda") %>
+          <%= image_tag("header-agenda.png", :alt => "picture-header-agenda") %>
       <% elsif current_page? ('/users/sign_in') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-in") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-in") %>
       <% elsif current_page? ('/users') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-in-user") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-in-user") %>
       <% elsif current_page? ('/users/sign_up') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-up") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-sign-up") %>
       <% elsif current_page? ('/users/edit') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-user-edit") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-user-edit") %>
       <% elsif current_page? ('/contacts/new') %>
-              <%= image_tag("header-contact.png", :alt => "picture-header-contacts-new") %>      
-      <% elsif current_page? ('/contacts') %>
-              <%= image_tag("header-contact.png", :alt => "picture-header-contacts") %>
+          <%= image_tag("header-contact.png", :alt => "picture-header-contacts-new") %>      
       <% elsif current_page? (new_event_path) %>
-              <%= image_tag("header-events.png", :alt => "picture-header-event") %>
+          <%= image_tag("header-events.png", :alt => "picture-header-event") %>
       <% elsif current_page? ('/users/confirmation/new.user') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-confirmation-new-user") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-confirmation-new-user") %>
       <% elsif current_page? ('/users/password/new') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-password-new") %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-password-new") %>
       <% elsif current_page? (@event) %>
-              <%= image_tag("header-events.png", :alt => "picture-header-events") %>
+          <%= image_tag("header-events.png", :alt => "picture-header-events") %>
       <% elsif current_page? ('/legalnotice/index') %>
-              <%= image_tag("header-sign_in.png", :alt => "picture-header-legalnotice") %>   
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-legalnotice") %>   
       <% else current_page? %>
-              <%= image_tag("errors.png", :alt => "errors_image") %>   
-
-    <% end %>
+          <%= image_tag("errors.png", :alt => "errors_image") %>   
+      <% end %>
 
      </div>
 
