@@ -154,6 +154,8 @@
           <%= image_tag("header-events.png", :alt => "picture-header-events") %>
       <% elsif current_page? ('/legalnotice/index') %>
           <%= image_tag("header-sign_in.png", :alt => "picture-header-legalnotice") %>   
+      <% elsif current_page? ('/users/password/edit') %>
+          <%= image_tag("header-sign_in.png", :alt => "picture-header-legalnotice") %>
       <% else current_page? %>
           <%= image_tag("errors.png", :alt => "errors_image") %>   
       <% end %>
