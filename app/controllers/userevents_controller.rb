@@ -5,16 +5,13 @@ class UsereventsController < ApplicationController
   def index
     @userevents = Userevent.all
   end
-
   # GET /userevents/1 or /userevents/1.json
   def show
   end
-
   # GET /userevents/new
   def new
     @userevent = UserEvent.new
   end
-
   # GET /userevents/1/edit
   def edit
   end
@@ -22,7 +19,6 @@ class UsereventsController < ApplicationController
   # POST /userevents or /userevents.json
   def create
     @userevent = UserEvent.new(userevent_params)
-
     respond_to do |format|
       if @userevent.save
         format.html { redirect_to @userevent, notice: "Userevent was successfully created." }

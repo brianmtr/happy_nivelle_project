@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   put '/events/:id', to: 'validate#update'
   # post '/comments/:id', to: 'comments#accepted'
   resources :comments
+
   resources :events do
     member do
       put "participates" => "participates#update"
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   end
 
 
-resources :participates, only: [ :update ]
+  resources :participates, only: [ :update ]
 
   namespace :admin do
     resources :users, :comments, :events do

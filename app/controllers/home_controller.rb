@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @events_in_progress = Event.accepted.where("date >= ?", Date.today).limit(3)
+    @events_in_progress = Event.where("status = ? or status = ?", 1,2).where("date >= ?", Date.today).limit(3)
     @events_proposed    = Event.proposed.where("date >= ?", Date.today).limit(3)
-    @events_past        = Event.past.where('date < ?', Date.today).limit(3)
-    if Event.accepted.where('date < ?', Date.today).update(status: 'past')
-    end
+    @events_past        = Event.accepted.where('date < ?', Date.today).limit(3)
   end
 end

@@ -1,23 +1,23 @@
 class AdminController < ApplicationController
-    before_action :authorized?
+  before_action :authorized?
     
-    layout 'administration'
+  layout 'administration'
     
-    def index
-        @events = Event.all
-        @comments = Comment.all
-        @users = User.all
+  def index
+      @events   = Event.all
+      @comments = Comment.all
+      @users    = User.all
+  end
+
+
+  private
+
+
+  def authorized?
+    unless current_user.admin?
+      flash[:error] = "You are not authorized to view that page."
+      redirect_to root_path
     end
-
-
-    private
-
-
-    def authorized?
-      unless current_user.admin?
-        flash[:error] = "You are not authorized to view that page."
-        redirect_to root_path
-      end
-    end
+  end
     
 end

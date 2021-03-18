@@ -1,16 +1,15 @@
 class CommentsController < ApplicationController
-    before_action :set_comment, only: %i[ show edit update destroy ]
+  before_action :set_comment, only: %i[ show edit update destroy ]
 
-    def index
-        
-        @comments = Comment.all
-      end
+  def index
+    @comments = Comment.all
+  end
 
-def show
-end
+  def show
+  end
 
 # GET /homes/new
-def new
+  def new
     @comment = Comment.new
   end
 
@@ -64,14 +63,14 @@ def new
     end
   end
 
-      private
+private
       # Use callbacks to share common setup or constraints between actions.
-      def set_comment
-        @comment = Comment.find(params[:id])
-      end
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
   
       # Only allow a list of trusted parameters through.
-      def comment_params
-        params.require(:comment).permit(:title, :description)
-      end
+  def comment_params
+    params.require(:comment).permit(:title, :description)
+  end
 end

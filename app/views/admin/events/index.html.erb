@@ -27,7 +27,7 @@
 <%= render 'status', event: event %>
 <% end %>
 
-<h2 class="event-boucle">Les évènements passée</h2>
-<% @events_past.each do |event| %>
+<h2 class="event-boucle">Les évènements annulés</h2>
+<% @events_cancel.each do |event| %>
 <%= render 'status', event: event %>
 <% end %>

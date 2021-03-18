@@ -3,11 +3,11 @@ class Admin::EventsController < AdminController
 
   # GET /events or /events.json
   def index
-    @events = Event.all
-    @comments = Comment.all
-    @events_proposed = Event.proposed.where("date >= ?", Date.today)
+    @events             = Event.all
+    @comments           = Comment.all
+    @events_proposed    = Event.proposed.where("date >= ?", Date.today)
     @events_in_progress = Event.accepted.where("date >= ?", Date.today)
-    @events_past = Event.past.where("date <= ?", Date.today)
+    @events_cancel      = Event.cancel
   end
 
   # GET /events/1 or /events/1.json
