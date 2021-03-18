@@ -1,5 +1,6 @@
-<div class="card-admin" style="width: 60%; margin-left: 20%">
-    <div class="card-header-admin" id="headingOne">
+<div class="container" style="width: 100%">
+    <div class="cards" id="headingOne">
+    <div class="card-headers" id="headingOne">
         <tbody>
             <tr>
                 <td><%= image_tag event.image, height: 50 if event.image %></td>
@@ -7,13 +8,13 @@
                 <td><%= event.date %></td><br>
                 <td><%= event.address %></td><br>
                 <br>
-                <td><%= event.description %></td><br>
-                <td>
                 <div class="buttons-vera">
-                <%= link_to 'Voir événement', event_path(event.id) %></td>
+                <%= link_to 'Voir événement', event_path(event.id) %>
+                <%= link_to 'Annuler', cancel_admin_event_path(event.id), method: :put %>
                 <%= link_to 'Edit', edit_admin_event_path(event.id) %>
                 <%= link_to 'Refuser', admin_event_path(event.id), method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
                 <%= link_to 'Accepter', event, method: :put %>
+                </div>
             </div>
             </tr>
         </tbody>
