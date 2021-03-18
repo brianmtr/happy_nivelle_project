@@ -1,28 +1,29 @@
 <h1 class="title-admin-event">Utilisateurs</h1>
 <div class="treuc">
-<% @users.each do |user| %>
+    <% @users.each do |user| %>
 
-<ul class="list-group">
-    <li class="list-group-item active" aria-current="true">
+    <ul class="list-group">
+
         <% if user.admin === true %>
-        <strong>Admin</strong>
+
+        <li class="list-group-item" aria-current="true" style="background-color: red">
+            <strong style="color: white">Admin</strong>
+        </li>
+
         <% else %>
-        <strong>Utilisateur classique</strong>
+        <li class="list-group-item active" aria-current="true">
+            <strong>Utilisateur classique</strong>
+        </li>
         <% end %>
-    </li>
-    <li class="list-group-item">
-        <%= user.firstname %>
-        <br>
-        <%= user.lastname %>
-        <br>
-        <%= user.email %>
-        <br>
+        <li class="list-group-item">
+            <a><%= user.firstname %></a>
+            <a><%= user.lastname %></a>
+            <a><%= user.email %></a>
 
-        <%= link_to 'Changer rôle', role_admin_user_path(user), method: :put, data: { confirm: 'Êtes-vous sûr ? Un utilisateur classique ne pourra pas accèder au panneau d\'administration.' } %>
+            <%= link_to 'Changer rôle', role_admin_user_path(user), method: :put, data: { confirm: 'Êtes-vous sûr ? Un utilisateur classique ne pourra pas accèder au panneau d\'administration.' } %>
+        </li>
 
-    </li>
-
-</ul>
-<br>
-<% end %>
+    </ul>
+    <br>
+    <% end %>
 </div>
