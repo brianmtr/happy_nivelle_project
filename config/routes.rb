@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/agenda/index'
   post '/users/:id', to: 'role#role'
   put '/events/:id', to: 'validate#update'
+
   # post '/comments/:id', to: 'comments#accepted'
   resources :comments
 
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
     resources :users, :comments, :events do
       member do
         put "role" => "role#update"
+        put "cancel", to: 'cancel#update'
       end
     end
   end

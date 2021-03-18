@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 //for media querry to 375px
+.card-headers {
+    padding: 10px;
+}
+
+.container {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
 .header-admin {
 position: relative;
 }
@@ -95,6 +103,10 @@ position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        margin-left: 10px;
+    }
+    .buttons-vera a {
+        margin-left: 10px;
     }
 }
 
