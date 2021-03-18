@@ -1,7 +1,11 @@
 
 <div class="card-events" >
-                          
-  <scope="col" ><p class="title-event"><%= event.title.upcase %></p>
+<% if event.cancel? %> 
+  <scope="col" ><p class="title-event"><%= event.title.upcase %>
+    
+  <span class="cancel">ANNULÉ</span>
+
+  </p>
      <div class="bar"></div>
              <div class="show-event">
                      <scope="col_image"><%= image_tag event.image %>
@@ -11,14 +15,24 @@
             </button>
         </div>
         <scope="col"><p class ="address-date"><%= event.date.to_formatted_s(:db)  %><br></p>
-        <scope="col"><p class ="address-date"><%= event.address %><br></p>                
+        <scope="col"><p class ="address-date"><%= event.address %><br></p>   
+      
+</div>
+<% else %>
+      <scope="col" ><p class="title-event"><%= event.title.upcase %>
+    
 
+  </p>
+     <div class="bar"></div>
+             <div class="show-event">
+                     <scope="col_image"><%= image_tag event.image %>
 
-
-    </div>
-       
-<br>
-<br>
-
-
- 
+            <button class="button">
+                <%= link_to 'Infos +', event_path(event.id) %>
+            </button>
+        </div>
+        <scope="col"><p class ="address-date"><%= event.date.to_formatted_s(:db)  %><br></p>
+        <scope="col"><p class ="address-date"><%= event.address %><br></p>   
+      
+</div>
+<% end %> 

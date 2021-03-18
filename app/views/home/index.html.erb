@@ -9,8 +9,9 @@
 
 <div class="align-card">
     <% @events_in_progress.each do |event| %>
-    <%= render 'status', event: event %>
+        <%= render 'status', event: event %>
     <% end %>
+
 </div>
 <div class="grey-box">
 

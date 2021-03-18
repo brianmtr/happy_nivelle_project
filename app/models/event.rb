@@ -10,5 +10,5 @@ class Event < ApplicationRecord
     validates :date, presence: true
     validates :image, attached: true, content_type: %i[png jpg jpeg]
 
-    enum status: [:proposed, :accepted, :past]
+    enum status: [:proposed, :accepted, :cancel]
 end
