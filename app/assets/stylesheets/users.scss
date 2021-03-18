@@ -80,7 +80,7 @@
 //admin/user
 .title-admin-event{
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .items-center{
     text-align: center;
@@ -90,15 +90,16 @@
    text-align: center;
 }
 
-.treuc{
+.list-group{
+    width: 90%;
     display: flex !important;
-    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px auto;
 }
 
-.list-group{
-    width: 400px;
-    display: flex !important;
-    margin: 50px auto;
+.list-group-item {
+   display: flex !important;
+    justify-content: space-around;
 }
 
 //account show page
