@@ -44,6 +44,13 @@ p{
   margin-top: 10px;
 }
 
+.alert {
+  font-size: 29px;
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+}
+
  .header-image-events-show img {
   width: 100%;
 }

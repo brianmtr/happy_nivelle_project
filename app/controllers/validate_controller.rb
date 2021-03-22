@@ -7,15 +7,15 @@ class ValidateController < EventsController
       when nil
         @event.status = 'proposed'
         @event.save
-        redirect_to '/events/', notice: "l'évenement a bien été accepté."
+        redirect_to '/events/', notice: "L'évenement a bien été proposé."
       when 'proposed' 
         @event.status = 'accepted'
         @event.save
-        redirect_to '/events/', notice: "l'évenement a bien été accepté."
+        redirect_to '/events/', notice: "L'évenement a bien été accepté."
       when 'cancel'
         @event.status = 'proposed'
         @event.save
-        redirect_to '/events/', notice: "l'évenement a bien été accepté."
+        redirect_to '/events/', notice: "L'évenement a bien été proposé."
     end
   end
 
